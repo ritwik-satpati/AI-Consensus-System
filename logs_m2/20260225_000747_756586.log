@@ -1,0 +1,110 @@
+2026-02-25 00:07:47.756586 +0530	AI_CONSENSUS_SYSTEM_M2 | START | AI_CONSENSUS_SYSTEM_M2_V1
+2026-02-25 00:07:47.756586 +0530	REQUEST_ID_GENERATOR | SUCCESS | Request Id generated | 20260225_000747_756586
+2026-02-25 00:07:47.767809 +0530	AI_CONSENSUS_SYSTEM_M2 | START | STAGE 0 | Initial Setup
+2026-02-25 00:07:47.772270 +0530	AI_CONSENSUS_SYSTEM_M2 | SUCCESS | Start Timestamp captured
+2026-02-25 00:07:47.780764 +0530	PROMPT_MANAGER | SUCCESS | Base Prompt loaded
+2026-02-25 00:07:48.037756 +0530	MODEL_MANAGER | SUCCESS | AI model configurations loaded
+2026-02-25 00:07:48.050189 +0530	AI_CONSENSUS_SYSTEM_M2 | END | STAGE 0 | Initial Setup
+2026-02-25 00:07:48.054125 +0530	AI_CONSENSUS_SYSTEM_M2 | START | STAGE 1 | Initial Model Execution
+2026-02-25 00:07:59.554285 +0530	OPENAI_API | START | Request initiated | gpt-4o-mini
+2026-02-25 00:08:04.199460 +0530	OPENAI_API | SUCCESS | Response received | gpt-4o-mini | Prompt Tokens = 26 | Completion Tokens = 105
+2026-02-25 00:08:04.203906 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | openai | gpt-4o-mini
+2026-02-25 00:08:08.983496 +0530	GEMINI_API | START | Request initiated | gemini-2.5-flash-lite
+2026-02-25 00:08:11.316258 +0530	GEMINI_API | SUCCESS | Response received | gemini-2.5-flash-lite | Prompt Tokens = 19 | Completion Tokens = 106
+2026-02-25 00:08:11.327650 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | google | gemini-2.5-flash-lite
+2026-02-25 00:08:11.334875 +0530	CLAUDE_API | START | Request initiated | claude-haiku-4-5-20251001
+2026-02-25 00:08:15.550984 +0530	CLAUDE_API | SUCCESS | Response received | claude-haiku-4-5-20251001 | Prompt Tokens = 24 | Completion Tokens = 140
+2026-02-25 00:08:15.554848 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | anthropic | claude-haiku-4-5-20251001
+2026-02-25 00:08:15.568712 +0530	RESPONSE_LOGGER | SUCCESS | Response log saved | outputs/stage_01_initial/20260225_000747_756586.json
+2026-02-25 00:08:15.584900 +0530	RESPONSE_FORMATTER | SUCCESS | Structured output saved | outputs/stage_01_initial_structured/20260225_000747_756586.json
+2026-02-25 00:08:15.591673 +0530	AI_CONSENSUS_SYSTEM_M2 | END | STAGE 1 | Initial Model Execution
+2026-02-25 00:08:15.596428 +0530	AI_CONSENSUS_SYSTEM_M2 | START | STAGE 2 | Consensus Refinement
+2026-02-25 00:08:15.605390 +0530	CONSENSUS_PROMPT_BUILDER | PROCESS | Combined Prompt added | gpt-4o-mini
+2026-02-25 00:08:15.608762 +0530	CONSENSUS_PROMPT_BUILDER | PROCESS | Combined Prompt added | gemini-2.5-flash-lite
+2026-02-25 00:08:15.612292 +0530	CONSENSUS_PROMPT_BUILDER | PROCESS | Combined Prompt added | claude-haiku-4-5-20251001
+2026-02-25 00:08:15.615660 +0530	CONSENSUS_PROMPT_BUILDER | SUCCESS | Combined Prompt created using 3 model responses
+2026-02-25 00:08:17.322502 +0530	OPENAI_API | START | Request initiated | gpt-4o-mini
+2026-02-25 00:08:20.825645 +0530	OPENAI_API | SUCCESS | Response received | gpt-4o-mini | Prompt Tokens = 431 | Completion Tokens = 117
+2026-02-25 00:08:20.829085 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | openai | gpt-4o-mini
+2026-02-25 00:08:25.054970 +0530	GEMINI_API | START | Request initiated | gemini-2.5-flash-lite
+2026-02-25 00:08:27.208534 +0530	GEMINI_API | SUCCESS | Response received | gemini-2.5-flash-lite | Prompt Tokens = 441 | Completion Tokens = 102
+2026-02-25 00:08:27.219301 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | google | gemini-2.5-flash-lite
+2026-02-25 00:08:27.226151 +0530	CLAUDE_API | START | Request initiated | claude-haiku-4-5-20251001
+2026-02-25 00:08:29.949624 +0530	CLAUDE_API | SUCCESS | Response received | claude-haiku-4-5-20251001 | Prompt Tokens = 462 | Completion Tokens = 199
+2026-02-25 00:08:29.953683 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | anthropic | claude-haiku-4-5-20251001
+2026-02-25 00:08:29.962647 +0530	RESPONSE_LOGGER | SUCCESS | Response log saved | outputs/stage_02_consensus/20260225_000747_756586.json
+2026-02-25 00:08:29.971495 +0530	RESPONSE_FORMATTER | SUCCESS | Structured output saved | outputs/stage_02_consensus_structured/20260225_000747_756586.json
+2026-02-25 00:08:29.975277 +0530	AI_CONSENSUS_SYSTEM_M2 | END | STAGE 2 | Consensus Refinement
+2026-02-25 00:08:29.978738 +0530	AI_CONSENSUS_SYSTEM_M2 | START | STAGE 3 | Scoring Round
+2026-02-25 00:08:29.985309 +0530	RANDOM_MODEL_MAPPER | START | Random model mapping initiated
+2026-02-25 00:08:29.989299 +0530	RANDOM_MODEL_MAPPER | SUCCESS | Random model mapping generated
+2026-02-25 00:08:29.998135 +0530	RANDOM_MODEL_MAPPER | SUCCESS | Random model mapping saved | outputs/stage_03_model_mapping/20260225_000747_756586.json
+2026-02-25 00:08:30.064912 +0530	SCORING_PROMPT_ORCHESTRATOR | START | Building scoring prompts
+2026-02-25 00:08:30.071413 +0530	SCORING_PROMPT_BUILDER | SUCCESS | Scoring Prompt created | claude-haiku-4-5-20251001
+2026-02-25 00:08:30.076233 +0530	SCORING_PROMPT_ORCHESTRATOR | SUCCESS | Evaluator Model = gpt-4o-mini | Candidate Model = claude-haiku-4-5-20251001
+2026-02-25 00:08:30.080232 +0530	SCORING_PROMPT_BUILDER | SUCCESS | Scoring Prompt created | gpt-4o-mini
+2026-02-25 00:08:30.083635 +0530	SCORING_PROMPT_ORCHESTRATOR | SUCCESS | Evaluator Model = gemini-2.5-flash-lite | Candidate Model = gpt-4o-mini
+2026-02-25 00:08:30.087624 +0530	SCORING_PROMPT_BUILDER | SUCCESS | Scoring Prompt created | gemini-2.5-flash-lite
+2026-02-25 00:08:30.090625 +0530	SCORING_PROMPT_ORCHESTRATOR | SUCCESS | Evaluator Model = claude-haiku-4-5-20251001 | Candidate Model = gemini-2.5-flash-lite
+2026-02-25 00:08:30.093516 +0530	SCORING_PROMPT_ORCHESTRATOR | SUCCESS | Generated 3 scoring prompts
+2026-02-25 00:08:30.098822 +0530	AI_CUSTOM_PROMPT_ORCHESTRATOR | START | Executing models with custom prompts
+2026-02-25 00:08:31.960796 +0530	OPENAI_API | START | Request initiated | gpt-4o-mini
+2026-02-25 00:08:34.536293 +0530	OPENAI_API | SUCCESS | Response received | gpt-4o-mini | Prompt Tokens = 369 | Completion Tokens = 43
+2026-02-25 00:08:34.540692 +0530	AI_CUSTOM_PROMPT_ORCHESTRATOR | SUCCESS | Output added | openai | gpt-4o-mini
+2026-02-25 00:08:39.065080 +0530	GEMINI_API | START | Request initiated | gemini-2.5-flash-lite
+2026-02-25 00:08:40.597438 +0530	GEMINI_API | SUCCESS | Response received | gemini-2.5-flash-lite | Prompt Tokens = 314 | Completion Tokens = 38
+2026-02-25 00:08:40.608370 +0530	AI_CUSTOM_PROMPT_ORCHESTRATOR | SUCCESS | Output added | google | gemini-2.5-flash-lite
+2026-02-25 00:08:40.615046 +0530	CLAUDE_API | START | Request initiated | claude-haiku-4-5-20251001
+2026-02-25 00:08:42.318173 +0530	CLAUDE_API | SUCCESS | Response received | claude-haiku-4-5-20251001 | Prompt Tokens = 324 | Completion Tokens = 42
+2026-02-25 00:08:42.321962 +0530	AI_CUSTOM_PROMPT_ORCHESTRATOR | SUCCESS | Output added | anthropic | claude-haiku-4-5-20251001
+2026-02-25 00:08:42.325333 +0530	AI_CUSTOM_PROMPT_ORCHESTRATOR | SUCCESS | Completed execution for 3 models
+2026-02-25 00:08:42.335629 +0530	RESPONSE_LOGGER | SUCCESS | Response log saved | outputs/stage_03_scoring/20260225_000747_756586.json
+2026-02-25 00:08:42.350869 +0530	RESPONSE_FORMATTER | SUCCESS | Structured output saved | outputs/stage_03_scoring_structured/20260225_000747_756586.json
+2026-02-25 00:08:42.354305 +0530	AI_CONSENSUS_SYSTEM_M2 | END | STAGE 3 | Scoring Round
+2026-02-25 00:08:42.357633 +0530	AI_CONSENSUS_SYSTEM_M2 | START | STAGE 4 | Score Aggregation & Selection
+2026-02-25 00:08:42.363493 +0530	SCORE_PARSER | START | Parsing scoring outputs initiated
+2026-02-25 00:08:42.367082 +0530	SCORE_PARSER | SUCCESS | JSON string parsed | gpt-4o-mini
+2026-02-25 00:08:42.369990 +0530	SCORE_PARSER | SUCCESS | JSON string parsed | gemini-2.5-flash-lite
+2026-02-25 00:08:42.372673 +0530	SCORE_PARSER | SUCCESS | JSON string parsed | claude-haiku-4-5-20251001
+2026-02-25 00:08:42.375518 +0530	SCORE_PARSER | SUCCESS | Parsed 3 evaluator results
+2026-02-25 00:08:42.384144 +0530	SCORE_LOGGER | SUCCESS | Score file saved | outputs/stage_04_raw_scores/20260225_000747_756586.json
+2026-02-25 00:08:42.389771 +0530	SCORE_AGGREGATOR | PROCESS | Averaged scores computed | claude-haiku-4-5-20251001
+2026-02-25 00:08:42.393234 +0530	SCORE_AGGREGATOR | PROCESS | Averaged scores computed | gpt-4o-mini
+2026-02-25 00:08:42.396596 +0530	SCORE_AGGREGATOR | PROCESS | Averaged scores computed | gemini-2.5-flash-lite
+2026-02-25 00:08:42.399979 +0530	SCORE_AGGREGATOR | SUCCESS | Aggregated scores generated for 3 agents
+2026-02-25 00:08:42.403140 +0530	SCORE_AGGREGATOR | SUCCESS | Self-bias removed = True
+2026-02-25 00:08:42.410609 +0530	SCORE_LOGGER | SUCCESS | Score file saved | outputs/stage_04_aggregated_scores/20260225_000747_756586.json
+2026-02-25 00:08:42.417882 +0530	FINAL_SCORE_CALCULATOR | START | Calculating weighted scores
+2026-02-25 00:08:42.422012 +0530	FINAL_SCORE_CALCULATOR | PROCESS | Weighted score computed for claude-haiku-4-5-20251001
+2026-02-25 00:08:42.425584 +0530	FINAL_SCORE_CALCULATOR | PROCESS | Weighted score computed for gpt-4o-mini
+2026-02-25 00:08:42.428780 +0530	FINAL_SCORE_CALCULATOR | PROCESS | Weighted score computed for gemini-2.5-flash-lite
+2026-02-25 00:08:42.432614 +0530	FINAL_SCORE_CALCULATOR | SUCCESS | Weighted scores calculated for 3 agents
+2026-02-25 00:08:42.442573 +0530	SCORE_LOGGER | SUCCESS | Score file saved | outputs/stage_04_weighted_scores/20260225_000747_756586.json
+2026-02-25 00:08:42.448334 +0530	WINNER_SELECTOR | SUCCESS | Winner selected | gpt-4o-mini | 9.6
+2026-02-25 00:08:42.452539 +0530	AI_CONSENSUS_SYSTEM_M2 | END | STAGE 4 | Score Aggregation & Selection
+2026-02-25 00:08:42.455623 +0530	AI_CONSENSUS_SYSTEM_M2 | START | STAGE 5 | Report Generation & Logging
+2026-02-25 00:08:42.458455 +0530	AI_CONSENSUS_SYSTEM_M2 | SUCCESS | End Timestamp captured
+2026-02-25 00:08:42.461285 +0530	AI_CONSENSUS_SYSTEM_M2 | SUCCESS | Total pipeline execution time 54.6862 seconds
+2026-02-25 00:08:42.471005 +0530	WINNER_LOGGER | SUCCESS | Winner file saved | outputs/stage_05_winner/20260225_000747_756586.json
+2026-02-25 00:08:42.481690 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | STAGE_1 | gpt-4o-mini
+2026-02-25 00:08:42.484574 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | STAGE_1 | gemini-2.5-flash-lite
+2026-02-25 00:08:42.487250 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | STAGE_1 | claude-haiku-4-5-20251001
+2026-02-25 00:08:42.489808 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | STAGE_2 | gpt-4o-mini
+2026-02-25 00:08:42.492377 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | STAGE_2 | gemini-2.5-flash-lite
+2026-02-25 00:08:42.496346 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | STAGE_2 | claude-haiku-4-5-20251001
+2026-02-25 00:08:42.501668 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | STAGE_3 | gpt-4o-mini
+2026-02-25 00:08:42.505261 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | STAGE_3 | gemini-2.5-flash-lite
+2026-02-25 00:08:42.509445 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | STAGE_3 | claude-haiku-4-5-20251001
+2026-02-25 00:08:42.513227 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | ALL_STAGES | gpt-4o-mini
+2026-02-25 00:08:42.516978 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | ALL_STAGES | gemini-2.5-flash-lite
+2026-02-25 00:08:42.520918 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | ALL_STAGES | claude-haiku-4-5-20251001
+2026-02-25 00:08:42.524193 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | ALL_STAGES | ALL_MODELS
+2026-02-25 00:08:42.532300 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary generated | outputs/stage_05_token_summary/20260225_000747_756586.json
+2026-02-25 00:08:44.385761 +0530	TOKEN_REPORT_BUILDER | START | Token report building initiated
+2026-02-25 00:08:44.390139 +0530	TOKEN_REPORT_BUILDER | SUCCESS | Token summary converted to DataFrame
+2026-02-25 00:08:44.418355 +0530	TOKEN_REPORT_BUILDER | SUCCESS | Stage-wise report generated
+2026-02-25 00:08:44.437230 +0530	TOKEN_REPORT_BUILDER | SUCCESS | Model-wise summary report generated
+2026-02-25 00:08:44.442255 +0530	TOKEN_REPORT_BUILDER | COMPLETE | Token report building completed
+2026-02-25 00:08:44.462149 +0530	CSV_EXPORTER | SUCCESS | CSV file created | outputs/stage_05_token_report_stage/20260225_000747_756586.csv
+2026-02-25 00:08:44.472927 +0530	CSV_EXPORTER | SUCCESS | CSV file created | outputs/stage_05_token_report_model_summary/20260225_000747_756586.csv
+2026-02-25 00:08:44.477496 +0530	AI_CONSENSUS_SYSTEM_M2 | END | STAGE 5 | Report Generation & Logging

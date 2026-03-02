@@ -1,0 +1,10 @@
+stage,model,prompt_token,completion_token,total_token
+STAGE_1,gpt-4o-mini,26,110,136
+STAGE_1,gemini-2.5-flash-lite,19,110,129
+STAGE_1,claude-haiku-4-5-20251001,24,135,159
+STAGE_2,gpt-4o-mini,434,115,549
+STAGE_2,gemini-2.5-flash-lite,451,109,560
+STAGE_2,claude-haiku-4-5-20251001,463,175,638
+STAGE_3,gpt-4o-mini,595,118,713
+STAGE_3,gemini-2.5-flash-lite,628,131,759
+STAGE_3,claude-haiku-4-5-20251001,654,119,773

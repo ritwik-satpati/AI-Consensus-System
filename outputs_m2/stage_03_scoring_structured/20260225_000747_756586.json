@@ -1,0 +1,5 @@
+{
+    "gpt-4o-mini": "{\"claude-haiku-4-5-20251001\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 7}}",
+    "gemini-2.5-flash-lite": "{\"gpt-4o-mini\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}",
+    "claude-haiku-4-5-20251001": "{\"gemini-2.5-flash-lite\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}}"
+}

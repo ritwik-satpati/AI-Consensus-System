@@ -1,0 +1,4 @@
+model,prompt_token,completion_token,total_token
+gpt-4o-mini,826,265,1091
+gemini-2.5-flash-lite,774,246,1020
+claude-haiku-4-5-20251001,810,381,1191

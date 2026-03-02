@@ -1,0 +1,20 @@
+{
+    "claude-haiku-4-5-20251001": {
+        "accuracy": 9.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "conciseness": 7.0
+    },
+    "gpt-4o-mini": {
+        "accuracy": 10.0,
+        "clarity": 10.0,
+        "completeness": 9.0,
+        "conciseness": 9.0
+    },
+    "gemini-2.5-flash-lite": {
+        "accuracy": 9.0,
+        "clarity": 9.0,
+        "completeness": 8.0,
+        "conciseness": 9.0
+    }
+}

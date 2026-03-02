@@ -1,0 +1,10 @@
+{
+    "request_id": "20260224_215157_116499",
+    "prompt": "Explain API in simple words within 100 words",
+    "model": "claude-haiku-4-5-20251001",
+    "score": 9.1,
+    "output": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is a bridge that allows different software applications to communicate with each other.\n\nThink of it like a **waiter in a restaurant**: you (the customer/application) tell the waiter (the API) what you want, and the waiter brings back what you requested from the kitchen (another application or service). You don't need to know how the kitchen works—just how to place your order.\n\n**Key benefits:**\n- Enables software programs to share data and features easily\n- Developers can build apps faster by using existing services without creating everything from scratch\n\n**Real-world examples:**\n- Weather apps accessing weather data\n- Social media logins on websites\n- Google Maps embedded in other applications\n\nAPIs make modern software development efficient and seamless.",
+    "start_time": "2026-02-24 21:51:57.126868 +0530",
+    "end_time": "2026-02-24 21:53:07.103684 +0530",
+    "execution_time": 69.9768
+}

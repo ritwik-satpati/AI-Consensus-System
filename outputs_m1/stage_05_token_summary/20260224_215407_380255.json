@@ -1,0 +1,106 @@
+[
+    {
+        "stage": "STAGE_1",
+        "model": "gpt-4o-mini",
+        "prompt_token": 26,
+        "completion_token": 104,
+        "other_token": 0,
+        "total_token": 130
+    },
+    {
+        "stage": "STAGE_1",
+        "model": "gemini-2.5-flash-lite",
+        "prompt_token": 19,
+        "completion_token": 108,
+        "other_token": 0,
+        "total_token": 127
+    },
+    {
+        "stage": "STAGE_1",
+        "model": "claude-haiku-4-5-20251001",
+        "prompt_token": 24,
+        "completion_token": 138,
+        "other_token": 0,
+        "total_token": 162
+    },
+    {
+        "stage": "STAGE_2",
+        "model": "gpt-4o-mini",
+        "prompt_token": 428,
+        "completion_token": 117,
+        "other_token": 0,
+        "total_token": 545
+    },
+    {
+        "stage": "STAGE_2",
+        "model": "gemini-2.5-flash-lite",
+        "prompt_token": 445,
+        "completion_token": 106,
+        "other_token": 0,
+        "total_token": 551
+    },
+    {
+        "stage": "STAGE_2",
+        "model": "claude-haiku-4-5-20251001",
+        "prompt_token": 458,
+        "completion_token": 175,
+        "other_token": 0,
+        "total_token": 633
+    },
+    {
+        "stage": "STAGE_3",
+        "model": "gpt-4o-mini",
+        "prompt_token": 596,
+        "completion_token": 118,
+        "other_token": 0,
+        "total_token": 714
+    },
+    {
+        "stage": "STAGE_3",
+        "model": "gemini-2.5-flash-lite",
+        "prompt_token": 634,
+        "completion_token": 133,
+        "other_token": 0,
+        "total_token": 767
+    },
+    {
+        "stage": "STAGE_3",
+        "model": "claude-haiku-4-5-20251001",
+        "prompt_token": 656,
+        "completion_token": 119,
+        "other_token": 0,
+        "total_token": 775
+    },
+    {
+        "stage": "ALL_STAGES",
+        "model": "gpt-4o-mini",
+        "prompt_token": 1050,
+        "completion_token": 339,
+        "other_token": 0,
+        "total_token": 1389
+    },
+    {
+        "stage": "ALL_STAGES",
+        "model": "gemini-2.5-flash-lite",
+        "prompt_token": 1098,
+        "completion_token": 347,
+        "other_token": 0,
+        "total_token": 1445
+    },
+    {
+        "stage": "ALL_STAGES",
+        "model": "claude-haiku-4-5-20251001",
+        "prompt_token": 1138,
+        "completion_token": 432,
+        "other_token": 0,
+        "total_token": 1570
+    },
+    {
+        "stage": "ALL_STAGES",
+        "model": "ALL_MODELS",
+        "prompt_token": 3286,
+        "completion_token": 1118,
+        "other_token": 0,
+        "total_token": 4404
+    }
+]

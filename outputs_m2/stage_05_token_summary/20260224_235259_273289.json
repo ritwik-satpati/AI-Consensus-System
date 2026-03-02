@@ -1,0 +1,74 @@
+[
+    {
+        "stage": "STAGE_1",
+        "model": "gpt-4o-mini",
+        "prompt_token": 26,
+        "completion_token": 100,
+        "other_token": 0,
+        "total_token": 126
+    },
+    {
+        "stage": "STAGE_1",
+        "model": "claude-haiku-4-5-20251001",
+        "prompt_token": 24,
+        "completion_token": 138,
+        "other_token": 0,
+        "total_token": 162
+    },
+    {
+        "stage": "STAGE_2",
+        "model": "gpt-4o-mini",
+        "prompt_token": 309,
+        "completion_token": 117,
+        "other_token": 0,
+        "total_token": 426
+    },
+    {
+        "stage": "STAGE_2",
+        "model": "claude-haiku-4-5-20251001",
+        "prompt_token": 331,
+        "completion_token": 158,
+        "other_token": 0,
+        "total_token": 489
+    },
+    {
+        "stage": "STAGE_3",
+        "model": "gpt-4o-mini",
+        "prompt_token": 335,
+        "completion_token": 43,
+        "other_token": 0,
+        "total_token": 378
+    },
+    {
+        "stage": "STAGE_3",
+        "model": "claude-haiku-4-5-20251001",
+        "prompt_token": 331,
+        "completion_token": 39,
+        "other_token": 0,
+        "total_token": 370
+    },
+    {
+        "stage": "ALL_STAGES",
+        "model": "gpt-4o-mini",
+        "prompt_token": 670,
+        "completion_token": 260,
+        "other_token": 0,
+        "total_token": 930
+    },
+    {
+        "stage": "ALL_STAGES",
+        "model": "claude-haiku-4-5-20251001",
+        "prompt_token": 686,
+        "completion_token": 335,
+        "other_token": 0,
+        "total_token": 1021
+    },
+    {
+        "stage": "ALL_STAGES",
+        "model": "ALL_MODELS",
+        "prompt_token": 1356,
+        "completion_token": 595,
+        "other_token": 0,
+        "total_token": 1951
+    }
+]

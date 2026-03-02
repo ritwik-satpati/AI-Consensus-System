@@ -1,0 +1,7 @@
+stage,model,prompt_token,completion_token,total_token
+STAGE_1,gpt-4o-mini,26,100,126
+STAGE_1,claude-haiku-4-5-20251001,24,138,162
+STAGE_2,gpt-4o-mini,309,117,426
+STAGE_2,claude-haiku-4-5-20251001,331,158,489
+STAGE_3,gpt-4o-mini,335,43,378
+STAGE_3,claude-haiku-4-5-20251001,331,39,370
