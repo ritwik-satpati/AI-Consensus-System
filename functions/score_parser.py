@@ -1,14 +1,16 @@
 # score_parser.py
+MODULE_NAME = "SCORE_PARSER"
 
 # Import JSON module for parsing stringified JSON
 import json
+from json_repair import repair_json
 from functions.log_generator import write_log
 
 # This function converts AI scoring outputs into usable Python dictionaries
 def parse_scoring_outputs(raw_scores, request_id):
 
     # Updating log entry    
-    write_log(filename=request_id, message="SCORE_PARSER | START | Parsing scoring outputs initiated")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | START | Parsing scoring outputs initiated")
 
     # Dictionary to store successfully parsed evaluator outputs
     parsed_results = {}
@@ -17,27 +19,39 @@ def parse_scoring_outputs(raw_scores, request_id):
     for evaluator_agent, score_data in raw_scores.items():
 
         try:
-            # Case 1: If evaluator already returned a dictionary → accept directly
+            # Case 1: Reject - If "agent_name" is present
+            if isinstance(score_data, str):
+                
+                # Reject if evaluator returned "agent_name"
+                if '"agent_name"' in score_data:
+                        
+                    # Updating log entry
+                    write_log(filename=request_id, message=f"{MODULE_NAME} | FAILED | Unsupported model name found | {evaluator_agent}")
+                    write_log(filename=request_id, message=f"ERROR : Invalid key 'agent_name' returned by evaluator = {evaluator_agent}")
+
+                    continue
+
+            # Case 2: Accept - If evaluator already returned a dictionary → accept directly
             if isinstance(score_data, dict):
 
                 parsed_results[evaluator_agent] = score_data
 
                 # Updating log entry
-                write_log( filename=request_id, message=f"SCORE_PARSER | SUCCESS | Dictionary accepted directly | {evaluator_agent}")
+                write_log( filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Dictionary accepted directly | {evaluator_agent}")
 
                 continue
 
-            # Case 2: If evaluator returned string → attempt JSON parsing
+            # Case 3: Accept - If evaluator returned string → attempt JSON parsing
             if isinstance(score_data, str):
 
                 try:
                     # Attempt normal JSON parsing
-                    parsed_json = json.loads(score_data)
+                    parsed_json = json.loads(repair_json(score_data))
 
                     parsed_results[evaluator_agent] = parsed_json
 
                     # Updating log entry
-                    write_log( filename=request_id, message=f"SCORE_PARSER | SUCCESS | JSON string parsed | {evaluator_agent}")
+                    write_log( filename=request_id, message=f"{MODULE_NAME} | SUCCESS | JSON string parsed | {evaluator_agent}")
 
                     continue
 
@@ -56,23 +70,23 @@ def parse_scoring_outputs(raw_scores, request_id):
                     parsed_results[evaluator_agent] = merged_result
 
                     # Updating log entry
-                    write_log( filename=request_id, message=f"SCORE_PARSER | SUCCESS | Multi-JSON merged | {evaluator_agent}")
+                    write_log( filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Multi-JSON merged | {evaluator_agent}")
 
                     continue
 
-            # Case 3: Unsupported data type
+            # Case 4: Reject - Unsupported data type
             # Updating log entry
-            write_log( filename=request_id, message=f"SCORE_PARSER | FAILED | Unsupported data format | {evaluator_agent}")
+            write_log( filename=request_id, message=f"{MODULE_NAME} | FAILED | Unsupported data format | {evaluator_agent}")
             write_log( filename=request_id, message=f"ERROR : Unsupported data format = {evaluator_agent}")
 
         except Exception as e:
             # Catch unexpected errors (safety net for production stability)
 
             # Updating log entry
-            write_log( filename=request_id, message=f"SCORE_PARSER | FAILED | {evaluator_agent}")
+            write_log( filename=request_id, message=f"{MODULE_NAME} | FAILED | {evaluator_agent}")
             write_log( filename=request_id, message=f"ERROR : {str(e)}")
 
     # Updating log entry
-    write_log(filename=request_id, message=f"SCORE_PARSER | SUCCESS | Parsed {len(parsed_results)} evaluator results")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Parsed {len(parsed_results)} evaluator results")
 
     return parsed_results

@@ -1,4 +1,5 @@
 # scoring_prompt_orchestrator.py
+MODULE_NAME = "SCORING_PROMPT_ORCHESTRATOR"
 
 from functions.scoring_prompt_builder import build_scoring_prompt
 from functions.log_generator import write_log
@@ -12,7 +13,7 @@ def build_scoring_prompt_orchestrator(request_id, original_prompt, model_outputs
     """
 
     # Updating log entry
-    write_log(filename=request_id, message="SCORING_PROMPT_ORCHESTRATOR | START | Building scoring prompts")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | START | Building scoring prompts")
 
     scoring_prompts = {}
 
@@ -23,7 +24,7 @@ def build_scoring_prompt_orchestrator(request_id, original_prompt, model_outputs
         if candidate_model not in model_outputs:
 
             # Updating log entry
-            write_log(filename=request_id, message=f"SCORING_PROMPT_ORCHESTRATOR | FAILED | Candidate model output missing | {candidate_model}")
+            write_log(filename=request_id, message=f"{MODULE_NAME} | FAILED | Candidate model output missing | {candidate_model}")
             write_log(filename=request_id, message=f"ERROR : Candidate model output missing = {candidate_model}")
 
             continue
@@ -43,9 +44,9 @@ def build_scoring_prompt_orchestrator(request_id, original_prompt, model_outputs
         scoring_prompts[evaluator_model] = scoring_prompt
 
         # Updating log entry
-        write_log(filename=request_id, message=f"SCORING_PROMPT_ORCHESTRATOR | SUCCESS | Evaluator Model = {evaluator_model} | Candidate Model = {candidate_model}")
+        write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Evaluator Model = {evaluator_model} | Candidate Model = {candidate_model}")
 
     # Updating log entry
-    write_log(filename=request_id, message=f"SCORING_PROMPT_ORCHESTRATOR | SUCCESS | Generated {len(scoring_prompts)} scoring prompts")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Generated {len(scoring_prompts)} scoring prompts")
     
     return scoring_prompts

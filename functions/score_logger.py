@@ -1,4 +1,5 @@
 # score_logger.py
+MODULE_NAME = "SCORE_LOGGER"
 
 # Import required modules
 import json
@@ -22,6 +23,6 @@ def save_scores_log(request_id, scores, dir):
         json.dump(data, f, indent=4, ensure_ascii=False)
 
     # Updating log entry 
-    write_log(filename=request_id, message=f"SCORE_LOGGER | SUCCESS | Score file saved | {filename}")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Score file saved | {filename}")
 
     return data

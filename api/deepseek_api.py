@@ -1,6 +1,8 @@
 # deepseek_api.py
+MODULE_NAME = "DEEPSEEK_API"
 
-from openai import OpenAI
+# from openai import OpenAI
+from openai import AsyncOpenAI
 from dotenv import load_dotenv
 from models.response_data import get_response_data
 from functions.log_generator import write_log
@@ -11,10 +13,10 @@ load_dotenv()
 
 
 # This function sends a prompt to DeepSeek and returns structured response data
-def call_deepseek(prompt, model, key, request_id):
+async def call_deepseek(prompt, model, key, system_prompt, request_id):
 
     # DeepSeek uses OpenAI-compatible API format
-    client = OpenAI(
+    client = AsyncOpenAI(
         api_key=key,
         base_url="https://api.deepseek.com/"   # DeepSeek base URL
     )
@@ -23,13 +25,13 @@ def call_deepseek(prompt, model, key, request_id):
 
     try:
         # Updating log entry
-        write_log(filename=request_id, message=f"DEEPSEEK_API | START | Request initiated | {model}")
+        write_log(filename=request_id, message=f"{MODULE_NAME} | START | Request initiated | {model}")
 
         # API Call
-        response = client.chat.completions.create(
+        response = await client.chat.completions.create(
             model=model,   # Example: deepseek-chat / deepseek-coder
             messages=[
-                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt}
             ]
         )
@@ -40,6 +42,8 @@ def call_deepseek(prompt, model, key, request_id):
         # Return Success Data
         return get_response_data(
             model_id=model,
+            provider_name="deepseek",
+            input=prompt,
             output=response.choices[0].message.content,
             p_tokens=response.usage.prompt_tokens,
             c_tokens=response.usage.completion_tokens,
@@ -65,6 +69,8 @@ def call_deepseek(prompt, model, key, request_id):
         # Return Error Data
         return get_response_data(
             model_id=model,
+            provider_name="deepseek",
+            input=prompt,
             status="error",
             error=str(e),
             p_tokens=p_tokens,

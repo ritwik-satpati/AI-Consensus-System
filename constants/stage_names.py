@@ -1,4 +1,5 @@
-# constants/stage_names.py
+# stage_names.py
+MODULE_NAME = "STAGE_NAMES"
 
 # =========================
 # Stage Names

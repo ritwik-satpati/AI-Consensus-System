@@ -1,38 +1,32 @@
 # test.py
+MODULE_NAME = "TEST"
 
 from functions.log_generator import write_log
-from api.deepseek_api import call_deepseek
-# Import
-import os
 from dotenv import load_dotenv
-from models.api_data import get_api_data
 from functions.log_generator import write_log
-
 
 # Load environment variables from .env file
 load_dotenv()
 
 def test():
 
-    # Hardcoded request_id & original_prompt
-    request_id = "XXXX_214848_791687"
-    original_prompt = "Explain API in simple words within 100 words"
+    # Hardcoded request_id & prompts
+    request_id = "XXXX_XXXXXX_XXXXXX"
+    base_prompt = "Explain API in simple words within 100 words"
+    system_prompt = "You are a helpful assistant."
 
     # Updating log entry 
-    write_log(filename=request_id, message=f"TEST | START | Used for replay/debug")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | START | Used for replay/debug")
 
-
-    resposne = call_deepseek(
-        prompt=original_prompt, 
-        model="deepseek-chat", 
-        key=os.getenv("DEEPSEEK_API_KEY"), 
-        request_id=request_id
-    )
-
-    print(resposne)
+    print("This is for internal Tesing!")
+    
+    # Tesing code - Start
+    
+    pass
+    
+    # Tesing code - End
 
     # Updating log entry 
-    write_log(filename=request_id, message=f"TEST | END | Used for replay/debug")
-
+    write_log(filename=request_id, message=f"{MODULE_NAME} | END | Used for replay/debug")
 
     return True

@@ -1,4 +1,5 @@
 # log_generator.py
+MODULE_NAME = "LOG_GENERATOR"
 
 import os
 from functions.time_utils import get_current_time

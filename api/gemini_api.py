@@ -1,7 +1,8 @@
 # gemini_api.py
+MODULE_NAME = "GEMINI_API"
 
-from dotenv import load_dotenv
 from google import genai
+from dotenv import load_dotenv
 from models.response_data import get_response_data
 from functions.log_generator import write_log
 
@@ -9,19 +10,19 @@ from functions.log_generator import write_log
 load_dotenv()
 
 # This function sends a prompt to Gemini and returns the response
-def call_gemini(prompt, model, key, request_id):
+async def call_gemini(prompt, model, key, system_prompt, request_id):
     
     # Create Gemini client using the API key from .env
     client = genai.Client(api_key=key)
 
     try:
         # Updating log entry 
-        write_log(filename=request_id, message=f"GEMINI_API | START | Request initiated | {model}")
+        write_log(filename=request_id, message=f"{MODULE_NAME} | START | Request initiated | {model}")
 
         # API Call
-        response = client.models.generate_content(
+        response = await client.aio.models.generate_content(
             model=model,
-            config={"system_instruction": "You are a helpful assistant."},
+            config={"system_instruction": system_prompt},
             contents=prompt
         )
 
@@ -29,11 +30,13 @@ def call_gemini(prompt, model, key, request_id):
         # print(response)
 
         # Updating log entry 
-        write_log(filename=request_id, message=f"GEMINI_API | SUCCESS | Response received | {model} | Prompt Tokens = {response.usage_metadata.prompt_token_count} | Completion Tokens = {response.usage_metadata.candidates_token_count}")
+        write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Response received | {model} | Prompt Tokens = {response.usage_metadata.prompt_token_count} | Completion Tokens = {response.usage_metadata.candidates_token_count}")
 
         # Return Success Data
         return get_response_data(
             model_id=model,
+            provider_name="google",
+            input=prompt,
             output=response.text,
             p_tokens=response.usage_metadata.prompt_token_count,
             c_tokens=response.usage_metadata.candidates_token_count,
@@ -49,12 +52,14 @@ def call_gemini(prompt, model, key, request_id):
             c_tokens = response.usage_metadata.candidates_token_count or 0
 
         # Updating log entry 
-        write_log(filename=request_id, message=f"GEMINI_API | FAILED | Error during API call | {model} | Prompt Tokens = {p_tokens} | Completion Tokens = {c_tokens}")
+        write_log(filename=request_id, message=f"{MODULE_NAME} | FAILED | Error during API call | {model} | Prompt Tokens = {p_tokens} | Completion Tokens = {c_tokens}")
         write_log(filename=request_id, message=f"ERROR : {str(e)}'")
         
         # Return Error Data
         return get_response_data(
             model_id=model,
+            provider_name="google",
+            input=prompt,
             status="error",
             error=str(e),
             p_tokens=p_tokens,

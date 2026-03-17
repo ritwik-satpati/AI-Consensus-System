@@ -1,4 +1,5 @@
 # request_id_generator.py
+MODULE_NAME = "REQUEST_ID_GENERATOR"
 
 # Import modules
 from functions.time_utils import get_current_time
@@ -16,8 +17,8 @@ def generate_request_id(pre_log_messages = []):
         for pre_log_message in pre_log_messages:
             write_log(filename=request_id, message=f"{pre_log_message}", current_time=time)
 
-    # write_log(filename=request_id, message=f"AI_CONSENSUS_SYSTEM | START | AI_CONSENSUS_SYSTEM", current_time=time)
-    write_log(filename=request_id, message=f"REQUEST_ID_GENERATOR | SUCCESS | Request Id generated | {request_id}", current_time=time)
+    # Updating log entry
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Request Id generated | {request_id}", current_time=time)
 
     # Format: YYYYMMDD_HHMMSS
     # return datetime.now().strftime("%Y%m%d_%H%M%S_%f")

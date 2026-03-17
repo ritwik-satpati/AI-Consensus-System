@@ -1,4 +1,5 @@
 # consensus_prompt_builder
+MODULE_NAME = "CONSENSUS_PROMPT_BUILDER"
 
 from functions.log_generator import write_log
 
@@ -12,7 +13,7 @@ def build_consensus_prompt(original_prompt, structured_result, request_id):
         combined_prompt += f"{model}:\n{answer}\n\n"
 
         # Updating log entry 
-        write_log(filename=request_id, message=f"CONSENSUS_PROMPT_BUILDER | PROCESS | Combined Prompt added | {model}")
+        write_log(filename=request_id, message=f"{MODULE_NAME} | PROCESS | Combined Prompt added | {model}")
 
 
     combined_prompt += (
@@ -21,7 +22,7 @@ def build_consensus_prompt(original_prompt, structured_result, request_id):
     )
 
     # Updating log entry 
-    write_log(filename=request_id, message=f"CONSENSUS_PROMPT_BUILDER | SUCCESS | Combined Prompt created using {len(structured_result)} model responses")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Combined Prompt created using {len(structured_result)} model responses")
 
     # print(combined_prompt)
 

@@ -1,6 +1,8 @@
 # openai_api.py
+MODULE_NAME = "OPENAI_API"
 
-from openai import OpenAI
+# from openai import OpenAI
+from openai import AsyncOpenAI
 from dotenv import load_dotenv
 from models.response_data import get_response_data
 from functions.log_generator import write_log
@@ -11,32 +13,34 @@ load_dotenv()
 
 
 # This function sends a prompt to OpenAI and returns structured response data
-def call_openai(prompt, model, key, request_id):
+async def call_openai(prompt, model, key, system_prompt, request_id):
 
     # Create OpenAI client using API key stored in .env file
-    client = OpenAI(api_key=key)
+    client = AsyncOpenAI(api_key=key)
 
     response = None  # Predefine response for safer exception handling
 
     try:
         # Updating log entry 
-        write_log(filename=request_id, message=f"OPENAI_API | START | Request initiated | {model}")
+        write_log(filename=request_id, message=f"{MODULE_NAME} | START | Request initiated | {model}")
 
         # API Call
-        response = client.chat.completions.create(
+        response = await client.chat.completions.create(
             model=model,
             messages=[
-                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt}
             ]
         )
 
         # Updating log entry 
-        write_log(filename=request_id, message=f"OPENAI_API | SUCCESS | Response received | {model} | Prompt Tokens = {response.usage.prompt_tokens} | Completion Tokens = {response.usage.completion_tokens}")
+        write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Response received | {model} | Prompt Tokens = {response.usage.prompt_tokens} | Completion Tokens = {response.usage.completion_tokens}")
 
         # Return Success Data
         return get_response_data(
             model_id=model,
+            provider_name="openai",
+            input=prompt,
             output=response.choices[0].message.content,
             p_tokens=response.usage.prompt_tokens,
             c_tokens=response.usage.completion_tokens,
@@ -55,12 +59,14 @@ def call_openai(prompt, model, key, request_id):
             c_tokens = response.usage.completion_tokens or 0
 
         # Updating log entry 
-        write_log(filename=request_id, message=f"OPENAI_API | FAILED | Error during API call | {model} | Prompt Tokens = {p_tokens} | Completion Tokens = {c_tokens}")
+        write_log(filename=request_id, message=f"{MODULE_NAME} | FAILED | Error during API call | {model} | Prompt Tokens = {p_tokens} | Completion Tokens = {c_tokens}")
         write_log(filename=request_id, message=f"ERROR : {str(e)}'")
 
         # Return Error Data
         return get_response_data(
             model_id=model,
+            provider_name="openai",
+            input=prompt,
             status="error",
             error=str(e),
             p_tokens=p_tokens,

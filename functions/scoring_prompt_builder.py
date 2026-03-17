@@ -1,4 +1,5 @@
 # scoring_prompt_builder.py
+MODULE_NAME = "SCORING_PROMPT_BUILDER"
 
 from functions.log_generator import write_log
 
@@ -36,6 +37,6 @@ Rules:
 """
 
     # Updating log entry 
-    write_log(filename=request_id, message=f"SCORING_PROMPT_BUILDER | SUCCESS | Scoring Prompt created | {model}")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Scoring Prompt created | {model}")
     
     return prompt_text

@@ -1,6 +1,8 @@
 # claude_api.py
+MODULE_NAME = "CLAUDE_API"
 
-import anthropic
+# from anthropic import Anthropic
+from anthropic import AsyncAnthropic
 from dotenv import load_dotenv
 from models.response_data import get_response_data
 from functions.log_generator import write_log
@@ -10,23 +12,23 @@ import httpx
 load_dotenv()
 
 # This function sends a prompt to Claude and returns the response
-def call_claude(prompt, model, key, request_id):
+async def call_claude(prompt, model, key, system_prompt, request_id):
 
     # Create Anthropic client using the API key from .env
-    client = anthropic.Anthropic(
+    client = AsyncAnthropic(
     api_key=key,
-    http_client=httpx.Client(verify=False)
+    http_client=httpx.AsyncClient(verify=False)
 )
 
     try:
         # Updating log entry
-        write_log(filename=request_id, message=f"CLAUDE_API | START | Request initiated | {model}")
+        write_log(filename=request_id, message=f"{MODULE_NAME} | START | Request initiated | {model}")
 
         # API Call
-        response = client.messages.create(
+        response = await client.messages.create(
             model=model,
             max_tokens=8096,
-            system="You are a helpful assistant.",
+            system=system_prompt,
             messages=[
                 {"role": "user", "content": prompt}
             ]
@@ -35,11 +37,13 @@ def call_claude(prompt, model, key, request_id):
         # print(response)
 
         # Updating log entry
-        write_log(filename=request_id, message=f"CLAUDE_API | SUCCESS | Response received | {model} | Prompt Tokens = {response.usage.input_tokens} | Completion Tokens = {response.usage.output_tokens}")
+        write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Response received | {model} | Prompt Tokens = {response.usage.input_tokens} | Completion Tokens = {response.usage.output_tokens}")
 
         # Return Success Data
         return get_response_data(
             model_id=model,
+            provider_name="anthropic",
+            input=prompt,
             output=response.content[0].text,
             p_tokens=response.usage.input_tokens,
             c_tokens=response.usage.output_tokens,
@@ -55,12 +59,14 @@ def call_claude(prompt, model, key, request_id):
             c_tokens = response.usage.output_tokens or 0
 
         # Updating log entry
-        write_log(filename=request_id, message=f"CLAUDE_API | FAILED | Error during API call | {model} | Prompt Tokens = {p_tokens} | Completion Tokens = {c_tokens}")
+        write_log(filename=request_id, message=f"{MODULE_NAME} | FAILED | Error during API call | {model} | Prompt Tokens = {p_tokens} | Completion Tokens = {c_tokens}")
         write_log(filename=request_id, message=f"ERROR : {str(e)}'")
 
         # Return Error Data
         return get_response_data(
             model_id=model,
+            provider_name="anthropic",
+            input=prompt,
             status="error",
             error=str(e),
             p_tokens=p_tokens,

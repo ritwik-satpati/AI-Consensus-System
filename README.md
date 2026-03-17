@@ -1,4 +1,4 @@
-# AI Consensus System - V 1.0
+# AI Consensus System - V2 - Version 1.1.0
 
 A robust Python-based orchestration pipeline that leverages multiple LLMs to generate, refine, and peer-evaluate responses. The system ensures that the final output is not produced by a single model, but emerges from a structured multi-stage consensus and scoring process.
 
@@ -17,9 +17,9 @@ Both follow the same generation and consensus stages but differ in how Stage 3 (
 
 📄 Detailed documentation:
 
-- **AI Consensus System – M1 - V1 - Version 1.0.0** $\Rightarrow$ [AI Consensus System – M1 Architecture](./AI_Consensus_System_M1.md)
-- **AI Consensus System – M2 - V1 - Version 1.0.0** $\Rightarrow$ [AI Consensus System – M2 Architecture](./AI_Consensus_System_M2.md)
-- [M1 vs M2 Comparison](./AI_Consensus_System_M1_vs_M2.md)
+- **AI Consensus System – M1 - V2 - Version 1.1.0** $\Rightarrow$ [AI Consensus System – M1 Architecture](./docs/AI_Consensus_System_M1.md)
+- **AI Consensus System – M2 - V2 - Version 1.1.0** $\Rightarrow$ [AI Consensus System – M2 Architecture](./docs/AI_Consensus_System_M2.md)
+- [M1 vs M2 Comparison](./docs/AI_Consensus_System_M1_vs_M2.md)
 
 ---
 
@@ -117,9 +117,17 @@ Tested with:
 
 ```bash
 pip install python-dotenv
+pip install json-repair
+pip install asyncio
+pip install pandas
+pip install python-certifi-win32
+pip install --upgrade certifi
+pip install --upgrade grpcio grpcio-status cryptography
+
 pip install openai
 pip install -U google-genai
 pip install anthropic
+pip install xai_sdk
 ```
 
 ---
@@ -136,10 +144,22 @@ OPENAI_API_KEY=XXXXX
 GEMINI_API_KEY=XXXXX
 
 # Claude API key used by the Claude client
-ANTHROPIC_API_KEY=xxxxx
+ANTHROPIC_API_KEY=XXXXX
 
 # Deepseek API key used by the Deepseek client
-DEEPSEEK_API_KEY=xxxxxx
+DEEPSEEK_API_KEY=xxxxx
+
+# NVIDIA API key used by NVIDIA clients
+NVIDIA_API_KEY=XXXXX
+
+# XAI API key used by Grok clients
+XAI_API_KEY=xxxxx
+
+# Meta API key used by Meta clients
+META_API_KEY=XXXXX
+
+# Mistral API key used by Mistral.ai clients
+MISTRAL_API_KEY=XXXXX
 ```
 
 Configure:
@@ -169,5 +189,9 @@ The AI Consensus System currently supports multiple AI providers through modular
 
 - **OpenAI**
 - **Google Gemini**
-- **Anthropic (Claude)**
+- **Anthropic Claude**
 - **DeepSeek**
+- **Nvidia**
+- **xAI Grok**
+- **Meta**
+- **Mistral.ai**

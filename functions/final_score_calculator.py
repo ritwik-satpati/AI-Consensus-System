@@ -1,11 +1,12 @@
 # final_score_calculator.py
+MODULE_NAME = "FINAL_SCORE_CALCULATOR"
 
 from functions.log_generator import write_log
 
 def calculate_weighted_score(agent_scores, request_id):
 
     # Updating log entry 
-    write_log(filename=request_id, message="FINAL_SCORE_CALCULATOR | START | Calculating weighted scores")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | START | Calculating weighted scores")
 
     weights = {
         "accuracy": 0.4,
@@ -23,10 +24,10 @@ def calculate_weighted_score(agent_scores, request_id):
         final[agent] = round(score, 2)
 
         # Updating log entry 
-        write_log(filename=request_id, message=f"FINAL_SCORE_CALCULATOR | PROCESS | Weighted score computed for {agent}")
+        write_log(filename=request_id, message=f"{MODULE_NAME} | PROCESS | Weighted score computed for {agent}")
     
     # Updating log entry 
-    write_log(filename=request_id, message=f"FINAL_SCORE_CALCULATOR | SUCCESS | Weighted scores calculated for {len(final)} agents")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Weighted scores calculated for {len(final)} agents")
     
 
     return final

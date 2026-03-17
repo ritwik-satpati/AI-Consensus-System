@@ -1,0 +1,227 @@
+[
+    {
+        "stage": "STAGE_1",
+        "model": "gpt-4o-mini",
+        "provider": "openai",
+        "prompt_token": 29,
+        "completion_token": 104,
+        "other_token": 0,
+        "total_token": 133
+    },
+    {
+        "stage": "STAGE_1",
+        "model": "gemini-2.5-flash-lite",
+        "provider": "google",
+        "prompt_token": 24,
+        "completion_token": 94,
+        "other_token": 0,
+        "total_token": 118
+    },
+    {
+        "stage": "STAGE_1",
+        "model": "claude-haiku-4-5-20251001",
+        "provider": "anthropic",
+        "prompt_token": 29,
+        "completion_token": 134,
+        "other_token": 0,
+        "total_token": 163
+    },
+    {
+        "stage": "STAGE_1",
+        "model": "nvidia/nemotron-3-super-120b-a12b",
+        "provider": "nvidia",
+        "prompt_token": 40,
+        "completion_token": 138,
+        "other_token": 0,
+        "total_token": 178
+    },
+    {
+        "stage": "STAGE_1",
+        "model": "meta/llama-4-maverick-17b-128e-instruct",
+        "provider": "meta",
+        "prompt_token": 33,
+        "completion_token": 109,
+        "other_token": 0,
+        "total_token": 142
+    },
+    {
+        "stage": "STAGE_1",
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "prompt_token": 41,
+        "completion_token": 140,
+        "other_token": 0,
+        "total_token": 181
+    },
+    {
+        "stage": "STAGE_2",
+        "model": "gpt-4o-mini",
+        "provider": "openai",
+        "prompt_token": 833,
+        "completion_token": 115,
+        "other_token": 0,
+        "total_token": 948
+    },
+    {
+        "stage": "STAGE_2",
+        "model": "gemini-2.5-flash-lite",
+        "provider": "google",
+        "prompt_token": 878,
+        "completion_token": 114,
+        "other_token": 0,
+        "total_token": 992
+    },
+    {
+        "stage": "STAGE_2",
+        "model": "claude-haiku-4-5-20251001",
+        "provider": "anthropic",
+        "prompt_token": 901,
+        "completion_token": 177,
+        "other_token": 0,
+        "total_token": 1078
+    },
+    {
+        "stage": "STAGE_2",
+        "model": "nvidia/nemotron-3-super-120b-a12b",
+        "provider": "nvidia",
+        "prompt_token": 866,
+        "completion_token": 146,
+        "other_token": 0,
+        "total_token": 1012
+    },
+    {
+        "stage": "STAGE_2",
+        "model": "meta/llama-4-maverick-17b-128e-instruct",
+        "provider": "meta",
+        "prompt_token": 836,
+        "completion_token": 113,
+        "other_token": 0,
+        "total_token": 949
+    },
+    {
+        "stage": "STAGE_2",
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "prompt_token": 867,
+        "completion_token": 137,
+        "other_token": 0,
+        "total_token": 1004
+    },
+    {
+        "stage": "STAGE_3",
+        "model": "gpt-4o-mini",
+        "provider": "openai",
+        "prompt_token": 311,
+        "completion_token": 48,
+        "other_token": 0,
+        "total_token": 359
+    },
+    {
+        "stage": "STAGE_3",
+        "model": "gemini-2.5-flash-lite",
+        "provider": "google",
+        "prompt_token": 320,
+        "completion_token": 38,
+        "other_token": 0,
+        "total_token": 358
+    },
+    {
+        "stage": "STAGE_3",
+        "model": "claude-haiku-4-5-20251001",
+        "provider": "anthropic",
+        "prompt_token": 337,
+        "completion_token": 42,
+        "other_token": 0,
+        "total_token": 379
+    },
+    {
+        "stage": "STAGE_3",
+        "model": "nvidia/nemotron-3-super-120b-a12b",
+        "provider": "nvidia",
+        "prompt_token": 341,
+        "completion_token": 36,
+        "other_token": 0,
+        "total_token": 377
+    },
+    {
+        "stage": "STAGE_3",
+        "model": "meta/llama-4-maverick-17b-128e-instruct",
+        "provider": "meta",
+        "prompt_token": 341,
+        "completion_token": 46,
+        "other_token": 0,
+        "total_token": 387
+    },
+    {
+        "stage": "STAGE_3",
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "prompt_token": 387,
+        "completion_token": 53,
+        "other_token": 0,
+        "total_token": 440
+    },
+    {
+        "stage": "ALL_STAGES",
+        "model": "gpt-4o-mini",
+        "provider": "openai",
+        "prompt_token": 1173,
+        "completion_token": 267,
+        "other_token": 0,
+        "total_token": 1440
+    },
+    {
+        "stage": "ALL_STAGES",
+        "model": "gemini-2.5-flash-lite",
+        "provider": "google",
+        "prompt_token": 1222,
+        "completion_token": 246,
+        "other_token": 0,
+        "total_token": 1468
+    },
+    {
+        "stage": "ALL_STAGES",
+        "model": "claude-haiku-4-5-20251001",
+        "provider": "anthropic",
+        "prompt_token": 1267,
+        "completion_token": 353,
+        "other_token": 0,
+        "total_token": 1620
+    },
+    {
+        "stage": "ALL_STAGES",
+        "model": "nvidia/nemotron-3-super-120b-a12b",
+        "provider": "nvidia",
+        "prompt_token": 1247,
+        "completion_token": 320,
+        "other_token": 0,
+        "total_token": 1567
+    },
+    {
+        "stage": "ALL_STAGES",
+        "model": "meta/llama-4-maverick-17b-128e-instruct",
+        "provider": "meta",
+        "prompt_token": 1210,
+        "completion_token": 268,
+        "other_token": 0,
+        "total_token": 1478
+    },
+    {
+        "stage": "ALL_STAGES",
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "prompt_token": 1295,
+        "completion_token": 330,
+        "other_token": 0,
+        "total_token": 1625
+    },
+    {
+        "stage": "ALL_STAGES",
+        "model": "ALL_MODELS",
+        "provider": "ALL_PROVIDERS",
+        "prompt_token": 7414,
+        "completion_token": 1784,
+        "other_token": 0,
+        "total_token": 9198
+    }
+]

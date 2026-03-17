@@ -1,4 +1,5 @@
 # score_logger.py
+MODULE_NAME = "WINNER_LOGGER"
 
 # Import required modules
 import json
@@ -36,7 +37,7 @@ def save_winner_log(request_id, prompt, model, score, output, start_time, end_ti
         json.dump(data, f, indent=4, ensure_ascii=False)
 
     # Updating log entry 
-    write_log(filename=request_id, message=f"WINNER_LOGGER | SUCCESS | Winner file saved | {filename}")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Winner file saved | {filename}")
 
 
     return data

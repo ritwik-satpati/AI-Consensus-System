@@ -1,9 +1,10 @@
 # api_data.py
+MODULE_NAME = "API_DATA"
 
-def get_api_data(company_name, model_id, api_key):
+def get_api_data(provider_name, model_id, api_key):
 
     return {
-        "company": company_name,
+        "provider": provider_name,
         "model": model_id,
         "key": api_key
     }

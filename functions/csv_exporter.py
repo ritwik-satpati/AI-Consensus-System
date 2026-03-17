@@ -1,4 +1,5 @@
 # csv_exporter.py
+MODULE_NAME = "CSV_EXPORTER"
 
 # Import modules
 import os
@@ -18,7 +19,7 @@ def export_csv(request_id, data, directory):
     """
 
     # # Updating log entry
-    # write_log(filename=request_id, message="CSV_EXPORTER | START | CSV export initiated")
+    # write_log(filename=request_id, message=f"{MODULE_NAME} | START | CSV export initiated")
 
     # Ensure directory exists
     os.makedirs(directory, exist_ok=True)
@@ -36,6 +37,6 @@ def export_csv(request_id, data, directory):
     df.to_csv(filepath, index=False)
 
     # # Updating log entry
-    write_log(filename=request_id, message=f"CSV_EXPORTER | SUCCESS | CSV file created | {filepath}")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | CSV file created | {filepath}")
 
     return filepath

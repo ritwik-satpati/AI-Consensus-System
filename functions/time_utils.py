@@ -1,4 +1,5 @@
 # time_utils.py
+MODULE_NAME = "TIME_UTILS"
 
 from datetime import datetime
 

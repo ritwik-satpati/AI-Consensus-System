@@ -1,0 +1,10 @@
+{
+    "request_id": "20260317_115635_126987",
+    "prompt": "Explain API in simple words within 100 words",
+    "model": "claude-haiku-4-5-20251001",
+    "score": 9.4,
+    "output": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\n**Think of it like a waiter in a restaurant:** You don't go into the kitchen to cook your meal. Instead, you tell the waiter (API) what you want, the waiter takes your order to the kitchen (server/system), and brings back your food (response). You don't need to know how the kitchen works—you just interact with the waiter.\n\n**In practice:** When you use a weather app, it sends a request through an API to a weather service. The service sends back the current weather information without you needing to understand how it retrieves or processes that data.\n\nAPIs enable software applications to work together seamlessly, share information safely, and integrate services easily—powering everything from social media logins to mobile apps.",
+    "start_time": "2026-03-17 11:56:35.131766 +0530",
+    "end_time": "2026-03-17 11:57:29.702185 +0530",
+    "execution_time": 54.5683
+}

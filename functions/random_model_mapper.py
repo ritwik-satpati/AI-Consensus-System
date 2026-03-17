@@ -1,10 +1,10 @@
 # random_model_mapper.py
+MODULE_NAME = "RANDOM_MODEL_MAPPER"
 
 import random
 from functions.log_generator import write_log
 import json
 import os
-
 
 
 def generate_random_model_mapping(request_id, model_outputs, directory):
@@ -17,13 +17,13 @@ def generate_random_model_mapping(request_id, model_outputs, directory):
     """
 
     # Updating log entry
-    write_log(filename=request_id, message="RANDOM_MODEL_MAPPER | START | Random model mapping initiated")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | START | Random model mapping initiated")
 
     models = list(model_outputs.keys())
 
     if len(models) < 2:
         # Updating log entry 
-        write_log(filename=request_id, message=f"RANDOM_MODEL_MAPPER | FAILED | Provided models = {len(models)} | Required models = 2")
+        write_log(filename=request_id, message=f"{MODULE_NAME} | FAILED | Provided models = {len(models)} | Required models = 2")
         write_log(filename=request_id, message=f"ERROR : At least 2 models required for random model mapping")
         
         raise ValueError("At least 2 models required for cross evaluation.")
@@ -40,7 +40,7 @@ def generate_random_model_mapping(request_id, model_outputs, directory):
     random_map = dict(zip(models, shuffled))
 
     # Updating log entry
-    write_log(filename=request_id, message=f"RANDOM_MODEL_MAPPER | SUCCESS | Random model mapping generated")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Random model mapping generated")
 
      # Ensure structured folder exists
     os.makedirs(directory, exist_ok=True)
@@ -53,6 +53,6 @@ def generate_random_model_mapping(request_id, model_outputs, directory):
         json.dump(random_map, file, indent=4, ensure_ascii=False)
 
     # Updating log entry
-    write_log(filename=request_id, message=f"RANDOM_MODEL_MAPPER | SUCCESS | Random model mapping saved | {filename}")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Random model mapping saved | {filename}")
 
     return random_map

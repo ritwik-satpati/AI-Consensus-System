@@ -1,0 +1,38 @@
+{
+    "meta/llama-4-maverick-17b-128e-instruct": {
+        "accuracy": 9.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "conciseness": 8.0
+    },
+    "gpt-4o-mini": {
+        "accuracy": 10.0,
+        "clarity": 10.0,
+        "completeness": 9.0,
+        "conciseness": 9.0
+    },
+    "gemini-2.5-flash-lite": {
+        "accuracy": 9.0,
+        "clarity": 10.0,
+        "completeness": 8.0,
+        "conciseness": 9.0
+    },
+    "mistral-small-latest": {
+        "accuracy": 9.0,
+        "clarity": 9.0,
+        "completeness": 8.0,
+        "conciseness": 8.0
+    },
+    "nvidia/nemotron-3-super-120b-a12b": {
+        "accuracy": 9.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "conciseness": 8.0
+    },
+    "claude-haiku-4-5-20251001": {
+        "accuracy": 10.0,
+        "clarity": 10.0,
+        "completeness": 10.0,
+        "conciseness": 10.0
+    }
+}

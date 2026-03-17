@@ -1,0 +1,73 @@
+{
+    "request_id": "20260317_120033_193011",
+    "responses": [
+        {
+            "model": "gpt-4o-mini",
+            "provider": "openai",
+            "input": "Explain API in simple words within 100 words",
+            "output": "An API, or Application Programming Interface, is like a set of rules and tools that allows different software applications to communicate with each other. Think of it as a waiter in a restaurant: you tell the waiter what you want (the request), they take it to the kitchen (the backend), and bring back your food (the response). APIs let programmers request data or services from other software, making it easier to build applications without starting from scratch. They enable different systems to work together smoothly, sharing information and functionality efficiently.",
+            "prompt_token": 29,
+            "completion_token": 104,
+            "status": "success",
+            "error": null,
+            "created_at": "2026-03-17 12:00:44.078695 +0530"
+        },
+        {
+            "model": "gemini-2.5-flash-lite",
+            "provider": "google",
+            "input": "Explain API in simple words within 100 words",
+            "output": "Think of an API (Application Programming Interface) like a waiter in a restaurant.\n\nYou, the customer, want food (data or a service). The kitchen (another application or system) has the food. The waiter (API) takes your order, tells the kitchen what you want, and brings the food back to you.\n\nAn API allows different software applications to communicate and share information or functionality with each other, without needing to know how the other works internally.",
+            "prompt_token": 24,
+            "completion_token": 94,
+            "status": "success",
+            "error": null,
+            "created_at": "2026-03-17 12:00:42.414607 +0530"
+        },
+        {
+            "model": "claude-haiku-4-5-20251001",
+            "provider": "anthropic",
+            "input": "Explain API in simple words within 100 words",
+            "output": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is like a waiter in a restaurant. You order food (request), the waiter takes your order to the kitchen (server), and brings back your meal (response).\n\nIn software, an API allows different programs to communicate and share data. It acts as a bridge between applications, letting them request information or perform actions without needing direct access to each other's code.\n\n**Example:** When you check weather on your phone, the app uses a weather service's API to fetch current conditions without building its own weather system.\n\nAPIs make technology work together seamlessly.",
+            "prompt_token": 29,
+            "completion_token": 134,
+            "status": "success",
+            "error": null,
+            "created_at": "2026-03-17 12:00:45.091656 +0530"
+        },
+        {
+            "model": "nvidia/nemotron-3-super-120b-a12b",
+            "provider": "nvidia",
+            "input": "Explain API in simple words within 100 words",
+            "output": "An API (Application Programming Interface) is a set of rules that lets different software programs talk to each other. Think of it like a waiter in a restaurant: you (the app) tell the waiter (API) what you want (e.g., “get today’s weather”), the waiter goes to the kitchen (another system), gets the data, and brings it back to you. You don’t need to know how the kitchen works — just how to ask. APIs let apps share data and features easily, like logging in with Google or checking stock prices. They make software work together smoothly, without exposing messy inner details. Simple, powerful, and everywhere. (98 words)",
+            "prompt_token": 40,
+            "completion_token": 138,
+            "status": "success",
+            "error": null,
+            "created_at": "2026-03-17 12:00:43.185558 +0530"
+        },
+        {
+            "model": "meta/llama-4-maverick-17b-128e-instruct",
+            "provider": "meta",
+            "input": "Explain API in simple words within 100 words",
+            "output": "An API, or Application Programming Interface, is a messenger between different software systems. Imagine you're at a restaurant and you want to order food. You can't just walk into the kitchen and make it yourself, so you tell the waiter what you want. The waiter takes your order to the kitchen staff, and they prepare your food. Then, the waiter brings it back to you. Similarly, an API is like the waiter, allowing different systems to communicate with each other, sending requests and receiving responses, without directly interacting with each other's internal workings.",
+            "prompt_token": 33,
+            "completion_token": 109,
+            "status": "success",
+            "error": null,
+            "created_at": "2026-03-17 12:00:42.195134 +0530"
+        },
+        {
+            "model": "mistral-small-latest",
+            "provider": "mistral",
+            "input": "Explain API in simple words within 100 words",
+            "output": "An **API (Application Programming Interface)** is like a waiter in a restaurant. You (the customer) ask for food (data or a service) by telling the waiter (API) what you want. The waiter takes your order to the kitchen (server), gets the food, and brings it back to you—without you needing to know how the kitchen works.\n\nIn tech terms, an API lets different software talk to each other. For example, when you check the weather on your phone, the app uses an API to fetch data from a weather service’s server, without you seeing the behind-the-scenes process. APIs make it easy to share and use data across apps and services.",
+            "prompt_token": 41,
+            "completion_token": 140,
+            "status": "success",
+            "error": null,
+            "created_at": "2026-03-17 12:00:42.967331 +0530"
+        }
+    ],
+    "status": "success",
+    "created_at": "2026-03-17 12:00:45.104700 +0530"
+}

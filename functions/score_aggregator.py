@@ -1,4 +1,5 @@
 # score_aggregator.py
+MODULE_NAME = "SCORE_AGGREGATOR"
 
 from functions.log_generator import write_log
 
@@ -36,10 +37,10 @@ def aggregate_model_scores(parsed_scores, request_id, remove_self_bias=True):
         }
 
         # Updating log entry 
-        write_log(filename=request_id, message=f"SCORE_AGGREGATOR | PROCESS | Averaged scores computed | {agent}")
+        write_log(filename=request_id, message=f"{MODULE_NAME} | PROCESS | Averaged scores computed | {agent}")
 
     # Updating log entry 
-    write_log(filename=request_id, message=f"SCORE_AGGREGATOR | SUCCESS | Aggregated scores generated for {len(averaged)} agents")
-    write_log(filename=request_id, message=f"SCORE_AGGREGATOR | SUCCESS | Self-bias removed = {remove_self_bias}")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Aggregated scores generated for {len(averaged)} agents")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Self-bias removed = {remove_self_bias}")
 
     return averaged

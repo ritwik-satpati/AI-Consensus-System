@@ -1,0 +1,73 @@
+{
+    "request_id": "20260317_120033_193011",
+    "responses": [
+        {
+            "model": "gpt-4o-mini",
+            "provider": "openai",
+            "input": "\nYou are an unbiased AI evaluator.\n\nOriginal Question:\nExplain API in simple words within 100 words\n\nBelow is response from different AI agent(s):\n\n\nAgent Name: meta/llama-4-maverick-17b-128e-instruct\nResponse:\nAn API, or Application Programming Interface, is like a waiter in a restaurant. You (the customer) tell the waiter (API) what you want (data or a service), they take your order to the kitchen (server or another application), and bring back what you requested (the response). APIs enable different software systems to communicate, share data, and use each other's functionality without needing to know the internal workings. This makes it easier to build applications and services that work together seamlessly, like checking the weather on your phone by fetching data from a weather service.\n\n\nEvaluate the agent independently using the following parameters:\n\n1. Accuracy (1-10)\n2. Clarity (1-10)\n3. Completeness (1-10)\n4. Conciseness (1-10)\n\nReturn STRICT JSON ONLY in this exact structure in a single line without JSON Structure:\n\n{\"agent_name\": {\"accuracy\": number, \"clarity\": number, \"completeness\": number, \"conciseness\": number}}\n\nRules:\n- Do NOT include explanations or comments.\n- Output valid JSON only but one line without \"\" or \"\n\"\n- Scores must be integers between 1 and 10.\n",
+            "output": "{\"meta/llama-4-maverick-17b-128e-instruct\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 8}}",
+            "prompt_token": 311,
+            "completion_token": 48,
+            "status": "success",
+            "error": null,
+            "created_at": "2026-03-17 12:01:01.089115 +0530"
+        },
+        {
+            "model": "gemini-2.5-flash-lite",
+            "provider": "google",
+            "input": "\nYou are an unbiased AI evaluator.\n\nOriginal Question:\nExplain API in simple words within 100 words\n\nBelow is response from different AI agent(s):\n\n\nAgent Name: gpt-4o-mini\nResponse:\nAn API, or Application Programming Interface, is like a waiter in a restaurant. You (the customer) make a request for food (data or a service), and the waiter (API) takes your order to the kitchen (another system). The kitchen prepares the food and the waiter brings it back to you. Similarly, an API allows different software applications to communicate and share information without needing to know how each other works internally. APIs make it easier to build applications by enabling them to request services or data and function together seamlessly. They are essential for modern software to interact efficiently.\n\n\nEvaluate the agent independently using the following parameters:\n\n1. Accuracy (1-10)\n2. Clarity (1-10)\n3. Completeness (1-10)\n4. Conciseness (1-10)\n\nReturn STRICT JSON ONLY in this exact structure in a single line without JSON Structure:\n\n{\"agent_name\": {\"accuracy\": number, \"clarity\": number, \"completeness\": number, \"conciseness\": number}}\n\nRules:\n- Do NOT include explanations or comments.\n- Output valid JSON only but one line without \"\" or \"\n\"\n- Scores must be integers between 1 and 10.\n",
+            "output": "{\"gpt-4o-mini\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}",
+            "prompt_token": 320,
+            "completion_token": 38,
+            "status": "success",
+            "error": null,
+            "created_at": "2026-03-17 12:00:59.278341 +0530"
+        },
+        {
+            "model": "claude-haiku-4-5-20251001",
+            "provider": "anthropic",
+            "input": "\nYou are an unbiased AI evaluator.\n\nOriginal Question:\nExplain API in simple words within 100 words\n\nBelow is response from different AI agent(s):\n\n\nAgent Name: gemini-2.5-flash-lite\nResponse:\nAn API (Application Programming Interface) is like a menu and a waiter for software. The menu (API documentation) tells you what you can order and how to ask for it. The waiter (API itself) takes your request to the kitchen (another application or system), gets what you asked for, and brings it back.\n\nThis allows different software programs to communicate and share data or functionality without needing to know how each other works internally. It's a standardized way for apps to interact, enabling features like logging in with Google or getting real-time stock prices.\n\n\nEvaluate the agent independently using the following parameters:\n\n1. Accuracy (1-10)\n2. Clarity (1-10)\n3. Completeness (1-10)\n4. Conciseness (1-10)\n\nReturn STRICT JSON ONLY in this exact structure in a single line without JSON Structure:\n\n{\"agent_name\": {\"accuracy\": number, \"clarity\": number, \"completeness\": number, \"conciseness\": number}}\n\nRules:\n- Do NOT include explanations or comments.\n- Output valid JSON only but one line without \"\" or \"\n\"\n- Scores must be integers between 1 and 10.\n",
+            "output": "{\"gemini-2.5-flash-lite\": {\"accuracy\": 9, \"clarity\": 10, \"completeness\": 8, \"conciseness\": 9}}",
+            "prompt_token": 337,
+            "completion_token": 42,
+            "status": "success",
+            "error": null,
+            "created_at": "2026-03-17 12:00:59.517217 +0530"
+        },
+        {
+            "model": "nvidia/nemotron-3-super-120b-a12b",
+            "provider": "nvidia",
+            "input": "\nYou are an unbiased AI evaluator.\n\nOriginal Question:\nExplain API in simple words within 100 words\n\nBelow is response from different AI agent(s):\n\n\nAgent Name: mistral-small-latest\nResponse:\nAn **API (Application Programming Interface)** is like a waiter in a restaurant. You (the customer) order food (data or a service) by telling the waiter (API) what you want. The waiter takes your request to the kitchen (server), fetches the data, and brings it back to you—without you needing to know how the kitchen works.\n\nIn simple terms, an API lets different software programs communicate and share information. For example, when you check the weather on your phone, the app uses a weather API to fetch data from a server. APIs make technology work together smoothly by acting as a bridge between systems, enabling easy data exchange without exposing internal details.\n\n\nEvaluate the agent independently using the following parameters:\n\n1. Accuracy (1-10)\n2. Clarity (1-10)\n3. Completeness (1-10)\n4. Conciseness (1-10)\n\nReturn STRICT JSON ONLY in this exact structure in a single line without JSON Structure:\n\n{\"agent_name\": {\"accuracy\": number, \"clarity\": number, \"completeness\": number, \"conciseness\": number}}\n\nRules:\n- Do NOT include explanations or comments.\n- Output valid JSON only but one line without \"\" or \"\n\"\n- Scores must be integers between 1 and 10.\n",
+            "output": "{\"mistral-small-latest\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 8}}",
+            "prompt_token": 341,
+            "completion_token": 36,
+            "status": "success",
+            "error": null,
+            "created_at": "2026-03-17 12:00:59.116870 +0530"
+        },
+        {
+            "model": "meta/llama-4-maverick-17b-128e-instruct",
+            "provider": "meta",
+            "input": "\nYou are an unbiased AI evaluator.\n\nOriginal Question:\nExplain API in simple words within 100 words\n\nBelow is response from different AI agent(s):\n\n\nAgent Name: nvidia/nemotron-3-super-120b-a12b\nResponse:\nAn API (Application Programming Interface) is a set of rules that allows different software applications to communicate and share data or functionality. Think of it like a waiter in a restaurant: you (the app) tell the waiter what you want (a request), the waiter goes to the kitchen (another system), retrieves the data or service, and brings it back to you (the response). You don’t need to know how the kitchen works internally—only how to make the request. APIs enable apps to integrate features like logging in with Google, checking weather, or processing payments, without building everything from scratch. They promote efficiency, reusability, and seamless interaction between systems while hiding complex internal details. (98 words)\n\n\nEvaluate the agent independently using the following parameters:\n\n1. Accuracy (1-10)\n2. Clarity (1-10)\n3. Completeness (1-10)\n4. Conciseness (1-10)\n\nReturn STRICT JSON ONLY in this exact structure in a single line without JSON Structure:\n\n{\"agent_name\": {\"accuracy\": number, \"clarity\": number, \"completeness\": number, \"conciseness\": number}}\n\nRules:\n- Do NOT include explanations or comments.\n- Output valid JSON only but one line without \"\" or \"\n\"\n- Scores must be integers between 1 and 10.\n",
+            "output": "{\"nvidia/nemotron-3-super-120b-a12b\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 8}}",
+            "prompt_token": 341,
+            "completion_token": 46,
+            "status": "success",
+            "error": null,
+            "created_at": "2026-03-17 12:00:58.775586 +0530"
+        },
+        {
+            "model": "mistral-small-latest",
+            "provider": "mistral",
+            "input": "\nYou are an unbiased AI evaluator.\n\nOriginal Question:\nExplain API in simple words within 100 words\n\nBelow is response from different AI agent(s):\n\n\nAgent Name: claude-haiku-4-5-20251001\nResponse:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\n**Think of it like a waiter in a restaurant:** You (the customer/app) request something (data or a service), the waiter (API) takes your order to the kitchen (the backend system), and brings back your result—without you needing to know how the kitchen operates internally.\n\n**In practice:** When you check weather on your phone, the app uses a weather service's API to fetch current conditions without building its own weather system. Similarly, you can log in using Google without the app accessing Google's internal code.\n\nAPIs act as bridges between systems, enabling them to work together seamlessly by sharing functionality and information efficiently, while keeping internal details hidden.\n\n\nEvaluate the agent independently using the following parameters:\n\n1. Accuracy (1-10)\n2. Clarity (1-10)\n3. Completeness (1-10)\n4. Conciseness (1-10)\n\nReturn STRICT JSON ONLY in this exact structure in a single line without JSON Structure:\n\n{\"agent_name\": {\"accuracy\": number, \"clarity\": number, \"completeness\": number, \"conciseness\": number}}\n\nRules:\n- Do NOT include explanations or comments.\n- Output valid JSON only but one line without \"\" or \"\n\"\n- Scores must be integers between 1 and 10.\n",
+            "output": "{\"claude-haiku-4-5-20251001\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 10}}",
+            "prompt_token": 387,
+            "completion_token": 53,
+            "status": "success",
+            "error": null,
+            "created_at": "2026-03-17 12:00:59.310490 +0530"
+        }
+    ],
+    "status": "success",
+    "created_at": "2026-03-17 12:01:01.099746 +0530"
+}

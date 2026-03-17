@@ -1,4 +1,5 @@
 # winner_selector.py
+MODULE_NAME = "WINNER_SELECTOR"
 
 from functions.log_generator import write_log
 
@@ -26,6 +27,6 @@ def select_winner(final_scores, combined_model_outputs, request_id):
     }
 
     # Updating log entry 
-    write_log(filename=request_id, message=f"WINNER_SELECTOR | SUCCESS | Winner selected | {best_model} | {best_score}")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Winner selected | {best_model} | {best_score}")
 
     return data

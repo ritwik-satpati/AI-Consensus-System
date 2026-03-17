@@ -1,4 +1,5 @@
 # response_logger.py
+MODULE_NAME = "RESPONSE_LOGGER"
 
 # Import modules
 import json
@@ -7,7 +8,7 @@ from functions.time_utils import get_current_time
 from functions.log_generator import write_log
 
 # This function saves AI response data into a JSON log file
-def save_response_log(request_id, outputs, dir, prompt = None):
+def save_response_log(request_id, outputs, dir):
 
     # Ensure logs directory exists
     os.makedirs(dir, exist_ok=True)
@@ -18,8 +19,7 @@ def save_response_log(request_id, outputs, dir, prompt = None):
     # Structure the data to be saved
     data = {
         "request_id": request_id,
-        "input": prompt,
-        "outputs": outputs,
+        "responses": outputs,
         "status": "success",
         "created_at": get_current_time()
     }
@@ -29,6 +29,6 @@ def save_response_log(request_id, outputs, dir, prompt = None):
         json.dump(data, f, indent=4, ensure_ascii=False)
 
     # Updating log entry 
-    write_log(filename=request_id, message=f"RESPONSE_LOGGER | SUCCESS | Response log saved | {filename}")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Response log saved | {filename}")
 
     return data
