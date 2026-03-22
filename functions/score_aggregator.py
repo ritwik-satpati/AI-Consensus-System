@@ -2,9 +2,14 @@
 MODULE_NAME = "SCORE_AGGREGATOR"
 
 from functions.log_generator import write_log
+from functions.json_exporter import export_json
 
-def aggregate_model_scores(parsed_scores, request_id, remove_self_bias=True):
 
+def aggregate_model_scores(parsed_scores, request_id, remove_self_bias=False, directory=False):
+    """
+    This function average all the aggregate scores from all models (optionally remove self-scoring bias) 
+    """
+    
     collected = {}
 
     for evaluator, evaluations in parsed_scores.items():
@@ -38,6 +43,14 @@ def aggregate_model_scores(parsed_scores, request_id, remove_self_bias=True):
 
         # Updating log entry 
         write_log(filename=request_id, message=f"{MODULE_NAME} | PROCESS | Averaged scores computed | {agent}")
+
+    # Save the output using export_json
+    export_json(
+        request_id=request_id,
+        directory=directory,
+        data=averaged,
+        data_label="Aggregated Scores",
+    )
 
     # Updating log entry 
     write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Aggregated scores generated for {len(averaged)} agents")

@@ -2,8 +2,13 @@
 MODULE_NAME = "FINAL_SCORE_CALCULATOR"
 
 from functions.log_generator import write_log
+from functions.json_exporter import export_json
 
-def calculate_weighted_score(agent_scores, request_id):
+
+def calculate_weighted_score(agent_scores, request_id, directory=False):
+    """
+    This function calculate all the models final result using defined weights
+    """
 
     # Updating log entry 
     write_log(filename=request_id, message=f"{MODULE_NAME} | START | Calculating weighted scores")
@@ -26,8 +31,16 @@ def calculate_weighted_score(agent_scores, request_id):
         # Updating log entry 
         write_log(filename=request_id, message=f"{MODULE_NAME} | PROCESS | Weighted score computed for {agent}")
     
+    
+    # Save the output using export_json
+    export_json(
+        request_id=request_id,
+        directory=directory,
+        data=final,
+        data_label="Final Scores",
+    )
+
     # Updating log entry 
     write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Weighted scores calculated for {len(final)} agents")
     
-
     return final

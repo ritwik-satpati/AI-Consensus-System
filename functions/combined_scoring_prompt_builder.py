@@ -5,6 +5,10 @@ from functions.log_generator import write_log
 
 
 def build_combined_scoring_prompt(original_prompt, combined_structured_result, request_id):
+    """
+    This function used to create propmt using combined_structured_result at once for multiple models.
+    """
+    
     first_model = list(combined_structured_result.keys())[0]
 
     prompt_text = f"""
@@ -20,6 +24,7 @@ Below are responses from different AI agents:
         prompt_text += f"\nAgent Name: {model}\nResponse:\n{answer}\n"
 
     prompt_text += """
+
 Evaluate EACH agent independently using the following criteria (score each from 1 to 10):
 1. Accuracy – Correctness of the information.
 2. Clarity – How easy the response is to understand.
@@ -29,7 +34,7 @@ Evaluate EACH agent independently using the following criteria (score each from 
 Instructions::
 - Evaluate each agent independently.
 - Scores must be integers between 1 and 10.
-- Use the EXACT agent names provided after "Agent Name:" as JSON keys.
+- Use the EXACT agent names provided after "Agent Name: " as JSON keys.
 - Return ONLY valid JSON.
 - Do NOT include explanations, reasoning, or text outside the JSON.
 - Output must be a single-line JSON object.

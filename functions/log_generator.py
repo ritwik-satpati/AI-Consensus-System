@@ -12,7 +12,7 @@ def write_log(filename, message, directory="logs", current_time=None):
     Each log entry is written in the format:
     YYYY-MM-DD HH:MM:SS    <message>
     
-    Message >> SERVICE | STATUS | DETAILS
+    message >> SERVICE | STATUS | DETAILS
     """
 
     # If time is not provided, generate fresh timestamp

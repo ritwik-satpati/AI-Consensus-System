@@ -1,4 +1,4 @@
-# AI Consensus System - V2 - Version 1.1.0
+# AI Consensus System - V3 - Version 1.2.0
 
 A robust Python-based orchestration pipeline that leverages multiple LLMs to generate, refine, and peer-evaluate responses. The system ensures that the final output is not produced by a single model, but emerges from a structured multi-stage consensus and scoring process.
 
@@ -15,10 +15,10 @@ The project currently includes **two scoring architectures**:
 
 Both follow the same generation and consensus stages but differ in how Stage 3 (Scoring) is executed.
 
-📄 Detailed documentation:
+### 📄 Detailed documentation
 
-- **AI Consensus System – M1 - V2 - Version 1.1.0** $\Rightarrow$ [AI Consensus System – M1 Architecture](./docs/AI_Consensus_System_M1.md)
-- **AI Consensus System – M2 - V2 - Version 1.1.0** $\Rightarrow$ [AI Consensus System – M2 Architecture](./docs/AI_Consensus_System_M2.md)
+- **AI Consensus System – M1 - V3 - Version 1.2.0** $\Rightarrow$ [AI Consensus System – M1 Architecture](./docs/AI_Consensus_System_M1.md)
+- **AI Consensus System – M2 - V3 - Version 1.2.0** $\Rightarrow$ [AI Consensus System – M2 Architecture](./docs/AI_Consensus_System_M2.md)
 - [M1 vs M2 Comparison](./docs/AI_Consensus_System_M1_vs_M2.md)
 
 ---
@@ -69,36 +69,60 @@ Both follow the same generation and consensus stages but differ in how Stage 3 (
    - Produces refined outputs from all models
 
 4. **Scoring & Evaluation**
-   - M1: Full cross-model scoring
-   - M2: Randomized one-to-one scoring
+   - M1: Full cross-model scoring  
+   - M2: Randomized one-to-one scoring  
 
-5. **Aggregation & Winner Selection**
-   - Applies weighted scoring logic
-   - Selects highest-ranked output
+5. **Score Aggregation**
+   - Computes aggregated and weighted scores from model evaluations  
 
-6. **Finalization**
-   - Logs execution metrics
-   - Saves winner data
-   - Exports token reports
+6. **Winner Selection**
+   - Selects the final output based on highest-ranked score  
+   - Saves some more details about the pipeline
+
+7. **Finalization**
+   - Logs execution metrics  
+   - Saves consolidated output  
+   - Generates token usage summary  
 
 ---
 
 ## 📁 Directory Structure
 
-The system organizes outputs into structured directories:
-
-| Directory                                      | Content                                    |
-| ---------------------------------------------- | ------------------------------------------ |
-| `outputs/stage_01_initial/`                    | Raw JSON responses from initial generation |
-| `outputs/stage_01_initial_structured/`         | Structured `{model: output}` mappings      |
-| `outputs/stage_02_consensus/`                  | Refined consensus outputs                  |
-| `outputs/stage_03_scoring/`                    | Raw scoring responses                      |
-| `outputs/stage_04_raw_scores/`                 | Parsed scoring matrices                    |
-| `outputs/stage_04_weighted_scores/`            | Final weighted standings                   |
-| `outputs/stage_05_winner/`                     | Final winning output + metadata            |
-| `outputs/stage_05_token_summary/`              | Token usage breakdown                      |
-| `outputs/stage_05_token_report_stage/`         | Stage-wise token CSV                       |
-| `outputs/stage_05_token_report_model_summary/` | Model-wise token CSV                       |
+```
+AI-CONSENSUS-SYSTEM/
+│
+├── main.py                         # Entry point for execution
+│
+├── ai_consensus_system_m1.py       # M1 pipeline (Full Cross Scoring)
+├── ai_consensus_system_m2.py       # M2 pipeline (Randomized Scoring)
+├── test.py                         # Testing utilities / scripts
+│
+├── stages/                         # Modular pipeline stages (reusable across M1 & M2)
+├── pipeline_context.py             # Centralized pipeline state management
+│
+├── api/                            # API integrations for different AI providers
+├── functions/                      # Core reusable utility functions
+├── models/                         # Data models and schemas
+├── hardcodes/                      # Static configurations (models, prompts, etc.)
+│
+├── logs/                           # Execution logs and trace files (.log)
+├── outputs/                        # Pipeline output artifacts
+│   ├── <request_id>.json           # Consolidated pipeline output (JSON)
+│   ├── token_report_model/         # Model-wise token usage reports (CSV)
+│   ├── token_report_stage/         # Stage-wise token usage reports (CSV)
+│   └── <custom_folder>/            # Optional: specific outputs
+│       └── <request_id>.json       # Specific output (JSON)
+│
+├── .env                            # Environment variables (API keys)
+├── .env.sample                     # Sample environment configuration
+├── .gitignore                      # Git ignore rules
+│
+├── docs/                           # Detailed architecture and comparison documents
+├── CHANGELOG.md                    # Version history and updates
+├── Limitations.md                  # Known limitations and constraints
+├── README.md                       # Project documentation
+```
+> **Note:** The system follows a unified output design—storing complete pipeline results in a single JSON file (`<request_id>.json`)—while exporting token usage reports separately for model-wise and stage-wise analysis.
 
 ---
 
@@ -162,10 +186,12 @@ META_API_KEY=XXXXX
 MISTRAL_API_KEY=XXXXX
 ```
 
-Configure:
+Configure - Hardcodes:
 
 - `hardcodes/model_manager.py`
 - `hardcodes/prompt_manager.py`
+- `hardcodes/system_prompt_manager.py`
+- `hardcodes/test_request_id.py`
 
 ---
 

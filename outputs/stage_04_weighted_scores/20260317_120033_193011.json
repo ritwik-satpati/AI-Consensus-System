@@ -1,8 +1,0 @@
-{
-    "meta/llama-4-maverick-17b-128e-instruct": 8.9,
-    "gpt-4o-mini": 9.6,
-    "gemini-2.5-flash-lite": 8.9,
-    "mistral-small-latest": 8.6,
-    "nvidia/nemotron-3-super-120b-a12b": 8.9,
-    "claude-haiku-4-5-20251001": 10.0
-}

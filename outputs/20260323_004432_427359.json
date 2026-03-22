@@ -1,0 +1,926 @@
+{
+    "request_id": "20260323_004432_427359",
+    "stages": {
+        "SYSTEM_SETUP": {
+            "request_id": "20260323_004432_427359",
+            "start_timestamp": "2026-03-23 00:44:32.427307 +0530",
+            "base_prompt": "Explain API in simple words within 100 words",
+            "system_prompt": "You are a helpful assistant.",
+            "models_loaded": 6,
+            "model_configurations": [
+                {
+                    "provider": "openai",
+                    "model": "gpt-4o-mini",
+                    "key": "sk-**************************************************************************************************************************************************************IwA"
+                },
+                {
+                    "provider": "google",
+                    "model": "gemini-2.5-flash-lite",
+                    "key": "AIz*********************************TgE"
+                },
+                {
+                    "provider": "anthropic",
+                    "model": "claude-haiku-4-5-20251001",
+                    "key": "sk-******************************************************************************************************AAA"
+                },
+                {
+                    "provider": "nvidia",
+                    "model": "nvidia/nemotron-3-super-120b-a12b",
+                    "key": "nva****************************************************************Bqw"
+                },
+                {
+                    "provider": "meta",
+                    "model": "meta/llama-4-maverick-17b-128e-instruct",
+                    "key": "nva****************************************************************xot"
+                },
+                {
+                    "provider": "mistral",
+                    "model": "mistral-small-latest",
+                    "key": "ZrE**************************TZF"
+                }
+            ],
+            "startedAt": "2026-03-23 00:44:32.411791 +0530",
+            "completedAt": "2026-03-23 00:44:32.463633 +0530",
+            "stage_timing": 0.0519,
+            "savedAt": "2026-03-23 00:44:32.465699 +0530"
+        },
+        "INITIAL_EXECUTION": {
+            "initial_outputs": [
+                {
+                    "model": "gpt-4o-mini",
+                    "provider": "openai",
+                    "input": "Explain API in simple words within 100 words",
+                    "output": "An API, or Application Programming Interface, is like a set of rules that allows different software programs to communicate with each other. Imagine it as a menu in a restaurant: the menu lists dishes you can order, and when you choose one, the kitchen prepares it for you. Similarly, an API allows a developer to request certain functionalities or data from another application or service, and in return, they receive the needed response. This makes it easier to build software by allowing different parts to work together without needing to know the details of how everything functions behind the scenes.",
+                    "prompt_token": 26,
+                    "completion_token": 112,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:44:49.591122 +0530"
+                },
+                {
+                    "model": "gemini-2.5-flash-lite",
+                    "provider": "google",
+                    "input": "Explain API in simple words within 100 words",
+                    "output": "Imagine you're at a restaurant. You can't go into the kitchen to cook your food. Instead, you use a menu (an API) to tell the waiter (the software) what you want. The waiter then goes to the kitchen (another software system) and brings you your food.\n\nAn API (Application Programming Interface) is like that menu. It's a set of rules and tools that allows different software applications to talk to each other and share information or functionality, without needing to know the complex inner workings of each other. It's a messenger between programs.",
+                    "prompt_token": 19,
+                    "completion_token": 119,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:44:47.674753 +0530"
+                },
+                {
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "input": "Explain API in simple words within 100 words",
+                    "output": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate with each other.\n\nThink of it like a restaurant menu: you don't need to know how the kitchen works; you just order what you want, and the kitchen delivers it.\n\n**Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service server. The server sends back the information, and your app displays it.\n\nAPIs enable apps to share data and functionality without revealing their internal workings, making it easier for developers to build applications.",
+                    "prompt_token": 24,
+                    "completion_token": 132,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:44:48.365225 +0530"
+                },
+                {
+                    "model": "nvidia/nemotron-3-super-120b-a12b",
+                    "provider": "nvidia",
+                    "input": "Explain API in simple words within 100 words",
+                    "output": "An API (Application Programming Interface) is like a menu at a restaurant. Instead of cooking the food yourself, you look at the menu, pick what you want, and tell the waiter. The kitchen (the system) prepares it and brings it back to you. You don’t need to know how the kitchen works — just what you can order and how to ask for it.\n\nIn tech, an API lets one software program talk to another. It defines the rules for how apps can request data or services (like weather, payments, or maps) from each other, without needing to see the inner code. It’s simple, safe, and makes building apps faster and easier. (98 words)",
+                    "prompt_token": 34,
+                    "completion_token": 142,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:44:58.508215 +0530"
+                },
+                {
+                    "model": "meta/llama-4-maverick-17b-128e-instruct",
+                    "provider": "meta",
+                    "input": "Explain API in simple words within 100 words",
+                    "output": "Here's a simple explanation of API within 100 words:\n\nAn API, or Application Programming Interface, is like a messenger between different systems. Imagine you're at a restaurant and you want to order food. You can't just walk into the kitchen and make it yourself. Instead, you tell the waiter what you want, and they take your order to the kitchen staff. They then bring back your food. Similarly, an API is like the waiter. It takes your request, tells the system what you want, and brings back the response. It helps different systems communicate with each other in a structured way.",
+                    "prompt_token": 30,
+                    "completion_token": 119,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:44:47.145718 +0530"
+                },
+                {
+                    "model": "mistral-small-latest",
+                    "provider": "mistral",
+                    "input": "Explain API in simple words within 100 words",
+                    "output": "An **API (Application Programming Interface)** is like a waiter in a restaurant. You (the customer) ask for food (data or a service) by telling the waiter (API) what you want. The waiter takes your order to the kitchen (the server or another program), gets the food, and brings it back to you. You don’t need to know how the kitchen works—just place your order and get the result. APIs let different software systems talk to each other without needing to understand their inner workings. They simplify how apps and services interact!",
+                    "prompt_token": 35,
+                    "completion_token": 114,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:44:47.140448 +0530"
+                }
+            ],
+            "initial_structured": {
+                "gpt-4o-mini": "An API, or Application Programming Interface, is like a set of rules that allows different software programs to communicate with each other. Imagine it as a menu in a restaurant: the menu lists dishes you can order, and when you choose one, the kitchen prepares it for you. Similarly, an API allows a developer to request certain functionalities or data from another application or service, and in return, they receive the needed response. This makes it easier to build software by allowing different parts to work together without needing to know the details of how everything functions behind the scenes.",
+                "gemini-2.5-flash-lite": "Imagine you're at a restaurant. You can't go into the kitchen to cook your food. Instead, you use a menu (an API) to tell the waiter (the software) what you want. The waiter then goes to the kitchen (another software system) and brings you your food.\n\nAn API (Application Programming Interface) is like that menu. It's a set of rules and tools that allows different software applications to talk to each other and share information or functionality, without needing to know the complex inner workings of each other. It's a messenger between programs.",
+                "claude-haiku-4-5-20251001": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate with each other.\n\nThink of it like a restaurant menu: you don't need to know how the kitchen works; you just order what you want, and the kitchen delivers it.\n\n**Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service server. The server sends back the information, and your app displays it.\n\nAPIs enable apps to share data and functionality without revealing their internal workings, making it easier for developers to build applications.",
+                "nvidia/nemotron-3-super-120b-a12b": "An API (Application Programming Interface) is like a menu at a restaurant. Instead of cooking the food yourself, you look at the menu, pick what you want, and tell the waiter. The kitchen (the system) prepares it and brings it back to you. You don’t need to know how the kitchen works — just what you can order and how to ask for it.\n\nIn tech, an API lets one software program talk to another. It defines the rules for how apps can request data or services (like weather, payments, or maps) from each other, without needing to see the inner code. It’s simple, safe, and makes building apps faster and easier. (98 words)",
+                "meta/llama-4-maverick-17b-128e-instruct": "Here's a simple explanation of API within 100 words:\n\nAn API, or Application Programming Interface, is like a messenger between different systems. Imagine you're at a restaurant and you want to order food. You can't just walk into the kitchen and make it yourself. Instead, you tell the waiter what you want, and they take your order to the kitchen staff. They then bring back your food. Similarly, an API is like the waiter. It takes your request, tells the system what you want, and brings back the response. It helps different systems communicate with each other in a structured way.",
+                "mistral-small-latest": "An **API (Application Programming Interface)** is like a waiter in a restaurant. You (the customer) ask for food (data or a service) by telling the waiter (API) what you want. The waiter takes your order to the kitchen (the server or another program), gets the food, and brings it back to you. You don’t need to know how the kitchen works—just place your order and get the result. APIs let different software systems talk to each other without needing to understand their inner workings. They simplify how apps and services interact!"
+            },
+            "startedAt": "2026-03-23 00:44:32.474132 +0530",
+            "completedAt": "2026-03-23 00:44:58.533612 +0530",
+            "stage_timing": 26.0595,
+            "savedAt": "2026-03-23 00:44:58.536172 +0530"
+        },
+        "CONSENSUS_SYNTHESIS": {
+            "consensus_outputs": [
+                {
+                    "model": "gpt-4o-mini",
+                    "provider": "openai",
+                    "input": "Original Question::\nExplain API in simple words within 100 words\n\nModel Responses::\n\ngpt-4o-mini:\nAn API, or Application Programming Interface, is like a set of rules that allows different software programs to communicate with each other. Imagine it as a menu in a restaurant: the menu lists dishes you can order, and when you choose one, the kitchen prepares it for you. Similarly, an API allows a developer to request certain functionalities or data from another application or service, and in return, they receive the needed response. This makes it easier to build software by allowing different parts to work together without needing to know the details of how everything functions behind the scenes.\n\ngemini-2.5-flash-lite:\nImagine you're at a restaurant. You can't go into the kitchen to cook your food. Instead, you use a menu (an API) to tell the waiter (the software) what you want. The waiter then goes to the kitchen (another software system) and brings you your food.\n\nAn API (Application Programming Interface) is like that menu. It's a set of rules and tools that allows different software applications to talk to each other and share information or functionality, without needing to know the complex inner workings of each other. It's a messenger between programs.\n\nclaude-haiku-4-5-20251001:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate with each other.\n\nThink of it like a restaurant menu: you don't need to know how the kitchen works; you just order what you want, and the kitchen delivers it.\n\n**Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service server. The server sends back the information, and your app displays it.\n\nAPIs enable apps to share data and functionality without revealing their internal workings, making it easier for developers to build applications.\n\nnvidia/nemotron-3-super-120b-a12b:\nAn API (Application Programming Interface) is like a menu at a restaurant. Instead of cooking the food yourself, you look at the menu, pick what you want, and tell the waiter. The kitchen (the system) prepares it and brings it back to you. You don’t need to know how the kitchen works — just what you can order and how to ask for it.\n\nIn tech, an API lets one software program talk to another. It defines the rules for how apps can request data or services (like weather, payments, or maps) from each other, without needing to see the inner code. It’s simple, safe, and makes building apps faster and easier. (98 words)\n\nmeta/llama-4-maverick-17b-128e-instruct:\nHere's a simple explanation of API within 100 words:\n\nAn API, or Application Programming Interface, is like a messenger between different systems. Imagine you're at a restaurant and you want to order food. You can't just walk into the kitchen and make it yourself. Instead, you tell the waiter what you want, and they take your order to the kitchen staff. They then bring back your food. Similarly, an API is like the waiter. It takes your request, tells the system what you want, and brings back the response. It helps different systems communicate with each other in a structured way.\n\nmistral-small-latest:\nAn **API (Application Programming Interface)** is like a waiter in a restaurant. You (the customer) ask for food (data or a service) by telling the waiter (API) what you want. The waiter takes your order to the kitchen (the server or another program), gets the food, and brings it back to you. You don’t need to know how the kitchen works—just place your order and get the result. APIs let different software systems talk to each other without needing to understand their inner workings. They simplify how apps and services interact!\n\nBased on all the above responses, improve and refine the answer.\nIf there are contradictions, resolve them logically and give only answer as output.",
+                    "output": "An API, or Application Programming Interface, is like a waiter in a restaurant. Imagine you're dining out; you can't go into the kitchen to prepare your meal. Instead, you look at the menu (the API) to see what’s available and tell the waiter (the API) your order. The waiter takes your request to the kitchen (the software or server), which prepares your meal and brings it back to you. Similarly, an API allows different software applications to communicate with each other, enabling them to request and share data or services without needing to understand how everything works behind the scenes.",
+                    "prompt_token": 846,
+                    "completion_token": 118,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:45:07.293253 +0530"
+                },
+                {
+                    "model": "gemini-2.5-flash-lite",
+                    "provider": "google",
+                    "input": "Original Question::\nExplain API in simple words within 100 words\n\nModel Responses::\n\ngpt-4o-mini:\nAn API, or Application Programming Interface, is like a set of rules that allows different software programs to communicate with each other. Imagine it as a menu in a restaurant: the menu lists dishes you can order, and when you choose one, the kitchen prepares it for you. Similarly, an API allows a developer to request certain functionalities or data from another application or service, and in return, they receive the needed response. This makes it easier to build software by allowing different parts to work together without needing to know the details of how everything functions behind the scenes.\n\ngemini-2.5-flash-lite:\nImagine you're at a restaurant. You can't go into the kitchen to cook your food. Instead, you use a menu (an API) to tell the waiter (the software) what you want. The waiter then goes to the kitchen (another software system) and brings you your food.\n\nAn API (Application Programming Interface) is like that menu. It's a set of rules and tools that allows different software applications to talk to each other and share information or functionality, without needing to know the complex inner workings of each other. It's a messenger between programs.\n\nclaude-haiku-4-5-20251001:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate with each other.\n\nThink of it like a restaurant menu: you don't need to know how the kitchen works; you just order what you want, and the kitchen delivers it.\n\n**Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service server. The server sends back the information, and your app displays it.\n\nAPIs enable apps to share data and functionality without revealing their internal workings, making it easier for developers to build applications.\n\nnvidia/nemotron-3-super-120b-a12b:\nAn API (Application Programming Interface) is like a menu at a restaurant. Instead of cooking the food yourself, you look at the menu, pick what you want, and tell the waiter. The kitchen (the system) prepares it and brings it back to you. You don’t need to know how the kitchen works — just what you can order and how to ask for it.\n\nIn tech, an API lets one software program talk to another. It defines the rules for how apps can request data or services (like weather, payments, or maps) from each other, without needing to see the inner code. It’s simple, safe, and makes building apps faster and easier. (98 words)\n\nmeta/llama-4-maverick-17b-128e-instruct:\nHere's a simple explanation of API within 100 words:\n\nAn API, or Application Programming Interface, is like a messenger between different systems. Imagine you're at a restaurant and you want to order food. You can't just walk into the kitchen and make it yourself. Instead, you tell the waiter what you want, and they take your order to the kitchen staff. They then bring back your food. Similarly, an API is like the waiter. It takes your request, tells the system what you want, and brings back the response. It helps different systems communicate with each other in a structured way.\n\nmistral-small-latest:\nAn **API (Application Programming Interface)** is like a waiter in a restaurant. You (the customer) ask for food (data or a service) by telling the waiter (API) what you want. The waiter takes your order to the kitchen (the server or another program), gets the food, and brings it back to you. You don’t need to know how the kitchen works—just place your order and get the result. APIs let different software systems talk to each other without needing to understand their inner workings. They simplify how apps and services interact!\n\nBased on all the above responses, improve and refine the answer.\nIf there are contradictions, resolve them logically and give only answer as output.",
+                    "output": "An API (Application Programming Interface) acts as a messenger between different software programs. Think of it like ordering at a restaurant: you don't go into the kitchen; you use the menu to tell the waiter what you want. The waiter then communicates your order to the kitchen, and the kitchen prepares and delivers your food.\n\nSimilarly, an API provides a set of rules and tools that allow one application to request services or data from another. It acts as the intermediary, translating requests and responses, so programs can communicate and work together seamlessly without needing to know each other's internal complexities.",
+                    "prompt_token": 895,
+                    "completion_token": 119,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:45:06.081369 +0530"
+                },
+                {
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "input": "Original Question::\nExplain API in simple words within 100 words\n\nModel Responses::\n\ngpt-4o-mini:\nAn API, or Application Programming Interface, is like a set of rules that allows different software programs to communicate with each other. Imagine it as a menu in a restaurant: the menu lists dishes you can order, and when you choose one, the kitchen prepares it for you. Similarly, an API allows a developer to request certain functionalities or data from another application or service, and in return, they receive the needed response. This makes it easier to build software by allowing different parts to work together without needing to know the details of how everything functions behind the scenes.\n\ngemini-2.5-flash-lite:\nImagine you're at a restaurant. You can't go into the kitchen to cook your food. Instead, you use a menu (an API) to tell the waiter (the software) what you want. The waiter then goes to the kitchen (another software system) and brings you your food.\n\nAn API (Application Programming Interface) is like that menu. It's a set of rules and tools that allows different software applications to talk to each other and share information or functionality, without needing to know the complex inner workings of each other. It's a messenger between programs.\n\nclaude-haiku-4-5-20251001:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate with each other.\n\nThink of it like a restaurant menu: you don't need to know how the kitchen works; you just order what you want, and the kitchen delivers it.\n\n**Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service server. The server sends back the information, and your app displays it.\n\nAPIs enable apps to share data and functionality without revealing their internal workings, making it easier for developers to build applications.\n\nnvidia/nemotron-3-super-120b-a12b:\nAn API (Application Programming Interface) is like a menu at a restaurant. Instead of cooking the food yourself, you look at the menu, pick what you want, and tell the waiter. The kitchen (the system) prepares it and brings it back to you. You don’t need to know how the kitchen works — just what you can order and how to ask for it.\n\nIn tech, an API lets one software program talk to another. It defines the rules for how apps can request data or services (like weather, payments, or maps) from each other, without needing to see the inner code. It’s simple, safe, and makes building apps faster and easier. (98 words)\n\nmeta/llama-4-maverick-17b-128e-instruct:\nHere's a simple explanation of API within 100 words:\n\nAn API, or Application Programming Interface, is like a messenger between different systems. Imagine you're at a restaurant and you want to order food. You can't just walk into the kitchen and make it yourself. Instead, you tell the waiter what you want, and they take your order to the kitchen staff. They then bring back your food. Similarly, an API is like the waiter. It takes your request, tells the system what you want, and brings back the response. It helps different systems communicate with each other in a structured way.\n\nmistral-small-latest:\nAn **API (Application Programming Interface)** is like a waiter in a restaurant. You (the customer) ask for food (data or a service) by telling the waiter (API) what you want. The waiter takes your order to the kitchen (the server or another program), gets the food, and brings it back to you. You don’t need to know how the kitchen works—just place your order and get the result. APIs let different software systems talk to each other without needing to understand their inner workings. They simplify how apps and services interact!\n\nBased on all the above responses, improve and refine the answer.\nIf there are contradictions, resolve them logically and give only answer as output.",
+                    "output": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\n**Simple Analogy:** Think of an API like a waiter in a restaurant. You (the customer) don't need to know how the kitchen works. You simply tell the waiter what you want, and they deliver your request to the kitchen and bring back your food. Similarly, an API lets one program request data or services from another program without needing to understand its internal workings.\n\n**Real-World Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service. The server sends back the information, which your app then displays.\n\n**Key Benefit:** APIs make software development faster and easier by allowing different parts of applications to work together in a structured, safe way without exposing complex internal code.",
+                    "prompt_token": 908,
+                    "completion_token": 196,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:45:07.207112 +0530"
+                },
+                {
+                    "model": "nvidia/nemotron-3-super-120b-a12b",
+                    "provider": "nvidia",
+                    "input": "Original Question::\nExplain API in simple words within 100 words\n\nModel Responses::\n\ngpt-4o-mini:\nAn API, or Application Programming Interface, is like a set of rules that allows different software programs to communicate with each other. Imagine it as a menu in a restaurant: the menu lists dishes you can order, and when you choose one, the kitchen prepares it for you. Similarly, an API allows a developer to request certain functionalities or data from another application or service, and in return, they receive the needed response. This makes it easier to build software by allowing different parts to work together without needing to know the details of how everything functions behind the scenes.\n\ngemini-2.5-flash-lite:\nImagine you're at a restaurant. You can't go into the kitchen to cook your food. Instead, you use a menu (an API) to tell the waiter (the software) what you want. The waiter then goes to the kitchen (another software system) and brings you your food.\n\nAn API (Application Programming Interface) is like that menu. It's a set of rules and tools that allows different software applications to talk to each other and share information or functionality, without needing to know the complex inner workings of each other. It's a messenger between programs.\n\nclaude-haiku-4-5-20251001:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate with each other.\n\nThink of it like a restaurant menu: you don't need to know how the kitchen works; you just order what you want, and the kitchen delivers it.\n\n**Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service server. The server sends back the information, and your app displays it.\n\nAPIs enable apps to share data and functionality without revealing their internal workings, making it easier for developers to build applications.\n\nnvidia/nemotron-3-super-120b-a12b:\nAn API (Application Programming Interface) is like a menu at a restaurant. Instead of cooking the food yourself, you look at the menu, pick what you want, and tell the waiter. The kitchen (the system) prepares it and brings it back to you. You don’t need to know how the kitchen works — just what you can order and how to ask for it.\n\nIn tech, an API lets one software program talk to another. It defines the rules for how apps can request data or services (like weather, payments, or maps) from each other, without needing to see the inner code. It’s simple, safe, and makes building apps faster and easier. (98 words)\n\nmeta/llama-4-maverick-17b-128e-instruct:\nHere's a simple explanation of API within 100 words:\n\nAn API, or Application Programming Interface, is like a messenger between different systems. Imagine you're at a restaurant and you want to order food. You can't just walk into the kitchen and make it yourself. Instead, you tell the waiter what you want, and they take your order to the kitchen staff. They then bring back your food. Similarly, an API is like the waiter. It takes your request, tells the system what you want, and brings back the response. It helps different systems communicate with each other in a structured way.\n\nmistral-small-latest:\nAn **API (Application Programming Interface)** is like a waiter in a restaurant. You (the customer) ask for food (data or a service) by telling the waiter (API) what you want. The waiter takes your order to the kitchen (the server or another program), gets the food, and brings it back to you. You don’t need to know how the kitchen works—just place your order and get the result. APIs let different software systems talk to each other without needing to understand their inner workings. They simplify how apps and services interact!\n\nBased on all the above responses, improve and refine the answer.\nIf there are contradictions, resolve them logically and give only answer as output.",
+                    "output": "An API (Application Programming Interface) is a set of rules that allows one software application to communicate with another. Think of it like a waiter in a restaurant: you (the app) tell the waiter (API) what you want—like data or a service—without needing to know how the kitchen (the other system) prepares it. The waiter takes your request, delivers it to the system, and brings back the response. This lets apps share functionality securely and efficiently, without exposing internal details. APIs simplify development by enabling different programs to work together seamlessly. (98 words)",
+                    "prompt_token": 881,
+                    "completion_token": 119,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:45:10.307899 +0530"
+                },
+                {
+                    "model": "meta/llama-4-maverick-17b-128e-instruct",
+                    "provider": "meta",
+                    "input": "Original Question::\nExplain API in simple words within 100 words\n\nModel Responses::\n\ngpt-4o-mini:\nAn API, or Application Programming Interface, is like a set of rules that allows different software programs to communicate with each other. Imagine it as a menu in a restaurant: the menu lists dishes you can order, and when you choose one, the kitchen prepares it for you. Similarly, an API allows a developer to request certain functionalities or data from another application or service, and in return, they receive the needed response. This makes it easier to build software by allowing different parts to work together without needing to know the details of how everything functions behind the scenes.\n\ngemini-2.5-flash-lite:\nImagine you're at a restaurant. You can't go into the kitchen to cook your food. Instead, you use a menu (an API) to tell the waiter (the software) what you want. The waiter then goes to the kitchen (another software system) and brings you your food.\n\nAn API (Application Programming Interface) is like that menu. It's a set of rules and tools that allows different software applications to talk to each other and share information or functionality, without needing to know the complex inner workings of each other. It's a messenger between programs.\n\nclaude-haiku-4-5-20251001:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate with each other.\n\nThink of it like a restaurant menu: you don't need to know how the kitchen works; you just order what you want, and the kitchen delivers it.\n\n**Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service server. The server sends back the information, and your app displays it.\n\nAPIs enable apps to share data and functionality without revealing their internal workings, making it easier for developers to build applications.\n\nnvidia/nemotron-3-super-120b-a12b:\nAn API (Application Programming Interface) is like a menu at a restaurant. Instead of cooking the food yourself, you look at the menu, pick what you want, and tell the waiter. The kitchen (the system) prepares it and brings it back to you. You don’t need to know how the kitchen works — just what you can order and how to ask for it.\n\nIn tech, an API lets one software program talk to another. It defines the rules for how apps can request data or services (like weather, payments, or maps) from each other, without needing to see the inner code. It’s simple, safe, and makes building apps faster and easier. (98 words)\n\nmeta/llama-4-maverick-17b-128e-instruct:\nHere's a simple explanation of API within 100 words:\n\nAn API, or Application Programming Interface, is like a messenger between different systems. Imagine you're at a restaurant and you want to order food. You can't just walk into the kitchen and make it yourself. Instead, you tell the waiter what you want, and they take your order to the kitchen staff. They then bring back your food. Similarly, an API is like the waiter. It takes your request, tells the system what you want, and brings back the response. It helps different systems communicate with each other in a structured way.\n\nmistral-small-latest:\nAn **API (Application Programming Interface)** is like a waiter in a restaurant. You (the customer) ask for food (data or a service) by telling the waiter (API) what you want. The waiter takes your order to the kitchen (the server or another program), gets the food, and brings it back to you. You don’t need to know how the kitchen works—just place your order and get the result. APIs let different software systems talk to each other without needing to understand their inner workings. They simplify how apps and services interact!\n\nBased on all the above responses, improve and refine the answer.\nIf there are contradictions, resolve them logically and give only answer as output.",
+                    "output": "An API, or Application Programming Interface, is like a messenger or a waiter in a restaurant. You tell it what you need, and it helps you get it from another system or service. Just as you order food without knowing how it's prepared, an API allows different software applications to communicate and share data or functionality without needing to know the details of how the other system works. It simplifies interactions between apps and services, making it easier to build new applications.",
+                    "prompt_token": 848,
+                    "completion_token": 92,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:45:06.094987 +0530"
+                },
+                {
+                    "model": "mistral-small-latest",
+                    "provider": "mistral",
+                    "input": "Original Question::\nExplain API in simple words within 100 words\n\nModel Responses::\n\ngpt-4o-mini:\nAn API, or Application Programming Interface, is like a set of rules that allows different software programs to communicate with each other. Imagine it as a menu in a restaurant: the menu lists dishes you can order, and when you choose one, the kitchen prepares it for you. Similarly, an API allows a developer to request certain functionalities or data from another application or service, and in return, they receive the needed response. This makes it easier to build software by allowing different parts to work together without needing to know the details of how everything functions behind the scenes.\n\ngemini-2.5-flash-lite:\nImagine you're at a restaurant. You can't go into the kitchen to cook your food. Instead, you use a menu (an API) to tell the waiter (the software) what you want. The waiter then goes to the kitchen (another software system) and brings you your food.\n\nAn API (Application Programming Interface) is like that menu. It's a set of rules and tools that allows different software applications to talk to each other and share information or functionality, without needing to know the complex inner workings of each other. It's a messenger between programs.\n\nclaude-haiku-4-5-20251001:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate with each other.\n\nThink of it like a restaurant menu: you don't need to know how the kitchen works; you just order what you want, and the kitchen delivers it.\n\n**Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service server. The server sends back the information, and your app displays it.\n\nAPIs enable apps to share data and functionality without revealing their internal workings, making it easier for developers to build applications.\n\nnvidia/nemotron-3-super-120b-a12b:\nAn API (Application Programming Interface) is like a menu at a restaurant. Instead of cooking the food yourself, you look at the menu, pick what you want, and tell the waiter. The kitchen (the system) prepares it and brings it back to you. You don’t need to know how the kitchen works — just what you can order and how to ask for it.\n\nIn tech, an API lets one software program talk to another. It defines the rules for how apps can request data or services (like weather, payments, or maps) from each other, without needing to see the inner code. It’s simple, safe, and makes building apps faster and easier. (98 words)\n\nmeta/llama-4-maverick-17b-128e-instruct:\nHere's a simple explanation of API within 100 words:\n\nAn API, or Application Programming Interface, is like a messenger between different systems. Imagine you're at a restaurant and you want to order food. You can't just walk into the kitchen and make it yourself. Instead, you tell the waiter what you want, and they take your order to the kitchen staff. They then bring back your food. Similarly, an API is like the waiter. It takes your request, tells the system what you want, and brings back the response. It helps different systems communicate with each other in a structured way.\n\nmistral-small-latest:\nAn **API (Application Programming Interface)** is like a waiter in a restaurant. You (the customer) ask for food (data or a service) by telling the waiter (API) what you want. The waiter takes your order to the kitchen (the server or another program), gets the food, and brings it back to you. You don’t need to know how the kitchen works—just place your order and get the result. APIs let different software systems talk to each other without needing to understand their inner workings. They simplify how apps and services interact!\n\nBased on all the above responses, improve and refine the answer.\nIf there are contradictions, resolve them logically and give only answer as output.",
+                    "output": "An **API (Application Programming Interface)** is like a waiter in a restaurant. You (the user or software) request something—like food (data or a service)—by telling the waiter (API) what you want. The waiter takes your order to the kitchen (another program or server), gets the response, and brings it back to you. You don’t need to know how the kitchen works—just place your order and receive the result.\n\nAPIs enable different software systems to communicate smoothly by defining clear rules for requests and responses. They simplify integration, making it easier for apps to share data or functionality without exposing their internal details.",
+                    "prompt_token": 882,
+                    "completion_token": 129,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:45:07.044038 +0530"
+                }
+            ],
+            "consensus_structured": {
+                "gpt-4o-mini": "An API, or Application Programming Interface, is like a waiter in a restaurant. Imagine you're dining out; you can't go into the kitchen to prepare your meal. Instead, you look at the menu (the API) to see what’s available and tell the waiter (the API) your order. The waiter takes your request to the kitchen (the software or server), which prepares your meal and brings it back to you. Similarly, an API allows different software applications to communicate with each other, enabling them to request and share data or services without needing to understand how everything works behind the scenes.",
+                "gemini-2.5-flash-lite": "An API (Application Programming Interface) acts as a messenger between different software programs. Think of it like ordering at a restaurant: you don't go into the kitchen; you use the menu to tell the waiter what you want. The waiter then communicates your order to the kitchen, and the kitchen prepares and delivers your food.\n\nSimilarly, an API provides a set of rules and tools that allow one application to request services or data from another. It acts as the intermediary, translating requests and responses, so programs can communicate and work together seamlessly without needing to know each other's internal complexities.",
+                "claude-haiku-4-5-20251001": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\n**Simple Analogy:** Think of an API like a waiter in a restaurant. You (the customer) don't need to know how the kitchen works. You simply tell the waiter what you want, and they deliver your request to the kitchen and bring back your food. Similarly, an API lets one program request data or services from another program without needing to understand its internal workings.\n\n**Real-World Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service. The server sends back the information, which your app then displays.\n\n**Key Benefit:** APIs make software development faster and easier by allowing different parts of applications to work together in a structured, safe way without exposing complex internal code.",
+                "nvidia/nemotron-3-super-120b-a12b": "An API (Application Programming Interface) is a set of rules that allows one software application to communicate with another. Think of it like a waiter in a restaurant: you (the app) tell the waiter (API) what you want—like data or a service—without needing to know how the kitchen (the other system) prepares it. The waiter takes your request, delivers it to the system, and brings back the response. This lets apps share functionality securely and efficiently, without exposing internal details. APIs simplify development by enabling different programs to work together seamlessly. (98 words)",
+                "meta/llama-4-maverick-17b-128e-instruct": "An API, or Application Programming Interface, is like a messenger or a waiter in a restaurant. You tell it what you need, and it helps you get it from another system or service. Just as you order food without knowing how it's prepared, an API allows different software applications to communicate and share data or functionality without needing to know the details of how the other system works. It simplifies interactions between apps and services, making it easier to build new applications.",
+                "mistral-small-latest": "An **API (Application Programming Interface)** is like a waiter in a restaurant. You (the user or software) request something—like food (data or a service)—by telling the waiter (API) what you want. The waiter takes your order to the kitchen (another program or server), gets the response, and brings it back to you. You don’t need to know how the kitchen works—just place your order and receive the result.\n\nAPIs enable different software systems to communicate smoothly by defining clear rules for requests and responses. They simplify integration, making it easier for apps to share data or functionality without exposing their internal details."
+            },
+            "startedAt": "2026-03-23 00:44:58.548916 +0530",
+            "completedAt": "2026-03-23 00:45:10.333989 +0530",
+            "stage_timing": 11.7851,
+            "savedAt": "2026-03-23 00:45:10.336858 +0530"
+        },
+        "SCORING_COMBINED": {
+            "scoring_outputs": [
+                {
+                    "model": "gpt-4o-mini",
+                    "provider": "openai",
+                    "input": "\nYou are an unbiased AI evaluator.\n\nOriginal Question:\nExplain API in simple words within 100 words\n\nBelow are responses from different AI agents:\n\nAgent Name: gpt-4o-mini\nResponse:\nAn API, or Application Programming Interface, is like a waiter in a restaurant. Imagine you're dining out; you can't go into the kitchen to prepare your meal. Instead, you look at the menu (the API) to see what’s available and tell the waiter (the API) your order. The waiter takes your request to the kitchen (the software or server), which prepares your meal and brings it back to you. Similarly, an API allows different software applications to communicate with each other, enabling them to request and share data or services without needing to understand how everything works behind the scenes.\n\nAgent Name: gemini-2.5-flash-lite\nResponse:\nAn API (Application Programming Interface) acts as a messenger between different software programs. Think of it like ordering at a restaurant: you don't go into the kitchen; you use the menu to tell the waiter what you want. The waiter then communicates your order to the kitchen, and the kitchen prepares and delivers your food.\n\nSimilarly, an API provides a set of rules and tools that allow one application to request services or data from another. It acts as the intermediary, translating requests and responses, so programs can communicate and work together seamlessly without needing to know each other's internal complexities.\n\nAgent Name: claude-haiku-4-5-20251001\nResponse:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\n**Simple Analogy:** Think of an API like a waiter in a restaurant. You (the customer) don't need to know how the kitchen works. You simply tell the waiter what you want, and they deliver your request to the kitchen and bring back your food. Similarly, an API lets one program request data or services from another program without needing to understand its internal workings.\n\n**Real-World Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service. The server sends back the information, which your app then displays.\n\n**Key Benefit:** APIs make software development faster and easier by allowing different parts of applications to work together in a structured, safe way without exposing complex internal code.\n\nAgent Name: nvidia/nemotron-3-super-120b-a12b\nResponse:\nAn API (Application Programming Interface) is a set of rules that allows one software application to communicate with another. Think of it like a waiter in a restaurant: you (the app) tell the waiter (API) what you want—like data or a service—without needing to know how the kitchen (the other system) prepares it. The waiter takes your request, delivers it to the system, and brings back the response. This lets apps share functionality securely and efficiently, without exposing internal details. APIs simplify development by enabling different programs to work together seamlessly. (98 words)\n\nAgent Name: meta/llama-4-maverick-17b-128e-instruct\nResponse:\nAn API, or Application Programming Interface, is like a messenger or a waiter in a restaurant. You tell it what you need, and it helps you get it from another system or service. Just as you order food without knowing how it's prepared, an API allows different software applications to communicate and share data or functionality without needing to know the details of how the other system works. It simplifies interactions between apps and services, making it easier to build new applications.\n\nAgent Name: mistral-small-latest\nResponse:\nAn **API (Application Programming Interface)** is like a waiter in a restaurant. You (the user or software) request something—like food (data or a service)—by telling the waiter (API) what you want. The waiter takes your order to the kitchen (another program or server), gets the response, and brings it back to you. You don’t need to know how the kitchen works—just place your order and receive the result.\n\nAPIs enable different software systems to communicate smoothly by defining clear rules for requests and responses. They simplify integration, making it easier for apps to share data or functionality without exposing their internal details.\n\n\nEvaluate EACH agent independently using the following criteria (score each from 1 to 10):\n1. Accuracy – Correctness of the information.\n2. Clarity – How easy the response is to understand.\n3. Completeness – How well the response answers the question.\n4. Conciseness – Whether the response is brief and avoids unnecessary information.\n\nInstructions::\n- Evaluate each agent independently.\n- Scores must be integers between 1 and 10.\n- Use the EXACT agent names provided after \"Agent Name: \" as JSON keys.\n- Return ONLY valid JSON.\n- Do NOT include explanations, reasoning, or text outside the JSON.\n- Output must be a single-line JSON object.\n\nCorrect Output Example:\n{{\"{first_model}\": {{\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}}}}\n\nWrong Output Examples:\n{{\"agent_name\": {{\"{first_model}\": {{\"accuracy\": 9, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}}}\n{{\"agent_name\": {{\"accuracy\": 10, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}\n",
+                    "output": "{\"gpt-4o-mini\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 8},\"gemini-2.5-flash-lite\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 9},\"claude-haiku-4-5-20251001\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 10, \"conciseness\": 8},\"nvidia/nemotron-3-super-120b-a12b\": {\"accuracy\": 9, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 10},\"meta/llama-4-maverick-17b-128e-instruct\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9},\"mistral-small-latest\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 9}}",
+                    "prompt_token": 1154,
+                    "completion_token": 245,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:45:21.840716 +0530"
+                },
+                {
+                    "model": "gemini-2.5-flash-lite",
+                    "provider": "google",
+                    "input": "\nYou are an unbiased AI evaluator.\n\nOriginal Question:\nExplain API in simple words within 100 words\n\nBelow are responses from different AI agents:\n\nAgent Name: gpt-4o-mini\nResponse:\nAn API, or Application Programming Interface, is like a waiter in a restaurant. Imagine you're dining out; you can't go into the kitchen to prepare your meal. Instead, you look at the menu (the API) to see what’s available and tell the waiter (the API) your order. The waiter takes your request to the kitchen (the software or server), which prepares your meal and brings it back to you. Similarly, an API allows different software applications to communicate with each other, enabling them to request and share data or services without needing to understand how everything works behind the scenes.\n\nAgent Name: gemini-2.5-flash-lite\nResponse:\nAn API (Application Programming Interface) acts as a messenger between different software programs. Think of it like ordering at a restaurant: you don't go into the kitchen; you use the menu to tell the waiter what you want. The waiter then communicates your order to the kitchen, and the kitchen prepares and delivers your food.\n\nSimilarly, an API provides a set of rules and tools that allow one application to request services or data from another. It acts as the intermediary, translating requests and responses, so programs can communicate and work together seamlessly without needing to know each other's internal complexities.\n\nAgent Name: claude-haiku-4-5-20251001\nResponse:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\n**Simple Analogy:** Think of an API like a waiter in a restaurant. You (the customer) don't need to know how the kitchen works. You simply tell the waiter what you want, and they deliver your request to the kitchen and bring back your food. Similarly, an API lets one program request data or services from another program without needing to understand its internal workings.\n\n**Real-World Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service. The server sends back the information, which your app then displays.\n\n**Key Benefit:** APIs make software development faster and easier by allowing different parts of applications to work together in a structured, safe way without exposing complex internal code.\n\nAgent Name: nvidia/nemotron-3-super-120b-a12b\nResponse:\nAn API (Application Programming Interface) is a set of rules that allows one software application to communicate with another. Think of it like a waiter in a restaurant: you (the app) tell the waiter (API) what you want—like data or a service—without needing to know how the kitchen (the other system) prepares it. The waiter takes your request, delivers it to the system, and brings back the response. This lets apps share functionality securely and efficiently, without exposing internal details. APIs simplify development by enabling different programs to work together seamlessly. (98 words)\n\nAgent Name: meta/llama-4-maverick-17b-128e-instruct\nResponse:\nAn API, or Application Programming Interface, is like a messenger or a waiter in a restaurant. You tell it what you need, and it helps you get it from another system or service. Just as you order food without knowing how it's prepared, an API allows different software applications to communicate and share data or functionality without needing to know the details of how the other system works. It simplifies interactions between apps and services, making it easier to build new applications.\n\nAgent Name: mistral-small-latest\nResponse:\nAn **API (Application Programming Interface)** is like a waiter in a restaurant. You (the user or software) request something—like food (data or a service)—by telling the waiter (API) what you want. The waiter takes your order to the kitchen (another program or server), gets the response, and brings it back to you. You don’t need to know how the kitchen works—just place your order and receive the result.\n\nAPIs enable different software systems to communicate smoothly by defining clear rules for requests and responses. They simplify integration, making it easier for apps to share data or functionality without exposing their internal details.\n\n\nEvaluate EACH agent independently using the following criteria (score each from 1 to 10):\n1. Accuracy – Correctness of the information.\n2. Clarity – How easy the response is to understand.\n3. Completeness – How well the response answers the question.\n4. Conciseness – Whether the response is brief and avoids unnecessary information.\n\nInstructions::\n- Evaluate each agent independently.\n- Scores must be integers between 1 and 10.\n- Use the EXACT agent names provided after \"Agent Name: \" as JSON keys.\n- Return ONLY valid JSON.\n- Do NOT include explanations, reasoning, or text outside the JSON.\n- Output must be a single-line JSON object.\n\nCorrect Output Example:\n{{\"{first_model}\": {{\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}}}}\n\nWrong Output Examples:\n{{\"agent_name\": {{\"{first_model}\": {{\"accuracy\": 9, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}}}\n{{\"agent_name\": {{\"accuracy\": 10, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}\n",
+                    "output": "{\"gpt-4o-mini\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 10}, \"gemini-2.5-flash-lite\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 10}, \"claude-haiku-4-5-20251001\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 8}, \"nvidia/nemotron-3-super-120b-a12b\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 10}, \"meta/llama-4-maverick-17b-128e-instruct\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 10}, \"mistral-small-latest\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 10}}",
+                    "prompt_token": 1218,
+                    "completion_token": 280,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:45:19.111440 +0530"
+                },
+                {
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "input": "\nYou are an unbiased AI evaluator.\n\nOriginal Question:\nExplain API in simple words within 100 words\n\nBelow are responses from different AI agents:\n\nAgent Name: gpt-4o-mini\nResponse:\nAn API, or Application Programming Interface, is like a waiter in a restaurant. Imagine you're dining out; you can't go into the kitchen to prepare your meal. Instead, you look at the menu (the API) to see what’s available and tell the waiter (the API) your order. The waiter takes your request to the kitchen (the software or server), which prepares your meal and brings it back to you. Similarly, an API allows different software applications to communicate with each other, enabling them to request and share data or services without needing to understand how everything works behind the scenes.\n\nAgent Name: gemini-2.5-flash-lite\nResponse:\nAn API (Application Programming Interface) acts as a messenger between different software programs. Think of it like ordering at a restaurant: you don't go into the kitchen; you use the menu to tell the waiter what you want. The waiter then communicates your order to the kitchen, and the kitchen prepares and delivers your food.\n\nSimilarly, an API provides a set of rules and tools that allow one application to request services or data from another. It acts as the intermediary, translating requests and responses, so programs can communicate and work together seamlessly without needing to know each other's internal complexities.\n\nAgent Name: claude-haiku-4-5-20251001\nResponse:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\n**Simple Analogy:** Think of an API like a waiter in a restaurant. You (the customer) don't need to know how the kitchen works. You simply tell the waiter what you want, and they deliver your request to the kitchen and bring back your food. Similarly, an API lets one program request data or services from another program without needing to understand its internal workings.\n\n**Real-World Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service. The server sends back the information, which your app then displays.\n\n**Key Benefit:** APIs make software development faster and easier by allowing different parts of applications to work together in a structured, safe way without exposing complex internal code.\n\nAgent Name: nvidia/nemotron-3-super-120b-a12b\nResponse:\nAn API (Application Programming Interface) is a set of rules that allows one software application to communicate with another. Think of it like a waiter in a restaurant: you (the app) tell the waiter (API) what you want—like data or a service—without needing to know how the kitchen (the other system) prepares it. The waiter takes your request, delivers it to the system, and brings back the response. This lets apps share functionality securely and efficiently, without exposing internal details. APIs simplify development by enabling different programs to work together seamlessly. (98 words)\n\nAgent Name: meta/llama-4-maverick-17b-128e-instruct\nResponse:\nAn API, or Application Programming Interface, is like a messenger or a waiter in a restaurant. You tell it what you need, and it helps you get it from another system or service. Just as you order food without knowing how it's prepared, an API allows different software applications to communicate and share data or functionality without needing to know the details of how the other system works. It simplifies interactions between apps and services, making it easier to build new applications.\n\nAgent Name: mistral-small-latest\nResponse:\nAn **API (Application Programming Interface)** is like a waiter in a restaurant. You (the user or software) request something—like food (data or a service)—by telling the waiter (API) what you want. The waiter takes your order to the kitchen (another program or server), gets the response, and brings it back to you. You don’t need to know how the kitchen works—just place your order and receive the result.\n\nAPIs enable different software systems to communicate smoothly by defining clear rules for requests and responses. They simplify integration, making it easier for apps to share data or functionality without exposing their internal details.\n\n\nEvaluate EACH agent independently using the following criteria (score each from 1 to 10):\n1. Accuracy – Correctness of the information.\n2. Clarity – How easy the response is to understand.\n3. Completeness – How well the response answers the question.\n4. Conciseness – Whether the response is brief and avoids unnecessary information.\n\nInstructions::\n- Evaluate each agent independently.\n- Scores must be integers between 1 and 10.\n- Use the EXACT agent names provided after \"Agent Name: \" as JSON keys.\n- Return ONLY valid JSON.\n- Do NOT include explanations, reasoning, or text outside the JSON.\n- Output must be a single-line JSON object.\n\nCorrect Output Example:\n{{\"{first_model}\": {{\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}}}}\n\nWrong Output Examples:\n{{\"agent_name\": {{\"{first_model}\": {{\"accuracy\": 9, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}}}\n{{\"agent_name\": {{\"accuracy\": 10, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}\n",
+                    "output": "```json\n{\"gpt-4o-mini\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 8}, \"gemini-2.5-flash-lite\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}, \"claude-haiku-4-5-20251001\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 10, \"conciseness\": 6}, \"nvidia/nemotron-3-super-120b-a12b\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}, \"meta/llama-4-maverick-17b-128e-instruct\": {\"accuracy\": 9, \"clarity\": 8, \"completeness\": 8, \"conciseness\": 9}, \"mistral-small-latest\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 8}}\n```",
+                    "prompt_token": 1261,
+                    "completion_token": 251,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:45:19.249077 +0530"
+                },
+                {
+                    "model": "nvidia/nemotron-3-super-120b-a12b",
+                    "provider": "nvidia",
+                    "input": "\nYou are an unbiased AI evaluator.\n\nOriginal Question:\nExplain API in simple words within 100 words\n\nBelow are responses from different AI agents:\n\nAgent Name: gpt-4o-mini\nResponse:\nAn API, or Application Programming Interface, is like a waiter in a restaurant. Imagine you're dining out; you can't go into the kitchen to prepare your meal. Instead, you look at the menu (the API) to see what’s available and tell the waiter (the API) your order. The waiter takes your request to the kitchen (the software or server), which prepares your meal and brings it back to you. Similarly, an API allows different software applications to communicate with each other, enabling them to request and share data or services without needing to understand how everything works behind the scenes.\n\nAgent Name: gemini-2.5-flash-lite\nResponse:\nAn API (Application Programming Interface) acts as a messenger between different software programs. Think of it like ordering at a restaurant: you don't go into the kitchen; you use the menu to tell the waiter what you want. The waiter then communicates your order to the kitchen, and the kitchen prepares and delivers your food.\n\nSimilarly, an API provides a set of rules and tools that allow one application to request services or data from another. It acts as the intermediary, translating requests and responses, so programs can communicate and work together seamlessly without needing to know each other's internal complexities.\n\nAgent Name: claude-haiku-4-5-20251001\nResponse:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\n**Simple Analogy:** Think of an API like a waiter in a restaurant. You (the customer) don't need to know how the kitchen works. You simply tell the waiter what you want, and they deliver your request to the kitchen and bring back your food. Similarly, an API lets one program request data or services from another program without needing to understand its internal workings.\n\n**Real-World Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service. The server sends back the information, which your app then displays.\n\n**Key Benefit:** APIs make software development faster and easier by allowing different parts of applications to work together in a structured, safe way without exposing complex internal code.\n\nAgent Name: nvidia/nemotron-3-super-120b-a12b\nResponse:\nAn API (Application Programming Interface) is a set of rules that allows one software application to communicate with another. Think of it like a waiter in a restaurant: you (the app) tell the waiter (API) what you want—like data or a service—without needing to know how the kitchen (the other system) prepares it. The waiter takes your request, delivers it to the system, and brings back the response. This lets apps share functionality securely and efficiently, without exposing internal details. APIs simplify development by enabling different programs to work together seamlessly. (98 words)\n\nAgent Name: meta/llama-4-maverick-17b-128e-instruct\nResponse:\nAn API, or Application Programming Interface, is like a messenger or a waiter in a restaurant. You tell it what you need, and it helps you get it from another system or service. Just as you order food without knowing how it's prepared, an API allows different software applications to communicate and share data or functionality without needing to know the details of how the other system works. It simplifies interactions between apps and services, making it easier to build new applications.\n\nAgent Name: mistral-small-latest\nResponse:\nAn **API (Application Programming Interface)** is like a waiter in a restaurant. You (the user or software) request something—like food (data or a service)—by telling the waiter (API) what you want. The waiter takes your order to the kitchen (another program or server), gets the response, and brings it back to you. You don’t need to know how the kitchen works—just place your order and receive the result.\n\nAPIs enable different software systems to communicate smoothly by defining clear rules for requests and responses. They simplify integration, making it easier for apps to share data or functionality without exposing their internal details.\n\n\nEvaluate EACH agent independently using the following criteria (score each from 1 to 10):\n1. Accuracy – Correctness of the information.\n2. Clarity – How easy the response is to understand.\n3. Completeness – How well the response answers the question.\n4. Conciseness – Whether the response is brief and avoids unnecessary information.\n\nInstructions::\n- Evaluate each agent independently.\n- Scores must be integers between 1 and 10.\n- Use the EXACT agent names provided after \"Agent Name: \" as JSON keys.\n- Return ONLY valid JSON.\n- Do NOT include explanations, reasoning, or text outside the JSON.\n- Output must be a single-line JSON object.\n\nCorrect Output Example:\n{{\"{first_model}\": {{\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}}}}\n\nWrong Output Examples:\n{{\"agent_name\": {{\"{first_model}\": {{\"accuracy\": 9, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}}}\n{{\"agent_name\": {{\"accuracy\": 10, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}\n",
+                    "output": "{\n  \"gpt-4o-mini\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 8},\n  \"gemini-2.5-flash-lite\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 8},\n  \"claude-haiku-4-5-20251001\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 8},\n  \"nvidia/nemotron-3-super-120b-a12b\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9},\n  \"meta/llama-4-maverick-17b-128e-instruct\": {\"accuracy\": 8, \"clarity\": 8, \"completeness\": 7, \"conciseness\": 8},\n  \"mistral-small-latest\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 8}\n}",
+                    "prompt_token": 1196,
+                    "completion_token": 271,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:45:51.960484 +0530"
+                },
+                {
+                    "model": "meta/llama-4-maverick-17b-128e-instruct",
+                    "provider": "meta",
+                    "input": "\nYou are an unbiased AI evaluator.\n\nOriginal Question:\nExplain API in simple words within 100 words\n\nBelow are responses from different AI agents:\n\nAgent Name: gpt-4o-mini\nResponse:\nAn API, or Application Programming Interface, is like a waiter in a restaurant. Imagine you're dining out; you can't go into the kitchen to prepare your meal. Instead, you look at the menu (the API) to see what’s available and tell the waiter (the API) your order. The waiter takes your request to the kitchen (the software or server), which prepares your meal and brings it back to you. Similarly, an API allows different software applications to communicate with each other, enabling them to request and share data or services without needing to understand how everything works behind the scenes.\n\nAgent Name: gemini-2.5-flash-lite\nResponse:\nAn API (Application Programming Interface) acts as a messenger between different software programs. Think of it like ordering at a restaurant: you don't go into the kitchen; you use the menu to tell the waiter what you want. The waiter then communicates your order to the kitchen, and the kitchen prepares and delivers your food.\n\nSimilarly, an API provides a set of rules and tools that allow one application to request services or data from another. It acts as the intermediary, translating requests and responses, so programs can communicate and work together seamlessly without needing to know each other's internal complexities.\n\nAgent Name: claude-haiku-4-5-20251001\nResponse:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\n**Simple Analogy:** Think of an API like a waiter in a restaurant. You (the customer) don't need to know how the kitchen works. You simply tell the waiter what you want, and they deliver your request to the kitchen and bring back your food. Similarly, an API lets one program request data or services from another program without needing to understand its internal workings.\n\n**Real-World Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service. The server sends back the information, which your app then displays.\n\n**Key Benefit:** APIs make software development faster and easier by allowing different parts of applications to work together in a structured, safe way without exposing complex internal code.\n\nAgent Name: nvidia/nemotron-3-super-120b-a12b\nResponse:\nAn API (Application Programming Interface) is a set of rules that allows one software application to communicate with another. Think of it like a waiter in a restaurant: you (the app) tell the waiter (API) what you want—like data or a service—without needing to know how the kitchen (the other system) prepares it. The waiter takes your request, delivers it to the system, and brings back the response. This lets apps share functionality securely and efficiently, without exposing internal details. APIs simplify development by enabling different programs to work together seamlessly. (98 words)\n\nAgent Name: meta/llama-4-maverick-17b-128e-instruct\nResponse:\nAn API, or Application Programming Interface, is like a messenger or a waiter in a restaurant. You tell it what you need, and it helps you get it from another system or service. Just as you order food without knowing how it's prepared, an API allows different software applications to communicate and share data or functionality without needing to know the details of how the other system works. It simplifies interactions between apps and services, making it easier to build new applications.\n\nAgent Name: mistral-small-latest\nResponse:\nAn **API (Application Programming Interface)** is like a waiter in a restaurant. You (the user or software) request something—like food (data or a service)—by telling the waiter (API) what you want. The waiter takes your order to the kitchen (another program or server), gets the response, and brings it back to you. You don’t need to know how the kitchen works—just place your order and receive the result.\n\nAPIs enable different software systems to communicate smoothly by defining clear rules for requests and responses. They simplify integration, making it easier for apps to share data or functionality without exposing their internal details.\n\n\nEvaluate EACH agent independently using the following criteria (score each from 1 to 10):\n1. Accuracy – Correctness of the information.\n2. Clarity – How easy the response is to understand.\n3. Completeness – How well the response answers the question.\n4. Conciseness – Whether the response is brief and avoids unnecessary information.\n\nInstructions::\n- Evaluate each agent independently.\n- Scores must be integers between 1 and 10.\n- Use the EXACT agent names provided after \"Agent Name: \" as JSON keys.\n- Return ONLY valid JSON.\n- Do NOT include explanations, reasoning, or text outside the JSON.\n- Output must be a single-line JSON object.\n\nCorrect Output Example:\n{{\"{first_model}\": {{\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}}}}\n\nWrong Output Examples:\n{{\"agent_name\": {{\"{first_model}\": {{\"accuracy\": 9, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}}}\n{{\"agent_name\": {{\"accuracy\": 10, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}\n",
+                    "output": "{\"gpt-4o-mini\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 7},\n\"gemini-2.5-flash-lite\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 8},\n\"claude-haiku-4-5-20251001\": {\"accuracy\": 10, \"clarity\": 9, \"completeness\": 10, \"conciseness\": 6},\n\"nvidia/nemotron-3-super-120b-a12b\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 9},\n\"meta/llama-4-maverick-17b-128e-instruct\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 8},\n\"mistral-small-latest\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 8}}",
+                    "prompt_token": 1156,
+                    "completion_token": 249,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:45:19.611213 +0530"
+                },
+                {
+                    "model": "mistral-small-latest",
+                    "provider": "mistral",
+                    "input": "\nYou are an unbiased AI evaluator.\n\nOriginal Question:\nExplain API in simple words within 100 words\n\nBelow are responses from different AI agents:\n\nAgent Name: gpt-4o-mini\nResponse:\nAn API, or Application Programming Interface, is like a waiter in a restaurant. Imagine you're dining out; you can't go into the kitchen to prepare your meal. Instead, you look at the menu (the API) to see what’s available and tell the waiter (the API) your order. The waiter takes your request to the kitchen (the software or server), which prepares your meal and brings it back to you. Similarly, an API allows different software applications to communicate with each other, enabling them to request and share data or services without needing to understand how everything works behind the scenes.\n\nAgent Name: gemini-2.5-flash-lite\nResponse:\nAn API (Application Programming Interface) acts as a messenger between different software programs. Think of it like ordering at a restaurant: you don't go into the kitchen; you use the menu to tell the waiter what you want. The waiter then communicates your order to the kitchen, and the kitchen prepares and delivers your food.\n\nSimilarly, an API provides a set of rules and tools that allow one application to request services or data from another. It acts as the intermediary, translating requests and responses, so programs can communicate and work together seamlessly without needing to know each other's internal complexities.\n\nAgent Name: claude-haiku-4-5-20251001\nResponse:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\n**Simple Analogy:** Think of an API like a waiter in a restaurant. You (the customer) don't need to know how the kitchen works. You simply tell the waiter what you want, and they deliver your request to the kitchen and bring back your food. Similarly, an API lets one program request data or services from another program without needing to understand its internal workings.\n\n**Real-World Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service. The server sends back the information, which your app then displays.\n\n**Key Benefit:** APIs make software development faster and easier by allowing different parts of applications to work together in a structured, safe way without exposing complex internal code.\n\nAgent Name: nvidia/nemotron-3-super-120b-a12b\nResponse:\nAn API (Application Programming Interface) is a set of rules that allows one software application to communicate with another. Think of it like a waiter in a restaurant: you (the app) tell the waiter (API) what you want—like data or a service—without needing to know how the kitchen (the other system) prepares it. The waiter takes your request, delivers it to the system, and brings back the response. This lets apps share functionality securely and efficiently, without exposing internal details. APIs simplify development by enabling different programs to work together seamlessly. (98 words)\n\nAgent Name: meta/llama-4-maverick-17b-128e-instruct\nResponse:\nAn API, or Application Programming Interface, is like a messenger or a waiter in a restaurant. You tell it what you need, and it helps you get it from another system or service. Just as you order food without knowing how it's prepared, an API allows different software applications to communicate and share data or functionality without needing to know the details of how the other system works. It simplifies interactions between apps and services, making it easier to build new applications.\n\nAgent Name: mistral-small-latest\nResponse:\nAn **API (Application Programming Interface)** is like a waiter in a restaurant. You (the user or software) request something—like food (data or a service)—by telling the waiter (API) what you want. The waiter takes your order to the kitchen (another program or server), gets the response, and brings it back to you. You don’t need to know how the kitchen works—just place your order and receive the result.\n\nAPIs enable different software systems to communicate smoothly by defining clear rules for requests and responses. They simplify integration, making it easier for apps to share data or functionality without exposing their internal details.\n\n\nEvaluate EACH agent independently using the following criteria (score each from 1 to 10):\n1. Accuracy – Correctness of the information.\n2. Clarity – How easy the response is to understand.\n3. Completeness – How well the response answers the question.\n4. Conciseness – Whether the response is brief and avoids unnecessary information.\n\nInstructions::\n- Evaluate each agent independently.\n- Scores must be integers between 1 and 10.\n- Use the EXACT agent names provided after \"Agent Name: \" as JSON keys.\n- Return ONLY valid JSON.\n- Do NOT include explanations, reasoning, or text outside the JSON.\n- Output must be a single-line JSON object.\n\nCorrect Output Example:\n{{\"{first_model}\": {{\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}}}}\n\nWrong Output Examples:\n{{\"agent_name\": {{\"{first_model}\": {{\"accuracy\": 9, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}}}\n{{\"agent_name\": {{\"accuracy\": 10, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}\n",
+                    "output": "```json\n{\"gpt-4o-mini\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}, \"gemini-2.5-flash-lite\": {\"accuracy\": 10, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}, \"claude-haiku-4-5-20251001\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 9}, \"nvidia/nemotron-3-super-120b-a12b\": {\"accuracy\": 10, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 10}, \"meta/llama-4-maverick-17b-128e-instruct\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}, \"mistral-small-latest\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 10}}\n```",
+                    "prompt_token": 1198,
+                    "completion_token": 278,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-23 00:45:18.723976 +0530"
+                }
+            ],
+            "scoring_structured": {
+                "gpt-4o-mini": "{\"gpt-4o-mini\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 8},\"gemini-2.5-flash-lite\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 9},\"claude-haiku-4-5-20251001\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 10, \"conciseness\": 8},\"nvidia/nemotron-3-super-120b-a12b\": {\"accuracy\": 9, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 10},\"meta/llama-4-maverick-17b-128e-instruct\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9},\"mistral-small-latest\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 9}}",
+                "gemini-2.5-flash-lite": "{\"gpt-4o-mini\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 10}, \"gemini-2.5-flash-lite\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 10}, \"claude-haiku-4-5-20251001\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 8}, \"nvidia/nemotron-3-super-120b-a12b\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 10}, \"meta/llama-4-maverick-17b-128e-instruct\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 10}, \"mistral-small-latest\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 10}}",
+                "claude-haiku-4-5-20251001": "```json\n{\"gpt-4o-mini\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 8}, \"gemini-2.5-flash-lite\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}, \"claude-haiku-4-5-20251001\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 10, \"conciseness\": 6}, \"nvidia/nemotron-3-super-120b-a12b\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}, \"meta/llama-4-maverick-17b-128e-instruct\": {\"accuracy\": 9, \"clarity\": 8, \"completeness\": 8, \"conciseness\": 9}, \"mistral-small-latest\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 8}}\n```",
+                "nvidia/nemotron-3-super-120b-a12b": "{\n  \"gpt-4o-mini\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 8},\n  \"gemini-2.5-flash-lite\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 8},\n  \"claude-haiku-4-5-20251001\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 8},\n  \"nvidia/nemotron-3-super-120b-a12b\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9},\n  \"meta/llama-4-maverick-17b-128e-instruct\": {\"accuracy\": 8, \"clarity\": 8, \"completeness\": 7, \"conciseness\": 8},\n  \"mistral-small-latest\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 8}\n}",
+                "meta/llama-4-maverick-17b-128e-instruct": "{\"gpt-4o-mini\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 7},\n\"gemini-2.5-flash-lite\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 8},\n\"claude-haiku-4-5-20251001\": {\"accuracy\": 10, \"clarity\": 9, \"completeness\": 10, \"conciseness\": 6},\n\"nvidia/nemotron-3-super-120b-a12b\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 9},\n\"meta/llama-4-maverick-17b-128e-instruct\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 8},\n\"mistral-small-latest\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 8}}",
+                "mistral-small-latest": "```json\n{\"gpt-4o-mini\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}, \"gemini-2.5-flash-lite\": {\"accuracy\": 10, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}, \"claude-haiku-4-5-20251001\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 9}, \"nvidia/nemotron-3-super-120b-a12b\": {\"accuracy\": 10, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 10}, \"meta/llama-4-maverick-17b-128e-instruct\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}, \"mistral-small-latest\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 10}}\n```"
+            },
+            "startedAt": "2026-03-23 00:45:10.348763 +0530",
+            "completedAt": "2026-03-23 00:45:51.988026 +0530",
+            "stage_timing": 41.6393,
+            "savedAt": "2026-03-23 00:45:51.990903 +0530"
+        },
+        "SCORE_AGGREGATION": {
+            "parsed_scores": {
+                "gpt-4o-mini": {
+                    "gpt-4o-mini": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 9,
+                        "conciseness": 8
+                    },
+                    "gemini-2.5-flash-lite": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 9,
+                        "conciseness": 9
+                    },
+                    "claude-haiku-4-5-20251001": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 10,
+                        "conciseness": 8
+                    },
+                    "nvidia/nemotron-3-super-120b-a12b": {
+                        "accuracy": 9,
+                        "clarity": 10,
+                        "completeness": 9,
+                        "conciseness": 10
+                    },
+                    "meta/llama-4-maverick-17b-128e-instruct": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 8,
+                        "conciseness": 9
+                    },
+                    "mistral-small-latest": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 9,
+                        "conciseness": 9
+                    }
+                },
+                "gemini-2.5-flash-lite": {
+                    "gpt-4o-mini": {
+                        "accuracy": 10,
+                        "clarity": 10,
+                        "completeness": 10,
+                        "conciseness": 10
+                    },
+                    "gemini-2.5-flash-lite": {
+                        "accuracy": 10,
+                        "clarity": 10,
+                        "completeness": 10,
+                        "conciseness": 10
+                    },
+                    "claude-haiku-4-5-20251001": {
+                        "accuracy": 10,
+                        "clarity": 10,
+                        "completeness": 10,
+                        "conciseness": 8
+                    },
+                    "nvidia/nemotron-3-super-120b-a12b": {
+                        "accuracy": 10,
+                        "clarity": 10,
+                        "completeness": 10,
+                        "conciseness": 10
+                    },
+                    "meta/llama-4-maverick-17b-128e-instruct": {
+                        "accuracy": 10,
+                        "clarity": 10,
+                        "completeness": 10,
+                        "conciseness": 10
+                    },
+                    "mistral-small-latest": {
+                        "accuracy": 10,
+                        "clarity": 10,
+                        "completeness": 10,
+                        "conciseness": 10
+                    }
+                },
+                "claude-haiku-4-5-20251001": {
+                    "gpt-4o-mini": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 8,
+                        "conciseness": 8
+                    },
+                    "gemini-2.5-flash-lite": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 8,
+                        "conciseness": 9
+                    },
+                    "claude-haiku-4-5-20251001": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 10,
+                        "conciseness": 6
+                    },
+                    "nvidia/nemotron-3-super-120b-a12b": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 8,
+                        "conciseness": 9
+                    },
+                    "meta/llama-4-maverick-17b-128e-instruct": {
+                        "accuracy": 9,
+                        "clarity": 8,
+                        "completeness": 8,
+                        "conciseness": 9
+                    },
+                    "mistral-small-latest": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 9,
+                        "conciseness": 8
+                    }
+                },
+                "nvidia/nemotron-3-super-120b-a12b": {
+                    "gpt-4o-mini": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 8,
+                        "conciseness": 8
+                    },
+                    "gemini-2.5-flash-lite": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 8,
+                        "conciseness": 8
+                    },
+                    "claude-haiku-4-5-20251001": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 9,
+                        "conciseness": 8
+                    },
+                    "nvidia/nemotron-3-super-120b-a12b": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 8,
+                        "conciseness": 9
+                    },
+                    "meta/llama-4-maverick-17b-128e-instruct": {
+                        "accuracy": 8,
+                        "clarity": 8,
+                        "completeness": 7,
+                        "conciseness": 8
+                    },
+                    "mistral-small-latest": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 8,
+                        "conciseness": 8
+                    }
+                },
+                "meta/llama-4-maverick-17b-128e-instruct": {
+                    "gpt-4o-mini": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 9,
+                        "conciseness": 7
+                    },
+                    "gemini-2.5-flash-lite": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 9,
+                        "conciseness": 8
+                    },
+                    "claude-haiku-4-5-20251001": {
+                        "accuracy": 10,
+                        "clarity": 9,
+                        "completeness": 10,
+                        "conciseness": 6
+                    },
+                    "nvidia/nemotron-3-super-120b-a12b": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 9,
+                        "conciseness": 9
+                    },
+                    "meta/llama-4-maverick-17b-128e-instruct": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 8,
+                        "conciseness": 8
+                    },
+                    "mistral-small-latest": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 9,
+                        "conciseness": 8
+                    }
+                },
+                "mistral-small-latest": {
+                    "gpt-4o-mini": {
+                        "accuracy": 10,
+                        "clarity": 10,
+                        "completeness": 9,
+                        "conciseness": 9
+                    },
+                    "gemini-2.5-flash-lite": {
+                        "accuracy": 10,
+                        "clarity": 9,
+                        "completeness": 8,
+                        "conciseness": 9
+                    },
+                    "claude-haiku-4-5-20251001": {
+                        "accuracy": 10,
+                        "clarity": 10,
+                        "completeness": 10,
+                        "conciseness": 9
+                    },
+                    "nvidia/nemotron-3-super-120b-a12b": {
+                        "accuracy": 10,
+                        "clarity": 9,
+                        "completeness": 8,
+                        "conciseness": 10
+                    },
+                    "meta/llama-4-maverick-17b-128e-instruct": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 8,
+                        "conciseness": 9
+                    },
+                    "mistral-small-latest": {
+                        "accuracy": 10,
+                        "clarity": 10,
+                        "completeness": 9,
+                        "conciseness": 10
+                    }
+                }
+            },
+            "aggregated_scores": {
+                "gpt-4o-mini": {
+                    "accuracy": 9.33,
+                    "clarity": 9.33,
+                    "completeness": 8.83,
+                    "conciseness": 8.33
+                },
+                "gemini-2.5-flash-lite": {
+                    "accuracy": 9.33,
+                    "clarity": 9.17,
+                    "completeness": 8.67,
+                    "conciseness": 8.83
+                },
+                "claude-haiku-4-5-20251001": {
+                    "accuracy": 9.5,
+                    "clarity": 9.33,
+                    "completeness": 9.83,
+                    "conciseness": 7.5
+                },
+                "nvidia/nemotron-3-super-120b-a12b": {
+                    "accuracy": 9.33,
+                    "clarity": 9.33,
+                    "completeness": 8.67,
+                    "conciseness": 9.5
+                },
+                "meta/llama-4-maverick-17b-128e-instruct": {
+                    "accuracy": 9.0,
+                    "clarity": 8.83,
+                    "completeness": 8.17,
+                    "conciseness": 8.83
+                },
+                "mistral-small-latest": {
+                    "accuracy": 9.33,
+                    "clarity": 9.33,
+                    "completeness": 9.0,
+                    "conciseness": 8.83
+                }
+            },
+            "weighted_scores": {
+                "gpt-4o-mini": 9.08,
+                "gemini-2.5-flash-lite": 9.05,
+                "claude-haiku-4-5-20251001": 9.37,
+                "nvidia/nemotron-3-super-120b-a12b": 9.15,
+                "meta/llama-4-maverick-17b-128e-instruct": 8.7,
+                "mistral-small-latest": 9.18
+            },
+            "startedAt": "2026-03-23 00:45:52.003833 +0530",
+            "completedAt": "2026-03-23 00:45:52.126458 +0530",
+            "stage_timing": 0.1227,
+            "savedAt": "2026-03-23 00:45:52.151939 +0530"
+        },
+        "WINNER_SELECTION": {
+            "winner_output_stage": "CONSENSUS_SYNTHESIS",
+            "model_rankings": [
+                {
+                    "rank": 1,
+                    "model": "claude-haiku-4-5-20251001",
+                    "score": 9.37
+                },
+                {
+                    "rank": 2,
+                    "model": "mistral-small-latest",
+                    "score": 9.18
+                },
+                {
+                    "rank": 3,
+                    "model": "nvidia/nemotron-3-super-120b-a12b",
+                    "score": 9.15
+                },
+                {
+                    "rank": 4,
+                    "model": "gpt-4o-mini",
+                    "score": 9.08
+                },
+                {
+                    "rank": 5,
+                    "model": "gemini-2.5-flash-lite",
+                    "score": 9.05
+                },
+                {
+                    "rank": 6,
+                    "model": "meta/llama-4-maverick-17b-128e-instruct",
+                    "score": 8.7
+                }
+            ],
+            "final_results": [
+                {
+                    "rank": 1,
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "score": 9.37,
+                    "output": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\n**Simple Analogy:** Think of an API like a waiter in a restaurant. You (the customer) don't need to know how the kitchen works. You simply tell the waiter what you want, and they deliver your request to the kitchen and bring back your food. Similarly, an API lets one program request data or services from another program without needing to understand its internal workings.\n\n**Real-World Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service. The server sends back the information, which your app then displays.\n\n**Key Benefit:** APIs make software development faster and easier by allowing different parts of applications to work together in a structured, safe way without exposing complex internal code."
+                },
+                {
+                    "rank": 2,
+                    "model": "mistral-small-latest",
+                    "provider": "mistral",
+                    "score": 9.18,
+                    "output": "An **API (Application Programming Interface)** is like a waiter in a restaurant. You (the user or software) request something—like food (data or a service)—by telling the waiter (API) what you want. The waiter takes your order to the kitchen (another program or server), gets the response, and brings it back to you. You don’t need to know how the kitchen works—just place your order and receive the result.\n\nAPIs enable different software systems to communicate smoothly by defining clear rules for requests and responses. They simplify integration, making it easier for apps to share data or functionality without exposing their internal details."
+                },
+                {
+                    "rank": 3,
+                    "model": "nvidia/nemotron-3-super-120b-a12b",
+                    "provider": "nvidia",
+                    "score": 9.15,
+                    "output": "An API (Application Programming Interface) is a set of rules that allows one software application to communicate with another. Think of it like a waiter in a restaurant: you (the app) tell the waiter (API) what you want—like data or a service—without needing to know how the kitchen (the other system) prepares it. The waiter takes your request, delivers it to the system, and brings back the response. This lets apps share functionality securely and efficiently, without exposing internal details. APIs simplify development by enabling different programs to work together seamlessly. (98 words)"
+                },
+                {
+                    "rank": 4,
+                    "model": "gpt-4o-mini",
+                    "provider": "openai",
+                    "score": 9.08,
+                    "output": "An API, or Application Programming Interface, is like a waiter in a restaurant. Imagine you're dining out; you can't go into the kitchen to prepare your meal. Instead, you look at the menu (the API) to see what’s available and tell the waiter (the API) your order. The waiter takes your request to the kitchen (the software or server), which prepares your meal and brings it back to you. Similarly, an API allows different software applications to communicate with each other, enabling them to request and share data or services without needing to understand how everything works behind the scenes."
+                },
+                {
+                    "rank": 5,
+                    "model": "gemini-2.5-flash-lite",
+                    "provider": "google",
+                    "score": 9.05,
+                    "output": "An API (Application Programming Interface) acts as a messenger between different software programs. Think of it like ordering at a restaurant: you don't go into the kitchen; you use the menu to tell the waiter what you want. The waiter then communicates your order to the kitchen, and the kitchen prepares and delivers your food.\n\nSimilarly, an API provides a set of rules and tools that allow one application to request services or data from another. It acts as the intermediary, translating requests and responses, so programs can communicate and work together seamlessly without needing to know each other's internal complexities."
+                },
+                {
+                    "rank": 6,
+                    "model": "meta/llama-4-maverick-17b-128e-instruct",
+                    "provider": "meta",
+                    "score": 8.7,
+                    "output": "An API, or Application Programming Interface, is like a messenger or a waiter in a restaurant. You tell it what you need, and it helps you get it from another system or service. Just as you order food without knowing how it's prepared, an API allows different software applications to communicate and share data or functionality without needing to know the details of how the other system works. It simplifies interactions between apps and services, making it easier to build new applications."
+                }
+            ],
+            "winner_details": {
+                "winner": {
+                    "rank": 1,
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "score": 9.37,
+                    "output": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\n**Simple Analogy:** Think of an API like a waiter in a restaurant. You (the customer) don't need to know how the kitchen works. You simply tell the waiter what you want, and they deliver your request to the kitchen and bring back your food. Similarly, an API lets one program request data or services from another program without needing to understand its internal workings.\n\n**Real-World Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service. The server sends back the information, which your app then displays.\n\n**Key Benefit:** APIs make software development faster and easier by allowing different parts of applications to work together in a structured, safe way without exposing complex internal code."
+                },
+                "winners": [
+                    {
+                        "rank": 1,
+                        "model": "claude-haiku-4-5-20251001",
+                        "provider": "anthropic",
+                        "score": 9.37,
+                        "output": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\n**Simple Analogy:** Think of an API like a waiter in a restaurant. You (the customer) don't need to know how the kitchen works. You simply tell the waiter what you want, and they deliver your request to the kitchen and bring back your food. Similarly, an API lets one program request data or services from another program without needing to understand its internal workings.\n\n**Real-World Example:** When you check weather on your phone, the weather app uses an API to request data from a weather service. The server sends back the information, which your app then displays.\n\n**Key Benefit:** APIs make software development faster and easier by allowing different parts of applications to work together in a structured, safe way without exposing complex internal code."
+                    }
+                ]
+            },
+            "more_details": {
+                "request_id": "20260323_004432_427359",
+                "prompt": "Explain API in simple words within 100 words",
+                "start_time": "2026-03-23 00:44:32.427307 +0530",
+                "end_time": "2026-03-23 00:45:52.229113 +0530",
+                "execution_time": 79.8018,
+                "winner_model": "claude-haiku-4-5-20251001",
+                "winners_count": 1,
+                "top_models": [
+                    "claude-haiku-4-5-20251001"
+                ]
+            },
+            "startedAt": "2026-03-23 00:45:52.166909 +0530",
+            "completedAt": "2026-03-23 00:45:52.237866 +0530",
+            "stage_timing": 0.071,
+            "savedAt": "2026-03-23 00:45:52.259655 +0530"
+        },
+        "REPORT_GENERATION": {
+            "token_summary": [
+                {
+                    "stage": "INITIAL_EXECUTION",
+                    "model": "gpt-4o-mini",
+                    "provider": "openai",
+                    "prompt_token": 26,
+                    "completion_token": 112,
+                    "other_token": 0,
+                    "total_token": 138
+                },
+                {
+                    "stage": "INITIAL_EXECUTION",
+                    "model": "gemini-2.5-flash-lite",
+                    "provider": "google",
+                    "prompt_token": 19,
+                    "completion_token": 119,
+                    "other_token": 0,
+                    "total_token": 138
+                },
+                {
+                    "stage": "INITIAL_EXECUTION",
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "prompt_token": 24,
+                    "completion_token": 132,
+                    "other_token": 0,
+                    "total_token": 156
+                },
+                {
+                    "stage": "INITIAL_EXECUTION",
+                    "model": "nvidia/nemotron-3-super-120b-a12b",
+                    "provider": "nvidia",
+                    "prompt_token": 34,
+                    "completion_token": 142,
+                    "other_token": 0,
+                    "total_token": 176
+                },
+                {
+                    "stage": "INITIAL_EXECUTION",
+                    "model": "meta/llama-4-maverick-17b-128e-instruct",
+                    "provider": "meta",
+                    "prompt_token": 30,
+                    "completion_token": 119,
+                    "other_token": 0,
+                    "total_token": 149
+                },
+                {
+                    "stage": "INITIAL_EXECUTION",
+                    "model": "mistral-small-latest",
+                    "provider": "mistral",
+                    "prompt_token": 35,
+                    "completion_token": 114,
+                    "other_token": 0,
+                    "total_token": 149
+                },
+                {
+                    "stage": "CONSENSUS_SYNTHESIS",
+                    "model": "gpt-4o-mini",
+                    "provider": "openai",
+                    "prompt_token": 846,
+                    "completion_token": 118,
+                    "other_token": 0,
+                    "total_token": 964
+                },
+                {
+                    "stage": "CONSENSUS_SYNTHESIS",
+                    "model": "gemini-2.5-flash-lite",
+                    "provider": "google",
+                    "prompt_token": 895,
+                    "completion_token": 119,
+                    "other_token": 0,
+                    "total_token": 1014
+                },
+                {
+                    "stage": "CONSENSUS_SYNTHESIS",
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "prompt_token": 908,
+                    "completion_token": 196,
+                    "other_token": 0,
+                    "total_token": 1104
+                },
+                {
+                    "stage": "CONSENSUS_SYNTHESIS",
+                    "model": "nvidia/nemotron-3-super-120b-a12b",
+                    "provider": "nvidia",
+                    "prompt_token": 881,
+                    "completion_token": 119,
+                    "other_token": 0,
+                    "total_token": 1000
+                },
+                {
+                    "stage": "CONSENSUS_SYNTHESIS",
+                    "model": "meta/llama-4-maverick-17b-128e-instruct",
+                    "provider": "meta",
+                    "prompt_token": 848,
+                    "completion_token": 92,
+                    "other_token": 0,
+                    "total_token": 940
+                },
+                {
+                    "stage": "CONSENSUS_SYNTHESIS",
+                    "model": "mistral-small-latest",
+                    "provider": "mistral",
+                    "prompt_token": 882,
+                    "completion_token": 129,
+                    "other_token": 0,
+                    "total_token": 1011
+                },
+                {
+                    "stage": "SCORING_COMBINED",
+                    "model": "gpt-4o-mini",
+                    "provider": "openai",
+                    "prompt_token": 1154,
+                    "completion_token": 245,
+                    "other_token": 0,
+                    "total_token": 1399
+                },
+                {
+                    "stage": "SCORING_COMBINED",
+                    "model": "gemini-2.5-flash-lite",
+                    "provider": "google",
+                    "prompt_token": 1218,
+                    "completion_token": 280,
+                    "other_token": 0,
+                    "total_token": 1498
+                },
+                {
+                    "stage": "SCORING_COMBINED",
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "prompt_token": 1261,
+                    "completion_token": 251,
+                    "other_token": 0,
+                    "total_token": 1512
+                },
+                {
+                    "stage": "SCORING_COMBINED",
+                    "model": "nvidia/nemotron-3-super-120b-a12b",
+                    "provider": "nvidia",
+                    "prompt_token": 1196,
+                    "completion_token": 271,
+                    "other_token": 0,
+                    "total_token": 1467
+                },
+                {
+                    "stage": "SCORING_COMBINED",
+                    "model": "meta/llama-4-maverick-17b-128e-instruct",
+                    "provider": "meta",
+                    "prompt_token": 1156,
+                    "completion_token": 249,
+                    "other_token": 0,
+                    "total_token": 1405
+                },
+                {
+                    "stage": "SCORING_COMBINED",
+                    "model": "mistral-small-latest",
+                    "provider": "mistral",
+                    "prompt_token": 1198,
+                    "completion_token": 278,
+                    "other_token": 0,
+                    "total_token": 1476
+                },
+                {
+                    "stage": "ALL_STAGES",
+                    "model": "gpt-4o-mini",
+                    "provider": "openai",
+                    "prompt_token": 2026,
+                    "completion_token": 475,
+                    "other_token": 0,
+                    "total_token": 2501
+                },
+                {
+                    "stage": "ALL_STAGES",
+                    "model": "gemini-2.5-flash-lite",
+                    "provider": "google",
+                    "prompt_token": 2132,
+                    "completion_token": 518,
+                    "other_token": 0,
+                    "total_token": 2650
+                },
+                {
+                    "stage": "ALL_STAGES",
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "prompt_token": 2193,
+                    "completion_token": 579,
+                    "other_token": 0,
+                    "total_token": 2772
+                },
+                {
+                    "stage": "ALL_STAGES",
+                    "model": "nvidia/nemotron-3-super-120b-a12b",
+                    "provider": "nvidia",
+                    "prompt_token": 2111,
+                    "completion_token": 532,
+                    "other_token": 0,
+                    "total_token": 2643
+                },
+                {
+                    "stage": "ALL_STAGES",
+                    "model": "meta/llama-4-maverick-17b-128e-instruct",
+                    "provider": "meta",
+                    "prompt_token": 2034,
+                    "completion_token": 460,
+                    "other_token": 0,
+                    "total_token": 2494
+                },
+                {
+                    "stage": "ALL_STAGES",
+                    "model": "mistral-small-latest",
+                    "provider": "mistral",
+                    "prompt_token": 2115,
+                    "completion_token": 521,
+                    "other_token": 0,
+                    "total_token": 2636
+                },
+                {
+                    "stage": "ALL_STAGES",
+                    "model": "ALL_MODELS",
+                    "provider": "ALL_PROVIDERS",
+                    "prompt_token": 12611,
+                    "completion_token": 3085,
+                    "other_token": 0,
+                    "total_token": 15696
+                }
+            ],
+            "stage_token_report": "                  stage   provider                                    model  prompt_token  completion_token  total_token\n0     INITIAL_EXECUTION     openai                              gpt-4o-mini            26               112          138\n1     INITIAL_EXECUTION     google                    gemini-2.5-flash-lite            19               119          138\n2     INITIAL_EXECUTION  anthropic                claude-haiku-4-5-20251001            24               132          156\n3     INITIAL_EXECUTION     nvidia        nvidia/nemotron-3-super-120b-a12b            34               142          176\n4     INITIAL_EXECUTION       meta  meta/llama-4-maverick-17b-128e-instruct            30               119          149\n5     INITIAL_EXECUTION    mistral                     mistral-small-latest            35               114          149\n6   CONSENSUS_SYNTHESIS     openai                              gpt-4o-mini           846               118          964\n7   CONSENSUS_SYNTHESIS     google                    gemini-2.5-flash-lite           895               119         1014\n8   CONSENSUS_SYNTHESIS  anthropic                claude-haiku-4-5-20251001           908               196         1104\n9   CONSENSUS_SYNTHESIS     nvidia        nvidia/nemotron-3-super-120b-a12b           881               119         1000\n10  CONSENSUS_SYNTHESIS       meta  meta/llama-4-maverick-17b-128e-instruct           848                92          940\n11  CONSENSUS_SYNTHESIS    mistral                     mistral-small-latest           882               129         1011\n12     SCORING_COMBINED     openai                              gpt-4o-mini          1154               245         1399\n13     SCORING_COMBINED     google                    gemini-2.5-flash-lite          1218               280         1498\n14     SCORING_COMBINED  anthropic                claude-haiku-4-5-20251001          1261               251         1512\n15     SCORING_COMBINED     nvidia        nvidia/nemotron-3-super-120b-a12b          1196               271         1467\n16     SCORING_COMBINED       meta  meta/llama-4-maverick-17b-128e-instruct          1156               249         1405\n17     SCORING_COMBINED    mistral                     mistral-small-latest          1198               278         1476",
+            "model_token_report": "    provider                                    model  prompt_token  completion_token  total_token\n0     openai                              gpt-4o-mini          2026               475         2501\n1     google                    gemini-2.5-flash-lite          2132               518         2650\n2  anthropic                claude-haiku-4-5-20251001          2193               579         2772\n3     nvidia        nvidia/nemotron-3-super-120b-a12b          2111               532         2643\n4       meta  meta/llama-4-maverick-17b-128e-instruct          2034               460         2494\n5    mistral                     mistral-small-latest          2115               521         2636",
+            "startedAt": "2026-03-23 00:45:52.275414 +0530",
+            "completedAt": "2026-03-23 00:45:53.862406 +0530",
+            "stage_timing": 1.5871,
+            "savedAt": "2026-03-23 00:45:53.866311 +0530"
+        }
+    },
+    "createdAt": "2026-03-23 00:44:32.463946 +0530",
+    "updatedAt": "2026-03-23 00:45:53.866375 +0530"
+}

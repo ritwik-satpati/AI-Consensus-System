@@ -10,9 +10,11 @@ from functions.log_generator import write_log
 load_dotenv()
 
 
-# This function sends a prompt to NVIDIA NIM model and returns structured response data
 async def call_nvidia(prompt, model, key, system_prompt, request_id):
-
+    """
+    This function sends a prompt to NVIDIA NIM model and returns structured response data
+    """
+    
     client = AsyncOpenAI(
         api_key=key,
         base_url="https://integrate.api.nvidia.com/v1"

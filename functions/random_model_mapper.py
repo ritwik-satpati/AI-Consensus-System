@@ -3,11 +3,10 @@ MODULE_NAME = "RANDOM_MODEL_MAPPER"
 
 import random
 from functions.log_generator import write_log
-import json
-import os
+from functions.json_exporter import export_json
 
 
-def generate_random_model_mapping(request_id, model_outputs, directory):
+def generate_random_model_mapping(request_id, model_outputs, directory=None):
     """
     Generates random model mapping where:
     - Each model is evaluated by exactly one other model
@@ -42,17 +41,12 @@ def generate_random_model_mapping(request_id, model_outputs, directory):
     # Updating log entry
     write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Random model mapping generated")
 
-     # Ensure structured folder exists
-    os.makedirs(directory, exist_ok=True)
-
-    # Generate timestamp-based filename
-    filename = f"{directory}/{request_id}.json"
-
-    # Save structured result
-    with open(filename, "w", encoding="utf-8") as file:
-        json.dump(random_map, file, indent=4, ensure_ascii=False)
-
-    # Updating log entry
-    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Random model mapping saved | {filename}")
+    # Save the output using export_json
+    export_json(
+        request_id=request_id,
+        directory=directory,
+        data=random_map,
+        data_label="Random Model Mapping",
+    )
 
     return random_map

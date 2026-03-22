@@ -3,8 +3,12 @@ MODULE_NAME = "SYSTEM_PROMPT_MANAGER"
 
 from functions.log_generator import write_log
 
-# This function returns a hardcoded prompt
+
 def get_system_prompt(request_id):
+    """
+    This function returns a hardcoded prompt
+    """
+    
     prompt = "You are a helpful assistant."
     
     # Updating log entry 

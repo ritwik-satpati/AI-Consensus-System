@@ -5,8 +5,12 @@ MODULE_NAME = "REQUEST_ID_GENERATOR"
 from functions.time_utils import get_current_time
 from functions.log_generator import write_log
 
-# This function generates a unique request ID using current timestamp
+
 def generate_request_id(pre_log_messages = []):
+    """
+    This function generates a unique request ID using current timestamp
+    """
+
     time = get_current_time()
 
     base = time.split(" ")[0] + " " + time.split(" ")[1]  # remove timezone

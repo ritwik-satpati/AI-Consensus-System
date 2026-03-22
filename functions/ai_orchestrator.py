@@ -2,19 +2,21 @@
 MODULE_NAME = "AI_ORCHESTRATOR"
 
 import asyncio
-
 from functions.ai_provider_mapper import mapping_ai_provider
 from functions.log_generator import write_log
+from functions.json_exporter import export_json
 
 # Map provider name to its corresponding function
 provider_map = mapping_ai_provider()
 
-# This function runs all configured models with single or custom prompt and collects their outputs
-async def run_models( models_data, system_prompt, request_id, prompt=None, prompts_with_model=None, min_required_models=1):
+
+async def run_models( models_data, system_prompt, request_id, stage, prompt=None, prompts_with_model=None, min_required_models=1, directory=None):
     """
+    This function runs all configured models with  single or custom prompt and collects their outputs
+
     prompt (for single prompt for all model)
     prompts_with_model => {model_name : prompt}
-    This function runs all configured models with  single or custom prompt and collects their outputs
+
     Returns => [{model_name : output}]
     """
 
@@ -118,8 +120,16 @@ async def run_models( models_data, system_prompt, request_id, prompt=None, promp
             # Updating log entry
             write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Output added | {result["provider"]} | {result["model"]}")
 
+    # Save the output using export_json
+    export_json(
+        request_id=request_id,
+        directory=directory,
+        data=outputs,
+        data_label=f"{"Initial Outputs for {stage}"}",
+    )
 
     # Updating log entry
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Initial outputs created | For stage {stage}")
     write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Completed execution for {len(outputs)} models")
 
     return outputs

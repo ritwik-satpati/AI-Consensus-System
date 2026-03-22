@@ -12,9 +12,11 @@ from functions.log_generator import write_log
 load_dotenv()
 
 
-# This function sends a prompt to DeepSeek and returns structured response data
 async def call_deepseek(prompt, model, key, system_prompt, request_id):
-
+    """
+    This function sends a prompt to DeepSeek and returns structured response data
+    """
+    
     # DeepSeek uses OpenAI-compatible API format
     client = AsyncOpenAI(
         api_key=key,

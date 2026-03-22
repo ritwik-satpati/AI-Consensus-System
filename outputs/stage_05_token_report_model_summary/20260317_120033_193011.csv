@@ -1,7 +1,0 @@
-provider,model,prompt_token,completion_token,total_token
-openai,gpt-4o-mini,1173,267,1440
-google,gemini-2.5-flash-lite,1222,246,1468
-anthropic,claude-haiku-4-5-20251001,1267,353,1620
-nvidia,nvidia/nemotron-3-super-120b-a12b,1247,320,1567
-meta,meta/llama-4-maverick-17b-128e-instruct,1210,268,1478
-mistral,mistral-small-latest,1295,330,1625

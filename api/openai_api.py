@@ -12,9 +12,11 @@ from functions.log_generator import write_log
 load_dotenv()
 
 
-# This function sends a prompt to OpenAI and returns structured response data
 async def call_openai(prompt, model, key, system_prompt, request_id):
-
+    """
+    This function sends a prompt to OpenAI and returns structured response data
+    """
+    
     # Create OpenAI client using API key stored in .env file
     client = AsyncOpenAI(api_key=key)
 

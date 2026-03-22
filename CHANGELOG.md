@@ -8,93 +8,96 @@ All notable changes to this project will be documented in this file.
 
 | Component | Old Version | New Version |
 |-----------|------------|------------|
-| AI Consensus System | V1 - Version 1.0.0 | V2 - Version 1.1.0 |
-| AI_CONSENSUS_SYSTEM_M1 | V1 - Version 1.0.0 | V2 - Version 1.1.0 |
-| AI_CONSENSUS_SYSTEM_M2 | V1 - Version 1.0.0 | V2 - Version 1.1.0 |
+| AI Consensus System | V2 - Version 1.1.0 | V3 - Version 1.2.0 |
+| AI_CONSENSUS_SYSTEM_M1 | V2 - Version 1.1.0 | V3 - Version 1.2.0 |
+| AI_CONSENSUS_SYSTEM_M2 | V2 - Version 1.1.0 | V3 - Version 1.2.0 |
 
 ---
 
 ## 📄 Update Summary
 
-### 1. Creation of CHANGELOG.md
+### 1. Update of CHANGELOG.md
 - **Added**
-    - CHANGELOG.md is created to maintain all the changes.
+    - CHANGELOG.md is updated with all the changes.
 >**Note:** Helps to view the changes or modifications in the latest version.
 
-### 2. Additional AI Models
-- **Added**
-    - Nvidia - `nvidia_api.py`.
-    - Grok (xAI) - `grok_api.py`.
-    - Meta - `meta_api.py`.
-    - Mistral.ai - `mistral_api.py`.
-- **Updated**
-    - Extended `ai_provider_mapper.py` to register newly supported providers and route requests accordingly.
-    - Updated environment configuration to include API keys for newly added providers in `.env` & `.env.sample`.
-    - Modify `model_manager.py` for calling newly AI models APIs.
-> **Note:** This enhancement expands the AI Consensus System to support multiple additional providers, enabling broader model diversity and improving the quality of consensus generation.
+### 2. Model Ranking & Result Formatting Enhancement
+**Added**
+    - `rank_models()` for score-based ranking with (1,1,3) tie handling.
+    - `format_ranked_results()` for structured ranked outputs.
+    - Support for multiple winners in `winner_selector.py`.
+    - Additional pipeline details in `score_logger.py`.
+**Updated**
+    - Winner selection now uses sorted results (index 0) as primary winner and all rank 1 models as winners list.
+    - Ranking, formatting, and winner selection are now modularized.
+**Removed**
+    - Direct winner selection based solely on highest weighted score without structured ranking.
+    - Implicit or unclear tie-handling behavior in winner selection.
+>**Note:** In tie cases, multiple models can have rank 1. The system selects a single winner deterministically from the first position (index 0), while all rank 1 models are included in the winners list for transparency and analysis.
 
-### 3. Parallel AI API Calls & Async execution using asyncio
+### 3. Centralized Reusable Pipeline Steps
 - **Added**
-    - Async execution using asyncio in main.py.
-    - Parallel AI model execution inside run_model() in ai_orchestrator.py.
+    - Dedicated `./steps` directory to store reusable pipeline steps.
+    - Introduced `PipelineContext` class in `pipeline_context.py` for centralized state management and reuse across stages.
 - **Updated**
-    - OpenAI, Gemini, Claude, and DeepSeek APIs converted to async.
+    - Refactored pipeline implementations (ai_consensus_system_m1 & ai_consensus_system_m1) to consume shared steps from the centralized directory.
+>**Note:** Enables step reusability, reduces duplication, and simplifies extension for future pipeline versions.
+
+### 4. Split Score Aggregation & Winner Selection
+**Added**
+    - Introduced separate stages for Score Aggregation and Winner Selection.
+**Updated** 
+    - Split previously combined logic into distinct components for better modularity.
+>**Note:** Enhances clarity, maintainability, and allows independent tuning of scoring and selection strategies.
+
+### 5. Unified Output & Consolidated Reporting
+- **Added**
+    - Single consolidated JSON output containing complete pipeline results.
+- **Updated**
+    - Refactored output handling to aggregate all stage data into one unified file.
+    - Simplified reporting flow across all pipeline stages.
 - **Removed**
-    - Sequential model execution inside run_model() in ai_orchestrator.py.
->**Note:** Significant drop in the overall pipeline execution time. For M1 with 3 models, it previously took around 60 sec, now it takes around 20 sec.
+    - Eliminated individual json output files and subfolders within ./outputs.
+    - Removed fragmented storage of stage-wise artifacts.
+>**Note:** All pipeline outputs are now stored in a single JSON file, improving traceability, portability, and ease of debugging.
 
-### 4. Dynamic System Prompt for Agent APIs
+### 6. Option-Based JSON & CSV Export Enhancement
 - **Added**
-    - Added system_prompt_manager.py in ./hardcodes.
+    - `json_exporter.py` for centralized JSON export handling.
+    - Support for option-based printing ()`isPrint`) across multiple functions.
+    - Support for directory-based export configuration for JSON and CSV outputs.
 - **Updated**
-    - Passing system_prompt in each API Calling functions from ai_consensus_system in ai_consensus_system_m1.py and ai_consensus_system_m2.py
+    - Refactored `csv_exporter.py` to align with the new export system.
+    - Multiple functions updated to support configurable printing and export options.
 - **Removed**
-    - Hardcoded system prompt in all API Calling functions.
->**Note:** This can use dynamic system prompt although it is in ./hardcoded as of now. We have the system to control it.
+    - Manual JSON/CSV export handling from multiple functions.
+    - Redundant step functions related to export logic.
+>**Note:** Export handling is now centralized and configurable, enabling cleaner code, reduced duplication, and flexible control over printing and file storage.
 
-### 5. Common run_model() in ai_orchestrator.py for both same and different prompts
+### 7. Standardized Function Documentation Using Docstrings
 - **Added**
-    - Single run_model() in ai_orchestrator.py, where it can work with both different prompts for all models or a single prompt for all models by converting prompt into prompts_with_model.
-- **Removed**
-    - run_model() in ai_orchestrator.py, where it passes a single prompt for all models.
-    - run_model() in ai_custom_prompt_orchestrator.py, where it passes different prompts for all models using prompts_with_model.
->**Note:** Only 1 function now handles both cases.
+    - Consistent use of Python docstrings (""" """) across functions.
+>**Note:** Improves code readability, IDE support (hover hints), and enables future documentation generation.
 
-### 6. Change directory of Documents .md files
-- **Updated**
-    - Moved all document type .md files into the ./docs folder.
-    - Relative changes in the README.md file.
->**Note:** Keeping the root folder as clean as possible.
-
-### 7. Combined all output folders in ./outputs 
-- **Added**
-    - ./outputs directory.
-- **Updated**
-    - Relative changes in ai_consensus_system_m1.py & ai_consensus_system_m2.py output directory sections.
-- **Removed**
-    - No more model-related output folders like ./outputs_m1 or ./outputs_m2.
->**Note:** Same output folder name for both models' output.
-
-### 8. Standardized Module Logging with MODULE_NAME
-- **Added**
-    - Introduced `MODULE_NAME` constant across core modules for consistent logging identifiers..
-- **Updated**
-    - Replaced hardcoded module identifiers in log messages with `MODULE_NAME` for better maintainability and readability.
-- **Removed**
-    - Static log prefixes such as `AI_ORCHESTRATOR`, reducing duplication and simplifying future module renaming.
-> **Note:** This change standardizes logging across the system and ensures that module identifiers can be updated in a single place without modifying multiple log statements.
-
-### 9. Modify Limitation.md file
+### 8. Modify Limitation.md file
 - **Updated**
     - Some of the points.
 >**Note:** Update with the current updates and changes.
 
-### 10. Update README.md file
+### 9. Update README.md file
 - **Updated**
-    - Version - AI Consensus System
-    - Documents .md files directory - Detailed documentation.
-    - pip commdands - Installation.
-    - Newly added .env file config - Configuration.
-    - Newly added ai models - Supported AI Providers.
+    - AI Consensus System - Version details
+    - 🚀 Overview section >> 📄 Detailed documentation
+    - 🛠 Execution Flow 
+    - 📁 Directory Structure
+    - 📝 Usage >> Configuration >> Configure - Hardcodes:
 >**Note:** Update with the latest changes.
+
+
+### X1. Documentation files inside .docs/ Not Updated
+- **Not Updated**
+    - AI_Consensus_System_M1_vs_M2.md
+    - AI_Consensus_System_M1.md
+    - AI_Consensus_System_M2.md
+>**Note:** In upcoming updates, model handling will be refactored to use an option-based approach instead of multiple predefined models.
 

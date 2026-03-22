@@ -11,8 +11,11 @@ from functions.log_generator import write_log
 # Load environment variables from .env file
 load_dotenv()
 
-# This function manages which API configuration to use
+
 def get_models(request_id):
+    """ 
+    This function manages which API configuration to use
+    """
 
     models = (
         get_api_data(provider_name="openai", model_id="gpt-4o-mini", api_key=os.getenv("OPENAI_API_KEY")),

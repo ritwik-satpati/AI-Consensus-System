@@ -8,17 +8,21 @@ from models.response_data import get_response_data
 from functions.log_generator import write_log
 import httpx
 
+
 # Load environment variables
 load_dotenv()
 
-# This function sends a prompt to Claude and returns the response
-async def call_claude(prompt, model, key, system_prompt, request_id):
 
+async def call_claude(prompt, model, key, system_prompt, request_id):
+    """
+    This function sends a prompt to Claude and returns the response
+    """
+    
     # Create Anthropic client using the API key from .env
     client = AsyncAnthropic(
-    api_key=key,
-    http_client=httpx.AsyncClient(verify=False)
-)
+        api_key=key,
+        http_client=httpx.AsyncClient(verify=False)
+    )
 
     try:
         # Updating log entry

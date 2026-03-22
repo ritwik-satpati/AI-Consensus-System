@@ -7,22 +7,19 @@ import pandas as pd
 from functions.log_generator import write_log
 
 
-# This function converts data into CSV file
-def export_csv(request_id, data, directory):
+def export_csv(request_id, data, dataframe_label=None, isPrint=False, directory=None):
     """
-    Exports given data (list/dict/DataFrame) into CSV file.
+    This function exports given data into a CSV file.
 
     Parameters:
-    request_id : Unique request identifier
-    data       : Data to export (list of dict OR pandas DataFrame)
-    directory  : Output directory
+    request_id   : str  -> Unique request identifier
+    data         : list[dict] | dict | pandas.DataFrame
+    output_label : str  -> Optional label for console print
+    directory    : str  -> Output directory
+
+    Returns:
+    str | None -> Path of saved file (if saved), else None
     """
-
-    # # Updating log entry
-    # write_log(filename=request_id, message=f"{MODULE_NAME} | START | CSV export initiated")
-
-    # Ensure directory exists
-    os.makedirs(directory, exist_ok=True)
 
     # Convert to DataFrame if not already
     if not isinstance(data, pd.DataFrame):
@@ -30,13 +27,26 @@ def export_csv(request_id, data, directory):
     else:
         df = data
 
-    # Generate filename
-    filepath = f"{directory}/{request_id}.csv"
+    # Print Dataframe if output_label is there
+    if dataframe_label and isPrint:
+        print(f"{dataframe_label} :\n{df}")
+        
+        # Updating log entry
+        write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Dataframe printed | {dataframe_label}")
 
-    # Export to CSV
-    df.to_csv(filepath, index=False)
 
-    # # Updating log entry
-    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | CSV file created | {filepath}")
+    # Save output file in different directory if directory is mentioned 
+    if directory:
+        # Ensure structured folder exists
+        os.makedirs(directory, exist_ok=True)
 
-    return filepath
+        # Generate filename
+        filename = f"{directory}/{request_id}.csv"
+
+        # Export to CSV
+        df.to_csv(filename, index=False)
+
+        # Updating log entry
+        write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | CSV file created | {filename}")
+
+    return

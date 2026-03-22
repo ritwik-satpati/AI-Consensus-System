@@ -5,9 +5,13 @@ MODULE_NAME = "SCORE_PARSER"
 import json
 from json_repair import repair_json
 from functions.log_generator import write_log
+from functions.json_exporter import export_json
 
-# This function converts AI scoring outputs into usable Python dictionaries
-def parse_scoring_outputs(raw_scores, request_id):
+
+def parse_scoring_outputs(raw_scores, request_id, directory=None):
+    """
+    # This function converts AI scoring outputs into usable Python dictionaries
+    """
 
     # Updating log entry    
     write_log(filename=request_id, message=f"{MODULE_NAME} | START | Parsing scoring outputs initiated")
@@ -85,6 +89,14 @@ def parse_scoring_outputs(raw_scores, request_id):
             # Updating log entry
             write_log( filename=request_id, message=f"{MODULE_NAME} | FAILED | {evaluator_agent}")
             write_log( filename=request_id, message=f"ERROR : {str(e)}")
+        
+    # Save the output using export_json
+    export_json(
+        request_id=request_id,
+        directory=directory,
+        data=parsed_results,
+        data_label="Parsed Scores",
+    )
 
     # Updating log entry
     write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Parsed {len(parsed_results)} evaluator results")

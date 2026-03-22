@@ -2,42 +2,36 @@
 MODULE_NAME = "WINNER_LOGGER"
 
 # Import required modules
-import json
-import os
 from functions.log_generator import write_log
+from functions.json_exporter import export_json
 
 
-# This function saves final score results into a JSON file
-def save_winner_log(request_id, prompt, model, score, output, start_time, end_time, execution_time, dir):
+def save_more_details(request_id, prompt, start_time, end_time, execution_time, winner_details, directory=None):
+    """
+    This function saves more details related to winning into a JSON file
+    """
 
-    # Ensure directory exists
-    os.makedirs(dir, exist_ok=True)
-
-    # Create filename using request_id
-    filename = f"{dir}/{request_id}.json"
-
+    winners = winner_details.get("winners") or []
+    winner = winner_details.get("winner") or {}
 
     # Structure the score output
     data = {
         "request_id": request_id,
         "prompt": prompt,
-        "model": model, 
-        "score": score,
-        "output": output, 
-        "start_time": start_time, 
-        "end_time": end_time, 
-        "execution_time": execution_time
+        "start_time": start_time,
+        "end_time": end_time,
+        "execution_time": execution_time,
+        "winner_model": winner.get("model"),
+        "winners_count": len(winners),
+        "top_models": [w.get("model") for w in winners],
     }
 
-    # # Print final winner data
-    # print(data)
-        
-    # Write JSON file
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=4, ensure_ascii=False)
-
-    # Updating log entry 
-    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Winner file saved | {filename}")
-
+    # Save the output using export_json
+    export_json(
+        request_id=request_id,
+        directory=directory,
+        data=data,
+        data_label="More Details",
+    )
 
     return data

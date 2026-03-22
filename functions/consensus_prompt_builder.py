@@ -3,9 +3,12 @@ MODULE_NAME = "CONSENSUS_PROMPT_BUILDER"
 
 from functions.log_generator import write_log
 
-# This function builds a combined prompt from all model responses
-def build_consensus_prompt(original_prompt, structured_result, request_id):
 
+def build_consensus_prompt(original_prompt, structured_result, request_id):
+    """
+    This function builds a combined prompt from all model responses
+    """
+    
     combined_prompt = f"Original Question::\n{original_prompt}\n\n"
     combined_prompt += "Model Responses::\n\n"
 

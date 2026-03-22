@@ -7,6 +7,8 @@ from functions.log_generator import write_log
 
 def build_scoring_prompt_orchestrator(request_id, original_prompt, model_outputs, random_map):
     """
+    This function used for mapping anf building propmt for single model.
+
     random_map => {evaluator_model : candidate_model}
     model_output => {candidate_model : candidate_model_answer}
     Returns => {evaluator_model : scoring_prompt_for_candidate_model}

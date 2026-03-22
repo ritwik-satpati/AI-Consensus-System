@@ -33,7 +33,7 @@ def build_token_reports(request_id, token_summary_data):
 
     stage_df = stage_df.reset_index(drop=True)
 
-    print(f"Stage DF :\n{stage_df}")
+    # print(f"Stage DF :\n{stage_df}")
 
     # Updating log entry
     write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Stage-wise report generated")
@@ -42,16 +42,16 @@ def build_token_reports(request_id, token_summary_data):
     # Model-wise overall summary
     # ============================
 
-    model_summary_df = df[
+    model_df = df[
         (df["stage"] == "ALL_STAGES") &
         (df["model"] != "ALL_MODELS")
     ][
         ["provider", "model", "prompt_token", "completion_token", "total_token"]
     ]
 
-    model_summary_df = model_summary_df.reset_index(drop=True)
+    model_df = model_df.reset_index(drop=True)
 
-    print(f"Model Summary DF :\n{model_summary_df}")
+    # print(f"Model Summary DF :\n{model_summary_df}")
 
     # Updating log entry
     write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Model-wise summary report generated")
@@ -59,4 +59,4 @@ def build_token_reports(request_id, token_summary_data):
     # Updating log entry
     write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Token report building completed")
 
-    return stage_df, model_summary_df
+    return stage_df, model_df

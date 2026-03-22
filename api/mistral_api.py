@@ -11,9 +11,11 @@ from functions.log_generator import write_log
 load_dotenv()
 
 
-# This function sends a prompt to Mistral AI and returns structured response data
 async def call_mistral(prompt, model, key, system_prompt, request_id):
-
+    """
+    This function sends a prompt to Mistral AI and returns structured response data
+    """
+    
     # Mistral OpenAI-compatible endpoint
     client = AsyncOpenAI(
         api_key=key,

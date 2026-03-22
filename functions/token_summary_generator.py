@@ -1,27 +1,25 @@
 # token_summary_generator.py
 MODULE_NAME = "TOKEN_SUMMARY_GENERATOR"
 
-import json
-import os
 from models.token_data import get_token_data
 from functions.log_generator import write_log
+from functions.json_exporter import export_json
 
 
-def generate_token_summary(request_id, stage1_output_data, stage2_output_data, stage3_output_data, directory):
+def generate_token_summary(request_id, stages_output_data, directory=None):
     """
     Generates token summary JSON as an array of objects.
+
+    stages_output_data format:
+    {
+        "STAGE_1": [...],
+        "STAGE_2": [...],
+        ...
+    }
 
     Each object contains:
     stage, model, provider, prompt_token, completion_token, other_token, total_token
     """
-
-    os.makedirs(directory, exist_ok=True)
-
-    stage_map = {
-        "STAGE_1": stage1_output_data,
-        "STAGE_2": stage2_output_data,
-        "STAGE_3": stage3_output_data
-    }
 
     result = []
 
@@ -38,17 +36,22 @@ def generate_token_summary(request_id, stage1_output_data, stage2_output_data, s
     # Map model -> provider
     model_provider_map = {}
 
-    # -----------------------------
+    # --------------------------------------
     # Stage Processing
-    # -----------------------------
-    for stage_name, stage_data in stage_map.items():
+    # --------------------------------------
+    for stage_name, stage_data in (stages_output_data or {}).items():
+
+        stage_outputs = stage_data.get("outputs")
 
         stage_token_map = {}
 
-        for output in stage_data or []:
+        for output in stage_outputs or []:
 
             model = output.get("model")
             provider = output.get("provider")
+
+            if not model:
+                continue
 
             model_provider_map[model] = provider
 
@@ -63,9 +66,9 @@ def generate_token_summary(request_id, stage1_output_data, stage2_output_data, s
             stage_token_map[model]["completion_token"] += output.get("completion_token", 0) or 0
             stage_token_map[model]["other_token"] += output.get("other_token", 0) or 0
 
-        # -----------------------------
+        # --------------------------------------
         # Stage-level Aggregation
-        # -----------------------------
+        # --------------------------------------
         for model, tokens in stage_token_map.items():
 
             provider = model_provider_map.get(model)
@@ -99,12 +102,12 @@ def generate_token_summary(request_id, stage1_output_data, stage2_output_data, s
                 )
             )
 
-            # Updating log entry
+            # Updating log entry 
             write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Token summary added | {stage_name} | {model}")
 
-    # -----------------------------
+    # --------------------------------------
     # ALL_STAGES per Model
-    # -----------------------------
+    # --------------------------------------
     for model, tokens in model_grand_totals.items():
 
         provider = model_provider_map.get(model)
@@ -120,12 +123,12 @@ def generate_token_summary(request_id, stage1_output_data, stage2_output_data, s
             )
         )
 
-        # Updating log entry
+        # Updating log entry 
         write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Token summary added | ALL_STAGES | {model}")
 
-    # -----------------------------
-    # Global Summary
-    # -----------------------------
+    # --------------------------------------
+    # Global Summary ALL_STAGES & ALL_MODELS
+    # --------------------------------------
     result.append(
         get_token_data(
             stage_name="ALL_STAGES",
@@ -137,18 +140,19 @@ def generate_token_summary(request_id, stage1_output_data, stage2_output_data, s
         )
     )
 
-    # Updating log entry
+    # Updating log entry 
     write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Token summary added | ALL_STAGES | ALL_MODELS")
 
-    # -----------------------------
+    # --------------------------------------
     # Save JSON
-    # -----------------------------
-    output_path = f"{directory}/{request_id}.json"
+    # --------------------------------------
 
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(result, f, indent=4)
-
-    # Updating log entry
-    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Token summary generated | {output_path}")
+    # Save the output using export_json
+    export_json(
+        request_id=request_id,
+        directory=directory,
+        data=result,
+        data_label="Token Summary",
+    )
 
     return result

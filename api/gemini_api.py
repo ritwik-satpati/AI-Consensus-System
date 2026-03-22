@@ -6,11 +6,15 @@ from dotenv import load_dotenv
 from models.response_data import get_response_data
 from functions.log_generator import write_log
 
+
 # Load environment variables
 load_dotenv()
 
-# This function sends a prompt to Gemini and returns the response
+
 async def call_gemini(prompt, model, key, system_prompt, request_id):
+    """
+    This function sends a prompt to Gemini and returns the response
+    """    
     
     # Create Gemini client using the API key from .env
     client = genai.Client(api_key=key)

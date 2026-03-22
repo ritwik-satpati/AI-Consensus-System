@@ -6,13 +6,16 @@ from dotenv import load_dotenv
 from models.response_data import get_response_data
 from functions.log_generator import write_log
 
+
 # Load environment variables
 load_dotenv()
 
 
-# This function sends a prompt to Meta Llama model and returns structured response data
 async def call_meta(prompt, model, key, system_prompt, request_id):
-
+    """
+    This function sends a prompt to Meta Llama model and returns structured response data
+    """
+    
     # Together AI uses OpenAI compatible API
     client = AsyncOpenAI(
         api_key=key,

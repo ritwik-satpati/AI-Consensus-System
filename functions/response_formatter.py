@@ -2,29 +2,27 @@
 MODULE_NAME = "RESPONSE_FORMATTER"
 
 # Import modules
-import json
-import os
 from functions.log_generator import write_log
+from functions.json_exporter import export_json
 
 
-
-# This function converts raw AI outputs into structured model-output format
-def format_structured_response(request_id, data, dir):
-
+def format_structured_response(request_id, data, stage, directory=None):
+    """
+    This function converts raw AI outputs into structured model-output format
+    """
+    
     # Create dictionary: { model_name : model_output }
-    result = {item["model"]: item["output"] for item in data["responses"]}
-
-    # Ensure structured folder exists
-    os.makedirs(dir, exist_ok=True)
-
-    # Generate timestamp-based filename
-    filename = f"{dir}/{request_id}.json"
-
-    # Save structured result
-    with open(filename, "w", encoding="utf-8") as file:
-        json.dump(result, file, indent=4, ensure_ascii=False)
+    result = {item["model"]: item["output"] for item in data}
+    
+    # Save the output using export_json
+    export_json(
+        request_id=request_id,
+        directory=directory,
+        data=result,
+        data_label=f"{"Structured Outputs for {stage}"}",
+    )
 
     # Updating log entry 
-    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Structured output saved | {filename}")
+    write_log(filename=request_id, message=f"{MODULE_NAME} | SUCCESS | Structured outputs created | For stage {stage}")
 
     return result

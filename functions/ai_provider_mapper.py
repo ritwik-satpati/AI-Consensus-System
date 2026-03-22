@@ -11,8 +11,12 @@ from api.grok_api import call_grok
 from api.meta_api import call_meta
 from api.mistral_api import call_mistral
 
-def mapping_ai_provider():
 
+def mapping_ai_provider():
+    """
+    This function connect ai api name to its corresponding function using provider_map
+    """
+    
     # Map provider name to its corresponding function
     provider_map = {
         "openai": call_openai,

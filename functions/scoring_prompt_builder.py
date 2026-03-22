@@ -3,7 +3,11 @@ MODULE_NAME = "SCORING_PROMPT_BUILDER"
 
 from functions.log_generator import write_log
 
+
 def build_scoring_prompt(original_prompt, model, answer, request_id):
+    """
+    This function used to create propmt for single model for random scoring.
+    """
 
     prompt_text = f"""
 You are an unbiased AI evaluator.
@@ -19,21 +23,26 @@ Below is response from different AI agent(s):
 
     prompt_text += """
 
-Evaluate the agent independently using the following parameters:
+Evaluate agent independently using the following criteria (score each from 1 to 10):
+1. Accuracy – Correctness of the information.
+2. Clarity – How easy the response is to understand.
+3. Completeness – How well the response answers the question.
+4. Conciseness – Whether the response is brief and avoids unnecessary information.
 
-1. Accuracy (1-10)
-2. Clarity (1-10)
-3. Completeness (1-10)
-4. Conciseness (1-10)
-
-Return STRICT JSON ONLY in this exact structure in a single line without JSON Structure:
-
-{"agent_name": {"accuracy": number, "clarity": number, "completeness": number, "conciseness": number}}
-
-Rules:
-- Do NOT include explanations or comments.
-- Output valid JSON only but one line without "\" or "\n"
+Instructions::
+- Evaluate each agent independently.
 - Scores must be integers between 1 and 10.
+- Use the EXACT agent names provided after "Agent Name: " as JSON keys.
+- Return ONLY valid JSON.
+- Do NOT include explanations, reasoning, or text outside the JSON.
+- Output must be a single-line JSON object.
+
+Correct Output Example:
+{{"{model}": {{"accuracy": 9, "clarity": 9, "completeness": 8, "conciseness": 9}}}}
+
+Wrong Output Examples:
+{{"agent_name": {{"{model}": {{"accuracy": 9, "clarity": 10, "completeness": 9, "conciseness": 9}}}}}}
+{{"agent_name": {{"accuracy": 10, "clarity": 10, "completeness": 9, "conciseness": 9}}}}
 """
 
     # Updating log entry 
