@@ -10,6 +10,9 @@ class PipelineContext:
         self.base_prompt = None
         self.system_prompt = None
         self.model_configurations = None
+        self.stages = None
+        self.evaluation_stage = None
+        self.scoring_stage = None
 
         self.current_stage = None
         self.current_stage_data = None

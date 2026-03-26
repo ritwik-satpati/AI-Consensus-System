@@ -1,0 +1,348 @@
+{
+    "request_id": "20260326_141116_559603",
+    "stages": {
+        "SYSTEM_SETUP": {
+            "request_id": "20260326_141116_559603",
+            "start_timestamp": "2026-03-26 14:11:16.559555 +0530",
+            "base_prompt": "Explain API in simple words within 100 words",
+            "system_prompt": "You are a helpful assistant.",
+            "models_loaded": 2,
+            "model_configurations": [
+                {
+                    "provider": "openai",
+                    "model": "gpt-4o-mini",
+                    "key": "sk-**************************************************************************************************************************************************************IwA"
+                },
+                {
+                    "provider": "anthropic",
+                    "model": "claude-haiku-4-5-20251001",
+                    "key": "sk-******************************************************************************************************AAA"
+                }
+            ],
+            "stages": [
+                "SYSTEM_SETUP",
+                "INITIAL_EXECUTION",
+                "CONSENSUS_SYNTHESIS",
+                "SCORING_RANDOM",
+                "SCORE_AGGREGATION",
+                "WINNER_SELECTION",
+                "REPORT_GENERATION"
+            ],
+            "evaluation_stage": "CONSENSUS_SYNTHESIS",
+            "scoring_stage": "SCORING_RANDOM",
+            "startedAt": "2026-03-26 14:11:16.500557 +0530",
+            "completedAt": "2026-03-26 14:11:16.593516 +0530",
+            "stage_timing": 0.0934,
+            "savedAt": "2026-03-26 14:11:16.597599 +0530"
+        },
+        "INITIAL_EXECUTION": {
+            "initial_outputs": [
+                {
+                    "model": "gpt-4o-mini",
+                    "provider": "openai",
+                    "input": "Explain API in simple words within 100 words",
+                    "output": "An API, or Application Programming Interface, is like a set of rules that allows different software programs to communicate with each other. It defines how requests for data or functions can be made and how responses should be handled. For example, when you use an app to check the weather, it sends a request to a weather service API, which then sends back the weather data. APIs help connect services and enable them to work together, making it easier for developers to create applications without having to build everything from scratch.",
+                    "prompt_token": 26,
+                    "completion_token": 101,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-26 14:11:27.105928 +0530"
+                },
+                {
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "input": "Explain API in simple words within 100 words",
+                    "output": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate with each other.\n\nThink of it like a **restaurant menu**: You (the customer) don't need to know how the kitchen works. You order food through the menu, and the kitchen delivers what you asked for.\n\nSimilarly, an API lets you request data or services from another application without needing to understand how it works internally. For example, when you check weather on your phone, an app uses an API to get data from a weather service.\n\n**In short**: APIs are bridges that help apps talk to each other.",
+                    "prompt_token": 24,
+                    "completion_token": 139,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-26 14:11:25.744251 +0530"
+                }
+            ],
+            "initial_structured": {
+                "gpt-4o-mini": "An API, or Application Programming Interface, is like a set of rules that allows different software programs to communicate with each other. It defines how requests for data or functions can be made and how responses should be handled. For example, when you use an app to check the weather, it sends a request to a weather service API, which then sends back the weather data. APIs help connect services and enable them to work together, making it easier for developers to create applications without having to build everything from scratch.",
+                "claude-haiku-4-5-20251001": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate with each other.\n\nThink of it like a **restaurant menu**: You (the customer) don't need to know how the kitchen works. You order food through the menu, and the kitchen delivers what you asked for.\n\nSimilarly, an API lets you request data or services from another application without needing to understand how it works internally. For example, when you check weather on your phone, an app uses an API to get data from a weather service.\n\n**In short**: APIs are bridges that help apps talk to each other."
+            },
+            "startedAt": "2026-03-26 14:11:16.608059 +0530",
+            "completedAt": "2026-03-26 14:11:27.120193 +0530",
+            "stage_timing": 10.5122,
+            "savedAt": "2026-03-26 14:11:27.159222 +0530"
+        },
+        "CONSENSUS_SYNTHESIS": {
+            "consensus_outputs": [
+                {
+                    "model": "gpt-4o-mini",
+                    "provider": "openai",
+                    "input": "Original Question::\nExplain API in simple words within 100 words\n\nModel Responses::\n\ngpt-4o-mini:\nAn API, or Application Programming Interface, is like a set of rules that allows different software programs to communicate with each other. It defines how requests for data or functions can be made and how responses should be handled. For example, when you use an app to check the weather, it sends a request to a weather service API, which then sends back the weather data. APIs help connect services and enable them to work together, making it easier for developers to create applications without having to build everything from scratch.\n\nclaude-haiku-4-5-20251001:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate with each other.\n\nThink of it like a **restaurant menu**: You (the customer) don't need to know how the kitchen works. You order food through the menu, and the kitchen delivers what you asked for.\n\nSimilarly, an API lets you request data or services from another application without needing to understand how it works internally. For example, when you check weather on your phone, an app uses an API to get data from a weather service.\n\n**In short**: APIs are bridges that help apps talk to each other.\n\nBased on all the above responses, improve and refine the answer.\nIf there are contradictions, resolve them logically and give only answer as output.",
+                    "output": "An API, or Application Programming Interface, is a set of rules that enables different software applications to communicate with each other. You can think of it like a restaurant menu: when you want to order food, you don’t need to know how the kitchen operates; you just place your order. Similarly, an API allows you to request data or services from another application without needing to understand its internal workings. For instance, when you check the weather on an app, it uses an API to fetch data from a weather service. In short, APIs act as bridges that facilitate interaction between applications.",
+                    "prompt_token": 313,
+                    "completion_token": 117,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-26 14:11:33.206780 +0530"
+                },
+                {
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "input": "Original Question::\nExplain API in simple words within 100 words\n\nModel Responses::\n\ngpt-4o-mini:\nAn API, or Application Programming Interface, is like a set of rules that allows different software programs to communicate with each other. It defines how requests for data or functions can be made and how responses should be handled. For example, when you use an app to check the weather, it sends a request to a weather service API, which then sends back the weather data. APIs help connect services and enable them to work together, making it easier for developers to create applications without having to build everything from scratch.\n\nclaude-haiku-4-5-20251001:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate with each other.\n\nThink of it like a **restaurant menu**: You (the customer) don't need to know how the kitchen works. You order food through the menu, and the kitchen delivers what you asked for.\n\nSimilarly, an API lets you request data or services from another application without needing to understand how it works internally. For example, when you check weather on your phone, an app uses an API to get data from a weather service.\n\n**In short**: APIs are bridges that help apps talk to each other.\n\nBased on all the above responses, improve and refine the answer.\nIf there are contradictions, resolve them logically and give only answer as output.",
+                    "output": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\nThink of it like a **restaurant menu**: You don't need to know how the kitchen works—you simply order through the menu, and the kitchen delivers what you requested. Similarly, an API lets you request data or services from another application without understanding its internal workings.\n\n**Real-world example**: When you check weather on your phone, the app uses an API to request data from a weather service, which sends back the information you need.\n\n**In short**: APIs are bridges that help apps talk to each other and work together seamlessly.",
+                    "prompt_token": 328,
+                    "completion_token": 150,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-26 14:11:30.748341 +0530"
+                }
+            ],
+            "consensus_structured": {
+                "gpt-4o-mini": "An API, or Application Programming Interface, is a set of rules that enables different software applications to communicate with each other. You can think of it like a restaurant menu: when you want to order food, you don’t need to know how the kitchen operates; you just place your order. Similarly, an API allows you to request data or services from another application without needing to understand its internal workings. For instance, when you check the weather on an app, it uses an API to fetch data from a weather service. In short, APIs act as bridges that facilitate interaction between applications.",
+                "claude-haiku-4-5-20251001": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\nThink of it like a **restaurant menu**: You don't need to know how the kitchen works—you simply order through the menu, and the kitchen delivers what you requested. Similarly, an API lets you request data or services from another application without understanding its internal workings.\n\n**Real-world example**: When you check weather on your phone, the app uses an API to request data from a weather service, which sends back the information you need.\n\n**In short**: APIs are bridges that help apps talk to each other and work together seamlessly."
+            },
+            "startedAt": "2026-03-26 14:11:27.168794 +0530",
+            "completedAt": "2026-03-26 14:11:33.223668 +0530",
+            "stage_timing": 6.0549,
+            "savedAt": "2026-03-26 14:11:33.274934 +0530"
+        },
+        "SCORING_RANDOM": {
+            "random_model_map": {
+                "gpt-4o-mini": "claude-haiku-4-5-20251001",
+                "claude-haiku-4-5-20251001": "gpt-4o-mini"
+            },
+            "prompts_with_model": {
+                "gpt-4o-mini": "\nYou are an unbiased AI evaluator.\n\nOriginal Question:\nExplain API in simple words within 100 words\n\nBelow is response from different AI agent(s):\n\n\nAgent Name: claude-haiku-4-5-20251001\nResponse:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\nThink of it like a **restaurant menu**: You don't need to know how the kitchen works—you simply order through the menu, and the kitchen delivers what you requested. Similarly, an API lets you request data or services from another application without understanding its internal workings.\n\n**Real-world example**: When you check weather on your phone, the app uses an API to request data from a weather service, which sends back the information you need.\n\n**In short**: APIs are bridges that help apps talk to each other and work together seamlessly.\n\n\nEvaluate agent independently using the following criteria (score each from 1 to 10):\n1. Accuracy – Correctness of the information.\n2. Clarity – How easy the response is to understand.\n3. Completeness – How well the response answers the question.\n4. Conciseness – Whether the response is brief and avoids unnecessary information.\n\nInstructions::\n- Evaluate each agent independently.\n- Scores must be integers between 1 and 10.\n- Use the EXACT agent names provided after \"Agent Name: \" as JSON keys.\n- Return ONLY valid JSON.\n- Do NOT include explanations, reasoning, or text outside the JSON.\n- Output must be a single-line JSON object.\n\nCorrect Output Example:\n{{\"{model}\": {{\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}}}}\n\nWrong Output Examples:\n{{\"agent_name\": {{\"{model}\": {{\"accuracy\": 9, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}}}\n{{\"agent_name\": {{\"accuracy\": 10, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}\n",
+                "claude-haiku-4-5-20251001": "\nYou are an unbiased AI evaluator.\n\nOriginal Question:\nExplain API in simple words within 100 words\n\nBelow is response from different AI agent(s):\n\n\nAgent Name: gpt-4o-mini\nResponse:\nAn API, or Application Programming Interface, is a set of rules that enables different software applications to communicate with each other. You can think of it like a restaurant menu: when you want to order food, you don’t need to know how the kitchen operates; you just place your order. Similarly, an API allows you to request data or services from another application without needing to understand its internal workings. For instance, when you check the weather on an app, it uses an API to fetch data from a weather service. In short, APIs act as bridges that facilitate interaction between applications.\n\n\nEvaluate agent independently using the following criteria (score each from 1 to 10):\n1. Accuracy – Correctness of the information.\n2. Clarity – How easy the response is to understand.\n3. Completeness – How well the response answers the question.\n4. Conciseness – Whether the response is brief and avoids unnecessary information.\n\nInstructions::\n- Evaluate each agent independently.\n- Scores must be integers between 1 and 10.\n- Use the EXACT agent names provided after \"Agent Name: \" as JSON keys.\n- Return ONLY valid JSON.\n- Do NOT include explanations, reasoning, or text outside the JSON.\n- Output must be a single-line JSON object.\n\nCorrect Output Example:\n{{\"{model}\": {{\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}}}}\n\nWrong Output Examples:\n{{\"agent_name\": {{\"{model}\": {{\"accuracy\": 9, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}}}\n{{\"agent_name\": {{\"accuracy\": 10, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}\n"
+            },
+            "scoring_outputs": [
+                {
+                    "model": "gpt-4o-mini",
+                    "provider": "openai",
+                    "input": "\nYou are an unbiased AI evaluator.\n\nOriginal Question:\nExplain API in simple words within 100 words\n\nBelow is response from different AI agent(s):\n\n\nAgent Name: claude-haiku-4-5-20251001\nResponse:\n# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\nThink of it like a **restaurant menu**: You don't need to know how the kitchen works—you simply order through the menu, and the kitchen delivers what you requested. Similarly, an API lets you request data or services from another application without understanding its internal workings.\n\n**Real-world example**: When you check weather on your phone, the app uses an API to request data from a weather service, which sends back the information you need.\n\n**In short**: APIs are bridges that help apps talk to each other and work together seamlessly.\n\n\nEvaluate agent independently using the following criteria (score each from 1 to 10):\n1. Accuracy – Correctness of the information.\n2. Clarity – How easy the response is to understand.\n3. Completeness – How well the response answers the question.\n4. Conciseness – Whether the response is brief and avoids unnecessary information.\n\nInstructions::\n- Evaluate each agent independently.\n- Scores must be integers between 1 and 10.\n- Use the EXACT agent names provided after \"Agent Name: \" as JSON keys.\n- Return ONLY valid JSON.\n- Do NOT include explanations, reasoning, or text outside the JSON.\n- Output must be a single-line JSON object.\n\nCorrect Output Example:\n{{\"{model}\": {{\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}}}}\n\nWrong Output Examples:\n{{\"agent_name\": {{\"{model}\": {{\"accuracy\": 9, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}}}\n{{\"agent_name\": {{\"accuracy\": 10, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}\n",
+                    "output": "{\"claude-haiku-4-5-20251001\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 9}}",
+                    "prompt_token": 465,
+                    "completion_token": 43,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-26 14:11:36.239745 +0530"
+                },
+                {
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "input": "\nYou are an unbiased AI evaluator.\n\nOriginal Question:\nExplain API in simple words within 100 words\n\nBelow is response from different AI agent(s):\n\n\nAgent Name: gpt-4o-mini\nResponse:\nAn API, or Application Programming Interface, is a set of rules that enables different software applications to communicate with each other. You can think of it like a restaurant menu: when you want to order food, you don’t need to know how the kitchen operates; you just place your order. Similarly, an API allows you to request data or services from another application without needing to understand its internal workings. For instance, when you check the weather on an app, it uses an API to fetch data from a weather service. In short, APIs act as bridges that facilitate interaction between applications.\n\n\nEvaluate agent independently using the following criteria (score each from 1 to 10):\n1. Accuracy – Correctness of the information.\n2. Clarity – How easy the response is to understand.\n3. Completeness – How well the response answers the question.\n4. Conciseness – Whether the response is brief and avoids unnecessary information.\n\nInstructions::\n- Evaluate each agent independently.\n- Scores must be integers between 1 and 10.\n- Use the EXACT agent names provided after \"Agent Name: \" as JSON keys.\n- Return ONLY valid JSON.\n- Do NOT include explanations, reasoning, or text outside the JSON.\n- Output must be a single-line JSON object.\n\nCorrect Output Example:\n{{\"{model}\": {{\"accuracy\": 9, \"clarity\": 9, \"completeness\": 8, \"conciseness\": 9}}}}\n\nWrong Output Examples:\n{{\"agent_name\": {{\"{model}\": {{\"accuracy\": 9, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}}}\n{{\"agent_name\": {{\"accuracy\": 10, \"clarity\": 10, \"completeness\": 9, \"conciseness\": 9}}}}\n",
+                    "output": "```json\n{\"gpt-4o-mini\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 8}}\n```",
+                    "prompt_token": 472,
+                    "completion_token": 44,
+                    "status": "success",
+                    "error": null,
+                    "created_at": "2026-03-26 14:11:36.233642 +0530"
+                }
+            ],
+            "scoring_structured": {
+                "gpt-4o-mini": "{\"claude-haiku-4-5-20251001\": {\"accuracy\": 10, \"clarity\": 10, \"completeness\": 10, \"conciseness\": 9}}",
+                "claude-haiku-4-5-20251001": "```json\n{\"gpt-4o-mini\": {\"accuracy\": 9, \"clarity\": 9, \"completeness\": 9, \"conciseness\": 8}}\n```"
+            },
+            "startedAt": "2026-03-26 14:11:33.308268 +0530",
+            "completedAt": "2026-03-26 14:11:36.255256 +0530",
+            "stage_timing": 2.947,
+            "savedAt": "2026-03-26 14:11:36.296718 +0530"
+        },
+        "SCORE_AGGREGATION": {
+            "parsed_scores": {
+                "gpt-4o-mini": {
+                    "claude-haiku-4-5-20251001": {
+                        "accuracy": 10,
+                        "clarity": 10,
+                        "completeness": 10,
+                        "conciseness": 9
+                    }
+                },
+                "claude-haiku-4-5-20251001": {
+                    "gpt-4o-mini": {
+                        "accuracy": 9,
+                        "clarity": 9,
+                        "completeness": 9,
+                        "conciseness": 8
+                    }
+                }
+            },
+            "aggregated_scores": {
+                "claude-haiku-4-5-20251001": {
+                    "accuracy": 10.0,
+                    "clarity": 10.0,
+                    "completeness": 10.0,
+                    "conciseness": 9.0
+                },
+                "gpt-4o-mini": {
+                    "accuracy": 9.0,
+                    "clarity": 9.0,
+                    "completeness": 9.0,
+                    "conciseness": 8.0
+                }
+            },
+            "weighted_scores": {
+                "claude-haiku-4-5-20251001": 9.9,
+                "gpt-4o-mini": 8.9
+            },
+            "startedAt": "2026-03-26 14:11:36.311037 +0530",
+            "completedAt": "2026-03-26 14:11:36.403999 +0530",
+            "stage_timing": 0.093,
+            "savedAt": "2026-03-26 14:11:36.428140 +0530"
+        },
+        "WINNER_SELECTION": {
+            "model_rankings": [
+                {
+                    "rank": 1,
+                    "model": "claude-haiku-4-5-20251001",
+                    "score": 9.9
+                },
+                {
+                    "rank": 2,
+                    "model": "gpt-4o-mini",
+                    "score": 8.9
+                }
+            ],
+            "final_results": [
+                {
+                    "rank": 1,
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "score": 9.9,
+                    "output": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\nThink of it like a **restaurant menu**: You don't need to know how the kitchen works—you simply order through the menu, and the kitchen delivers what you requested. Similarly, an API lets you request data or services from another application without understanding its internal workings.\n\n**Real-world example**: When you check weather on your phone, the app uses an API to request data from a weather service, which sends back the information you need.\n\n**In short**: APIs are bridges that help apps talk to each other and work together seamlessly."
+                },
+                {
+                    "rank": 2,
+                    "model": "gpt-4o-mini",
+                    "provider": "openai",
+                    "score": 8.9,
+                    "output": "An API, or Application Programming Interface, is a set of rules that enables different software applications to communicate with each other. You can think of it like a restaurant menu: when you want to order food, you don’t need to know how the kitchen operates; you just place your order. Similarly, an API allows you to request data or services from another application without needing to understand its internal workings. For instance, when you check the weather on an app, it uses an API to fetch data from a weather service. In short, APIs act as bridges that facilitate interaction between applications."
+                }
+            ],
+            "winner_details": {
+                "winner": {
+                    "rank": 1,
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "score": 9.9,
+                    "output": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\nThink of it like a **restaurant menu**: You don't need to know how the kitchen works—you simply order through the menu, and the kitchen delivers what you requested. Similarly, an API lets you request data or services from another application without understanding its internal workings.\n\n**Real-world example**: When you check weather on your phone, the app uses an API to request data from a weather service, which sends back the information you need.\n\n**In short**: APIs are bridges that help apps talk to each other and work together seamlessly."
+                },
+                "winners": [
+                    {
+                        "rank": 1,
+                        "model": "claude-haiku-4-5-20251001",
+                        "provider": "anthropic",
+                        "score": 9.9,
+                        "output": "# API Explained Simply\n\nAn **API (Application Programming Interface)** is a set of rules that allows different software applications to communicate and share data with each other.\n\nThink of it like a **restaurant menu**: You don't need to know how the kitchen works—you simply order through the menu, and the kitchen delivers what you requested. Similarly, an API lets you request data or services from another application without understanding its internal workings.\n\n**Real-world example**: When you check weather on your phone, the app uses an API to request data from a weather service, which sends back the information you need.\n\n**In short**: APIs are bridges that help apps talk to each other and work together seamlessly."
+                    }
+                ]
+            },
+            "more_details": {
+                "request_id": "20260326_141116_559603",
+                "prompt": "Explain API in simple words within 100 words",
+                "start_time": "2026-03-26 14:11:16.559555 +0530",
+                "end_time": "2026-03-26 14:11:36.492171 +0530",
+                "execution_time": 19.9326,
+                "winner_model": "claude-haiku-4-5-20251001",
+                "winners_count": 1,
+                "winner_models": [
+                    "claude-haiku-4-5-20251001"
+                ]
+            },
+            "startedAt": "2026-03-26 14:11:36.454264 +0530",
+            "completedAt": "2026-03-26 14:11:36.499509 +0530",
+            "stage_timing": 0.0453,
+            "savedAt": "2026-03-26 14:11:36.534380 +0530"
+        },
+        "REPORT_GENERATION": {
+            "token_summary": [
+                {
+                    "stage": "INITIAL_EXECUTION",
+                    "model": "gpt-4o-mini",
+                    "provider": "openai",
+                    "prompt_token": 26,
+                    "completion_token": 101,
+                    "other_token": 0,
+                    "total_token": 127
+                },
+                {
+                    "stage": "INITIAL_EXECUTION",
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "prompt_token": 24,
+                    "completion_token": 139,
+                    "other_token": 0,
+                    "total_token": 163
+                },
+                {
+                    "stage": "CONSENSUS_SYNTHESIS",
+                    "model": "gpt-4o-mini",
+                    "provider": "openai",
+                    "prompt_token": 313,
+                    "completion_token": 117,
+                    "other_token": 0,
+                    "total_token": 430
+                },
+                {
+                    "stage": "CONSENSUS_SYNTHESIS",
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "prompt_token": 328,
+                    "completion_token": 150,
+                    "other_token": 0,
+                    "total_token": 478
+                },
+                {
+                    "stage": "SCORING_RANDOM",
+                    "model": "gpt-4o-mini",
+                    "provider": "openai",
+                    "prompt_token": 465,
+                    "completion_token": 43,
+                    "other_token": 0,
+                    "total_token": 508
+                },
+                {
+                    "stage": "SCORING_RANDOM",
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "prompt_token": 472,
+                    "completion_token": 44,
+                    "other_token": 0,
+                    "total_token": 516
+                },
+                {
+                    "stage": "ALL_STAGES",
+                    "model": "gpt-4o-mini",
+                    "provider": "openai",
+                    "prompt_token": 804,
+                    "completion_token": 261,
+                    "other_token": 0,
+                    "total_token": 1065
+                },
+                {
+                    "stage": "ALL_STAGES",
+                    "model": "claude-haiku-4-5-20251001",
+                    "provider": "anthropic",
+                    "prompt_token": 824,
+                    "completion_token": 333,
+                    "other_token": 0,
+                    "total_token": 1157
+                },
+                {
+                    "stage": "ALL_STAGES",
+                    "model": "ALL_MODELS",
+                    "provider": "ALL_PROVIDERS",
+                    "prompt_token": 1628,
+                    "completion_token": 594,
+                    "other_token": 0,
+                    "total_token": 2222
+                }
+            ],
+            "stage_token_report": "                 stage   provider                      model  prompt_token  completion_token  total_token\n0    INITIAL_EXECUTION     openai                gpt-4o-mini            26               101          127\n1    INITIAL_EXECUTION  anthropic  claude-haiku-4-5-20251001            24               139          163\n2  CONSENSUS_SYNTHESIS     openai                gpt-4o-mini           313               117          430\n3  CONSENSUS_SYNTHESIS  anthropic  claude-haiku-4-5-20251001           328               150          478\n4       SCORING_RANDOM     openai                gpt-4o-mini           465                43          508\n5       SCORING_RANDOM  anthropic  claude-haiku-4-5-20251001           472                44          516",
+            "model_token_report": "    provider                      model  prompt_token  completion_token  total_token\n0     openai                gpt-4o-mini           804               261         1065\n1  anthropic  claude-haiku-4-5-20251001           824               333         1157",
+            "startedAt": "2026-03-26 14:11:36.555318 +0530",
+            "completedAt": "2026-03-26 14:11:38.215981 +0530",
+            "stage_timing": 1.6608,
+            "savedAt": "2026-03-26 14:11:38.245372 +0530"
+        }
+    },
+    "createdAt": "2026-03-26 14:11:16.594850 +0530",
+    "updatedAt": "2026-03-26 14:11:38.245434 +0530"
+}

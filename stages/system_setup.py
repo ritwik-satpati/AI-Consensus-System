@@ -26,6 +26,8 @@ async def run_system_setup(context):
     from functions.request_id_generator import generate_request_id
     from hardcodes.test_request_id_manager import get_test_request_id
     from functions.model_utils import get_safe_models
+    from hardcodes.stages_manager import get_stages
+    from functions.stage_validator import validate_stages
 
      # Start total execution timer
     start_perf_counter = time.perf_counter()
@@ -60,6 +62,12 @@ async def run_system_setup(context):
     # Masking API key for models
     safe_models = get_safe_models(request_id=request_id, models=model_configurations)
 
+    # Stages 
+    stages = get_stages(request_id=request_id)
+
+    # Validate Stage 
+    stages_list, evaluation_stage, scoring_stage = validate_stages(request_id=request_id, stages=stages)
+
     # Load current_satge_data in pipeline_context
     context.current_stage_data={
         "request_id": request_id,
@@ -68,6 +76,9 @@ async def run_system_setup(context):
         "system_prompt": system_prompt,
         "models_loaded": len(model_configurations),
         "model_configurations": safe_models,
+        "stages": stages_list,
+        "evaluation_stage": evaluation_stage,
+        "scoring_stage": scoring_stage
     }
 
     # Load more components in pipeline_context
@@ -77,3 +88,6 @@ async def run_system_setup(context):
     context.base_prompt = base_prompt
     context.system_prompt = system_prompt
     context.model_configurations = model_configurations
+    context.stages = stages_list
+    context.evaluation_stage = evaluation_stage
+    context.scoring_stage = scoring_stage

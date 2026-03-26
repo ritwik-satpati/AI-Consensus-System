@@ -1,0 +1,5 @@
+stage,provider,model,prompt_token,completion_token,total_token
+INITIAL_EXECUTION,openai,gpt-4o-mini,26,101,127
+INITIAL_EXECUTION,anthropic,claude-haiku-4-5-20251001,24,146,170
+SCORING_COMBINED,openai,gpt-4o-mini,573,80,653
+SCORING_COMBINED,anthropic,claude-haiku-4-5-20251001,622,85,707

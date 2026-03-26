@@ -1,12 +1,12 @@
-# ai_consensus_system_m1.py
-MODULE_NAME = "AI_CONSENSUS_SYSTEM_M1"
+# ai_consensus_system.py
+MODULE_NAME = "AI_CONSENSUS_SYSTEM"
 
 import traceback
 from functions.log_generator import write_log
 from pipeline_context import PipelineContext
 
 
-async def run_ai_consensus_system_m1():
+async def run_ai_consensus_system():
     """
     This function orchestrates the full AI Consensus System pipeline.
 
@@ -36,21 +36,32 @@ async def run_ai_consensus_system_m1():
         # from stages.initial_execution_reload import run_initial_execution_reload
         # await run_initial_execution_reload(context, isPrint=False)
 
-        # ===== STAGE - Combined Consensus Synthesis =====
-        from stages.consensus_synthesis import run_consensus_synthesis
-        await run_consensus_synthesis(context)
+        if context.evaluation_stage == "CONSENSUS_SYNTHESIS":
+            # ===== STAGE - Combined Consensus Synthesis =====
+            from stages.consensus_synthesis import run_consensus_synthesis
+            await run_consensus_synthesis(context)
 
-        # # # ===== STAGE - Reload Combined Consensus Synthesis Output =====
-        # from stages.consensus_synthesis_reload import run_consensus_synthesis_reload
-        # await run_consensus_synthesis_reload(context, isPrint=False)
+            # # # ===== STAGE - Reload Combined Consensus Synthesis Output =====
+            # from stages.consensus_synthesis_reload import run_consensus_synthesis_reload
+            # await run_consensus_synthesis_reload(context, isPrint=False)
 
-        # ===== STAGE - Combined Scoring Round =====
-        from stages.scoring_combined import run_scoring_combined
-        await run_scoring_combined(context)
+        if context.scoring_stage == "SCORING_COMBINED":
+            # ===== STAGE - Combined Scoring Round =====
+            from stages.scoring_combined import run_scoring_combined
+            await run_scoring_combined(context)
 
-        # # ===== STAGE - Reload Combined Scoring Round Output =====
-        # from stages.scoring_combined_reload import run_scoring_combined_reload
-        # await run_scoring_combined_reload(context, isPrint=False)
+            # # ===== STAGE - Reload Combined Scoring Round Output =====
+            # from stages.scoring_combined_reload import run_scoring_combined_reload
+            # await run_scoring_combined_reload(context, isPrint=False)
+        
+        elif context.scoring_stage == "SCORING_RANDOM":
+            # ===== STAGE - Random Scoring Round =====
+            from stages.scoring_random import run_scoring_random
+            await run_scoring_random(context)
+
+            # # ===== STAGE - Reload Random Scoring Round Output =====
+            # from stages.scoring_random_reload import run_scoring_random_reload
+            # await run_scoring_random_reload(context, isPrint=False)
 
         # ===== STAGE - Score Aggregation =====
         from stages.score_aggregation import run_score_aggregation

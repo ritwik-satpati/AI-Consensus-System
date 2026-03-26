@@ -25,19 +25,21 @@ async def run_winner_selection(context):
     from functions.winner_selector import select_winner
     from functions.winner_logger import save_more_details
 
-    # Winning output from
-    winner_output_stage = "CONSENSUS_SYNTHESIS"
+    # Winning output stage will be evaluation stage
+    evaluation_stage = context.evaluation_stage
 
+    # Rank all the models
     model_rankings = rank_models(
         context=context, 
         final_scores=context.weighted_scores
         # directory="outputs/model_rankings"
     )    
 
+    # Formate ranked model data result 
     final_results = format_ranked_results(
         context=context,
         rankings=model_rankings,
-        model_outputs=context.stages_output.get(winner_output_stage, {}).get("outputs", [])
+        model_outputs=context.stages_output.get(evaluation_stage, {}).get("outputs", [])
         # directory="outputs/final_results"
     )
 
@@ -76,7 +78,6 @@ async def run_winner_selection(context):
 
     # Load set_stage_output in pipeline_context
     context.current_stage_data={
-        "winner_output_stage": winner_output_stage,
         "model_rankings": model_rankings,
         "final_results": final_results,
         "winner_details": winner_details,

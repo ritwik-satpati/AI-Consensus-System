@@ -23,7 +23,7 @@ def save_more_details(request_id, prompt, start_time, end_time, execution_time, 
         "execution_time": execution_time,
         "winner_model": winner.get("model"),
         "winners_count": len(winners),
-        "top_models": [w.get("model") for w in winners],
+        "winner_models": [w.get("model") for w in winners],
     }
 
     # Save the output using export_json

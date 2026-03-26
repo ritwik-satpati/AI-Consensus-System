@@ -22,11 +22,17 @@ async def run_scoring_combined(context):
     from functions.combined_scoring_prompt_builder import build_combined_scoring_prompt
     from functions.ai_orchestrator import run_models
     from functions.response_formatter import format_structured_response
+    from functions.context_resolver import get_structured_output_for_scoring
+
+    # Select structured_output for scoring prompt
+    structured_output = get_structured_output_for_scoring(
+        context=context
+    )
 
     # Build scoring prompt to evaluate consensus outputs
     scoring_prompt = build_combined_scoring_prompt(
         original_prompt=context.base_prompt,
-        combined_structured_result=context.consensus_structured,
+        combined_structured_result=structured_output,
         request_id=context.request_id
     )
 

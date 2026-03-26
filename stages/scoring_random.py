@@ -23,11 +23,17 @@ async def run_scoring_random(context):
     from functions.scoring_prompt_orchestrator import build_scoring_prompt_orchestrator
     from functions.ai_orchestrator import run_models
     from functions.response_formatter import format_structured_response
+    from functions.context_resolver import get_structured_output_for_scoring
+
+    # Select structured_output for scoring prompt
+    structured_output = get_structured_output_for_scoring(
+        context=context
+    )
 
     # Generate random model mapping
     random_model_map = generate_random_model_mapping(
         request_id=context.request_id,
-        model_outputs=context.consensus_structured,
+        model_outputs=structured_output,
         # directory="outputs/model_mapping"
     )
 
@@ -36,7 +42,7 @@ async def run_scoring_random(context):
         request_id=context.request_id,
         original_prompt=context.base_prompt,
         random_map=random_model_map,
-        model_outputs=context.consensus_structured,
+        model_outputs=structured_output,
     )
 
     # Execute scoring round (Round 3 - Evaluation) with custom prompts

@@ -1,25 +1,20 @@
-# AI Consensus System - V3 - Version 1.2.0
+# AI Consensus System - V4 - Version 1.3.0
 
-A robust Python-based orchestration pipeline that leverages multiple LLMs to generate, refine, and peer-evaluate responses. The system ensures that the final output is not produced by a single model, but emerges from a structured multi-stage consensus and scoring process.
+**Integrated Multi-Model Conditional, Configurable & Option-Driven Consensus Orchestration System**. 
+A robust Python-based orchestration pipeline that leverages multiple LLMs to generate, refine, and peer-evaluate responses. 
+The system ensures that the final output is not produced by a single model, but emerges from a structured multi-stage consensus and scoring process.
 
 ---
 
 ## 🚀 Overview
 
-The AI Consensus System is built on the principle that multiple independent reasoning agents can collectively produce more reliable results than a single model.
-
-The project currently includes **two scoring architectures**:
-
-- **M1 – Full Cross Scoring Architecture**
-- **M2 – Randomized One-to-One Scoring Architecture**
-
-Both follow the same generation and consensus stages but differ in how Stage 3 (Scoring) is executed.
+The AI Consensus System is built on the principle that multiple independent reasoning agents can collectively produce more reliable results than a single ai model.
 
 ### 📄 Detailed documentation
 
-- **AI Consensus System – M1 - V3 - Version 1.2.0** $\Rightarrow$ [AI Consensus System – M1 Architecture](./docs/AI_Consensus_System_M1.md)
-- **AI Consensus System – M2 - V3 - Version 1.2.0** $\Rightarrow$ [AI Consensus System – M2 Architecture](./docs/AI_Consensus_System_M2.md)
-- [M1 vs M2 Comparison](./docs/AI_Consensus_System_M1_vs_M2.md)
+- **Architecture** $\Rightarrow$ [./Architecture.md](./Architecture.md)
+- **Changelog** $\Rightarrow$ [./CHANGELOG.md](../CHANGELOG.md)
+- **Limitations** $\Rightarrow$ [./Limitations.md](./Limitations.md)
 
 ---
 
@@ -53,39 +48,6 @@ Both follow the same generation and consensus stages but differ in how Stage 3 (
 
 ---
 
-## 🛠 Execution Flow (Common to M1 & M2)
-
-1. **Initial Setup**
-   - Generates unique `request_id`
-   - Captures execution timestamps
-   - Loads prompt and model configuration
-
-2. **Initial Model Execution**
-   - Sends base prompt to all configured models
-   - Captures and structures raw outputs
-
-3. **Consensus Refinement**
-   - Builds a combined consensus prompt
-   - Produces refined outputs from all models
-
-4. **Scoring & Evaluation**
-   - M1: Full cross-model scoring  
-   - M2: Randomized one-to-one scoring  
-
-5. **Score Aggregation**
-   - Computes aggregated and weighted scores from model evaluations  
-
-6. **Winner Selection**
-   - Selects the final output based on highest-ranked score  
-   - Saves some more details about the pipeline
-
-7. **Finalization**
-   - Logs execution metrics  
-   - Saves consolidated output  
-   - Generates token usage summary  
-
----
-
 ## 📁 Directory Structure
 
 ```
@@ -93,8 +55,7 @@ AI-CONSENSUS-SYSTEM/
 │
 ├── main.py                         # Entry point for execution
 │
-├── ai_consensus_system_m1.py       # M1 pipeline (Full Cross Scoring)
-├── ai_consensus_system_m2.py       # M2 pipeline (Randomized Scoring)
+├── ai_consensus_system.py          # Integrated Multi-Model Conditional, Configurable & Option-Driven Consensus Orchestration System
 ├── test.py                         # Testing utilities / scripts
 │
 ├── stages/                         # Modular pipeline stages (reusable across M1 & M2)
@@ -117,7 +78,7 @@ AI-CONSENSUS-SYSTEM/
 ├── .env.sample                     # Sample environment configuration
 ├── .gitignore                      # Git ignore rules
 │
-├── docs/                           # Detailed architecture and comparison documents
+├── Architecture.md                 # Detailed architecture
 ├── CHANGELOG.md                    # Version history and updates
 ├── Limitations.md                  # Known limitations and constraints
 ├── README.md                       # Project documentation
@@ -186,12 +147,13 @@ META_API_KEY=XXXXX
 MISTRAL_API_KEY=XXXXX
 ```
 
-Configure - Hardcodes:
+### Configure - Hardcodes:
 
 - `hardcodes/model_manager.py`
 - `hardcodes/prompt_manager.py`
 - `hardcodes/system_prompt_manager.py`
-- `hardcodes/test_request_id.py`
+- `hardcodes/test_request_id.py` [Optional - Testing only]
+- `hardcodes/stages_manager.py`
 
 ---
 
