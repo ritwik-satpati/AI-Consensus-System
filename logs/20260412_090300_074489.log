@@ -1,0 +1,206 @@
+2026-04-12 09:03:00.074489 +0530	AI_CONSENSUS_SYSTEM | START | V3 - Version 1.2.0
+2026-04-12 09:03:00.074489 +0530	REQUEST_ID_GENERATOR | SUCCESS | Request Id generated | 20260412_090300_074489
+2026-04-12 09:03:00.077559 +0530	PROMPT_MANAGER | SUCCESS | Base Prompt loaded
+2026-04-12 09:03:00.078548 +0530	SYSTEM_PROMPT_MANAGER | SUCCESS | Base System Prompt loaded
+2026-04-12 09:03:00.079441 +0530	MODEL_MANAGER | SUCCESS | AI model configurations loaded
+2026-04-12 09:03:00.084282 +0530	SECURITY_UTILS | SUCCESS | Key masked | sk-**************************************************************************************************************************************************************IwA
+2026-04-12 09:03:00.085585 +0530	MODEL_UTILS | SUCCESS | API Key masked | openai | gpt-4o-mini
+2026-04-12 09:03:00.086521 +0530	SECURITY_UTILS | SUCCESS | Key masked | AIz*********************************TgE
+2026-04-12 09:03:00.087477 +0530	MODEL_UTILS | SUCCESS | API Key masked | google | gemini-2.5-flash-lite
+2026-04-12 09:03:00.088362 +0530	SECURITY_UTILS | SUCCESS | Key masked | sk-******************************************************************************************************AAA
+2026-04-12 09:03:00.089232 +0530	MODEL_UTILS | SUCCESS | API Key masked | anthropic | claude-haiku-4-5-20251001
+2026-04-12 09:03:00.090156 +0530	SECURITY_UTILS | SUCCESS | Key masked | nva****************************************************************Bqw
+2026-04-12 09:03:00.091005 +0530	MODEL_UTILS | SUCCESS | API Key masked | nvidia | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:03:00.091882 +0530	SECURITY_UTILS | SUCCESS | Key masked | nva****************************************************************xot
+2026-04-12 09:03:00.092735 +0530	MODEL_UTILS | SUCCESS | API Key masked | meta | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:03:00.093837 +0530	MODEL_UTILS | SUCCESS | All 5 API Keys masked
+2026-04-12 09:03:00.095208 +0530	MODEL_MANAGER | SUCCESS | Stages configurations loaded
+2026-04-12 09:03:00.096080 +0530	STAGE_VALIDATOR | SUCCESS | CONSENSUS_SYNTHESIS set as evaluation stage
+2026-04-12 09:03:00.096963 +0530	STAGE_VALIDATOR | SUCCESS | SCORING_COMBINED set as scoring stage
+2026-04-12 09:03:00.097955 +0530	STAGE_VALIDATOR | SUCCESS | All stages validated
+2026-04-12 09:03:00.098876 +0530	STAGE_VALIDATOR | SUCCESS | SYSTEM_SETUP >> INITIAL_EXECUTION >> CONSENSUS_SYNTHESIS >> SCORING_COMBINED >> SCORE_AGGREGATION >> WINNER_SELECTION >> REPORT_GENERATION
+2026-04-12 09:03:00.099939 +0530	OUTPUT_MANAGER | SUCCESS | Output file created | outputs/20260412_090300_074489.json
+2026-04-12 09:03:00.102112 +0530	OUTPUT_MANAGER | SUCCESS | Output file updated | outputs/20260412_090300_074489.json | SYSTEM_SETUP
+2026-04-12 09:03:00.103123 +0530	STAGE_WRAPPER | END | SYSTEM_SETUP | Step execution time 0.0381 seconds
+2026-04-12 09:03:00.108755 +0530	STAGE_WRAPPER | START | INITIAL_EXECUTION
+2026-04-12 09:03:07.310985 +0530	AI_ORCHESTRATOR | SUCCESS | Single prompt execution started
+2026-04-12 09:03:07.312008 +0530	AI_ORCHESTRATOR | SUCCESS | Single prompt coverted to Custom prompt
+2026-04-12 09:03:07.312977 +0530	AI_ORCHESTRATOR | SUCCESS | Task created | openai | gpt-4o-mini
+2026-04-12 09:03:07.314097 +0530	AI_ORCHESTRATOR | SUCCESS | Task created | google | gemini-2.5-flash-lite
+2026-04-12 09:03:07.315074 +0530	AI_ORCHESTRATOR | SUCCESS | Task created | anthropic | claude-haiku-4-5-20251001
+2026-04-12 09:03:07.316039 +0530	AI_ORCHESTRATOR | SUCCESS | Task created | nvidia | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:03:07.316915 +0530	AI_ORCHESTRATOR | SUCCESS | Task created | meta | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:03:07.743634 +0530	OPENAI_API | START | Request initiated | gpt-4o-mini
+2026-04-12 09:03:09.256075 +0530	GEMINI_API | START | Request initiated | gemini-2.5-flash-lite
+2026-04-12 09:03:09.259969 +0530	CLAUDE_API | START | Request initiated | claude-haiku-4-5-20251001
+2026-04-12 09:03:09.622032 +0530	NVIDIA_API | START | Request initiated | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:03:09.988091 +0530	META_API | START | Request initiated | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:03:15.301551 +0530	CLAUDE_API | SUCCESS | Response received | claude-haiku-4-5-20251001 | Prompt Tokens = 49 | Completion Tokens = 397
+2026-04-12 09:03:16.215035 +0530	GEMINI_API | SUCCESS | Response received | gemini-2.5-flash-lite | Prompt Tokens = 42 | Completion Tokens = 1095
+2026-04-12 09:03:17.599936 +0530	OPENAI_API | SUCCESS | Response received | gpt-4o-mini | Prompt Tokens = 49 | Completion Tokens = 412
+2026-04-12 09:03:18.448592 +0530	META_API | SUCCESS | Response received | meta/llama-4-maverick-17b-128e-instruct | Prompt Tokens = 53 | Completion Tokens = 706
+2026-04-12 09:03:59.022384 +0530	NVIDIA_API | SUCCESS | Response received | nvidia/nemotron-3-super-120b-a12b | Prompt Tokens = 55 | Completion Tokens = 1024
+2026-04-12 09:03:59.024506 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | openai | gpt-4o-mini
+2026-04-12 09:03:59.025882 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | google | gemini-2.5-flash-lite
+2026-04-12 09:03:59.027203 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | anthropic | claude-haiku-4-5-20251001
+2026-04-12 09:03:59.028404 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | nvidia | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:03:59.029629 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | meta | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:03:59.030724 +0530	JSON_EXPORTER | SUCCESS | Initial Outputs for {stage} outputs skipped saving
+2026-04-12 09:03:59.031820 +0530	AI_ORCHESTRATOR | SUCCESS | Initial outputs created | For stage INITIAL_EXECUTION
+2026-04-12 09:03:59.032900 +0530	AI_ORCHESTRATOR | SUCCESS | Completed execution for 5 models
+2026-04-12 09:03:59.034064 +0530	JSON_EXPORTER | SUCCESS | Structured Outputs for {stage} outputs skipped saving
+2026-04-12 09:03:59.035158 +0530	RESPONSE_FORMATTER | SUCCESS | Structured outputs created | For stage INITIAL_EXECUTION
+2026-04-12 09:03:59.058865 +0530	OUTPUT_MANAGER | SUCCESS | Output file updated | outputs/20260412_090300_074489.json | INITIAL_EXECUTION
+2026-04-12 09:03:59.060491 +0530	STAGE_WRAPPER | END | INITIAL_EXECUTION | Step execution time 58.9301 seconds
+2026-04-12 09:03:59.067309 +0530	STAGE_WRAPPER | START | CONSENSUS_SYNTHESIS
+2026-04-12 09:03:59.073797 +0530	CONSENSUS_PROMPT_BUILDER | PROCESS | Combined Prompt added | gpt-4o-mini
+2026-04-12 09:03:59.075045 +0530	CONSENSUS_PROMPT_BUILDER | PROCESS | Combined Prompt added | gemini-2.5-flash-lite
+2026-04-12 09:03:59.076354 +0530	CONSENSUS_PROMPT_BUILDER | PROCESS | Combined Prompt added | claude-haiku-4-5-20251001
+2026-04-12 09:03:59.077670 +0530	CONSENSUS_PROMPT_BUILDER | PROCESS | Combined Prompt added | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:03:59.078907 +0530	CONSENSUS_PROMPT_BUILDER | PROCESS | Combined Prompt added | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:03:59.080086 +0530	CONSENSUS_PROMPT_BUILDER | SUCCESS | Combined Prompt created using 5 model responses
+2026-04-12 09:03:59.081281 +0530	AI_ORCHESTRATOR | SUCCESS | Single prompt execution started
+2026-04-12 09:03:59.082393 +0530	AI_ORCHESTRATOR | SUCCESS | Single prompt coverted to Custom prompt
+2026-04-12 09:03:59.083510 +0530	AI_ORCHESTRATOR | SUCCESS | Task created | openai | gpt-4o-mini
+2026-04-12 09:03:59.085076 +0530	AI_ORCHESTRATOR | SUCCESS | Task created | google | gemini-2.5-flash-lite
+2026-04-12 09:03:59.086322 +0530	AI_ORCHESTRATOR | SUCCESS | Task created | anthropic | claude-haiku-4-5-20251001
+2026-04-12 09:03:59.087843 +0530	AI_ORCHESTRATOR | SUCCESS | Task created | nvidia | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:03:59.089026 +0530	AI_ORCHESTRATOR | SUCCESS | Task created | meta | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:03:59.484360 +0530	OPENAI_API | START | Request initiated | gpt-4o-mini
+2026-04-12 09:04:00.579994 +0530	GEMINI_API | START | Request initiated | gemini-2.5-flash-lite
+2026-04-12 09:04:00.583444 +0530	CLAUDE_API | START | Request initiated | claude-haiku-4-5-20251001
+2026-04-12 09:04:01.012599 +0530	NVIDIA_API | START | Request initiated | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:04:01.415394 +0530	META_API | START | Request initiated | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:04:02.989034 +0530	META_API | SUCCESS | Response received | meta/llama-4-maverick-17b-128e-instruct | Prompt Tokens = 3632 | Completion Tokens = 12
+2026-04-12 09:04:05.183995 +0530	GEMINI_API | SUCCESS | Response received | gemini-2.5-flash-lite | Prompt Tokens = 3819 | Completion Tokens = 542
+2026-04-12 09:04:06.461395 +0530	NVIDIA_API | SUCCESS | Response received | nvidia/nemotron-3-super-120b-a12b | Prompt Tokens = 3762 | Completion Tokens = 290
+2026-04-12 09:04:08.699134 +0530	OPENAI_API | SUCCESS | Response received | gpt-4o-mini | Prompt Tokens = 3686 | Completion Tokens = 403
+2026-04-12 09:04:10.782775 +0530	CLAUDE_API | SUCCESS | Response received | claude-haiku-4-5-20251001 | Prompt Tokens = 4111 | Completion Tokens = 820
+2026-04-12 09:04:10.785269 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | openai | gpt-4o-mini
+2026-04-12 09:04:10.787236 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | google | gemini-2.5-flash-lite
+2026-04-12 09:04:10.789399 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | anthropic | claude-haiku-4-5-20251001
+2026-04-12 09:04:10.791114 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | nvidia | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:04:10.792422 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | meta | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:04:10.793850 +0530	JSON_EXPORTER | SUCCESS | Initial Outputs for {stage} outputs skipped saving
+2026-04-12 09:04:10.795276 +0530	AI_ORCHESTRATOR | SUCCESS | Initial outputs created | For stage CONSENSUS_SYNTHESIS
+2026-04-12 09:04:10.796552 +0530	AI_ORCHESTRATOR | SUCCESS | Completed execution for 5 models
+2026-04-12 09:04:10.797804 +0530	JSON_EXPORTER | SUCCESS | Structured Outputs for {stage} outputs skipped saving
+2026-04-12 09:04:10.799068 +0530	RESPONSE_FORMATTER | SUCCESS | Structured outputs created | For stage CONSENSUS_SYNTHESIS
+2026-04-12 09:04:10.821968 +0530	OUTPUT_MANAGER | SUCCESS | Output file updated | outputs/20260412_090300_074489.json | CONSENSUS_SYNTHESIS
+2026-04-12 09:04:10.823541 +0530	STAGE_WRAPPER | END | CONSENSUS_SYNTHESIS | Step execution time 11.7337 seconds
+2026-04-12 09:04:10.829567 +0530	STAGE_WRAPPER | START | SCORING_COMBINED
+2026-04-12 09:04:10.839673 +0530	CONTEXT_RESOLVER | SUCCESS | consensus_structured set as structured output
+2026-04-12 09:04:10.841060 +0530	COMBINED_SCORING_PROMPT_BUILDER | SUCCESS | Scoring Prompt created using 5 model responses
+2026-04-12 09:04:10.842550 +0530	AI_ORCHESTRATOR | SUCCESS | Single prompt execution started
+2026-04-12 09:04:10.843872 +0530	AI_ORCHESTRATOR | SUCCESS | Single prompt coverted to Custom prompt
+2026-04-12 09:04:10.845189 +0530	AI_ORCHESTRATOR | SUCCESS | Task created | openai | gpt-4o-mini
+2026-04-12 09:04:10.846508 +0530	AI_ORCHESTRATOR | SUCCESS | Task created | google | gemini-2.5-flash-lite
+2026-04-12 09:04:10.847760 +0530	AI_ORCHESTRATOR | SUCCESS | Task created | anthropic | claude-haiku-4-5-20251001
+2026-04-12 09:04:10.848995 +0530	AI_ORCHESTRATOR | SUCCESS | Task created | nvidia | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:04:10.850326 +0530	AI_ORCHESTRATOR | SUCCESS | Task created | meta | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:04:11.224707 +0530	OPENAI_API | START | Request initiated | gpt-4o-mini
+2026-04-12 09:04:12.398192 +0530	GEMINI_API | START | Request initiated | gemini-2.5-flash-lite
+2026-04-12 09:04:12.402171 +0530	CLAUDE_API | START | Request initiated | claude-haiku-4-5-20251001
+2026-04-12 09:04:12.762661 +0530	NVIDIA_API | START | Request initiated | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:04:13.120622 +0530	META_API | START | Request initiated | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:04:15.949837 +0530	GEMINI_API | SUCCESS | Response received | gemini-2.5-flash-lite | Prompt Tokens = 2475 | Completion Tokens = 235
+2026-04-12 09:04:16.058328 +0530	CLAUDE_API | SUCCESS | Response received | claude-haiku-4-5-20251001 | Prompt Tokens = 2646 | Completion Tokens = 216
+2026-04-12 09:04:16.132524 +0530	META_API | SUCCESS | Response received | meta/llama-4-maverick-17b-128e-instruct | Prompt Tokens = 2340 | Completion Tokens = 213
+2026-04-12 09:04:17.536940 +0530	NVIDIA_API | SUCCESS | Response received | nvidia/nemotron-3-super-120b-a12b | Prompt Tokens = 2425 | Completion Tokens = 272
+2026-04-12 09:04:17.936287 +0530	OPENAI_API | SUCCESS | Response received | gpt-4o-mini | Prompt Tokens = 2377 | Completion Tokens = 209
+2026-04-12 09:04:17.938208 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | openai | gpt-4o-mini
+2026-04-12 09:04:17.939549 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | google | gemini-2.5-flash-lite
+2026-04-12 09:04:17.940771 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | anthropic | claude-haiku-4-5-20251001
+2026-04-12 09:04:17.942043 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | nvidia | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:04:17.943224 +0530	AI_ORCHESTRATOR | SUCCESS | Output added | meta | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:04:17.944527 +0530	JSON_EXPORTER | SUCCESS | Initial Outputs for {stage} outputs skipped saving
+2026-04-12 09:04:17.946315 +0530	AI_ORCHESTRATOR | SUCCESS | Initial outputs created | For stage SCORING_COMBINED
+2026-04-12 09:04:17.947776 +0530	AI_ORCHESTRATOR | SUCCESS | Completed execution for 5 models
+2026-04-12 09:04:17.949032 +0530	JSON_EXPORTER | SUCCESS | Structured Outputs for {stage} outputs skipped saving
+2026-04-12 09:04:17.950195 +0530	RESPONSE_FORMATTER | SUCCESS | Structured outputs created | For stage SCORING_COMBINED
+2026-04-12 09:04:17.973363 +0530	OUTPUT_MANAGER | SUCCESS | Output file updated | outputs/20260412_090300_074489.json | SCORING_COMBINED
+2026-04-12 09:04:17.974813 +0530	STAGE_WRAPPER | END | SCORING_COMBINED | Step execution time 7.1222 seconds
+2026-04-12 09:04:17.979587 +0530	STAGE_WRAPPER | START | SCORE_AGGREGATION
+2026-04-12 09:04:18.018830 +0530	SCORE_PARSER | START | Parsing scoring outputs initiated
+2026-04-12 09:04:18.020251 +0530	SCORE_PARSER | SUCCESS | JSON string parsed | gpt-4o-mini
+2026-04-12 09:04:18.021516 +0530	SCORE_PARSER | SUCCESS | JSON string parsed | gemini-2.5-flash-lite
+2026-04-12 09:04:18.022932 +0530	SCORE_PARSER | SUCCESS | JSON string parsed | claude-haiku-4-5-20251001
+2026-04-12 09:04:18.024162 +0530	SCORE_PARSER | SUCCESS | JSON string parsed | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:04:18.025408 +0530	SCORE_PARSER | SUCCESS | JSON string parsed | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:04:18.026563 +0530	JSON_EXPORTER | SUCCESS | Parsed Scores outputs skipped saving
+2026-04-12 09:04:18.027766 +0530	SCORE_PARSER | SUCCESS | Parsed 5 evaluator results
+2026-04-12 09:04:18.028941 +0530	SCORE_AGGREGATOR | PROCESS | Averaged scores computed | gpt-4o-mini
+2026-04-12 09:04:18.030119 +0530	SCORE_AGGREGATOR | PROCESS | Averaged scores computed | gemini-2.5-flash-lite
+2026-04-12 09:04:18.031272 +0530	SCORE_AGGREGATOR | PROCESS | Averaged scores computed | claude-haiku-4-5-20251001
+2026-04-12 09:04:18.032403 +0530	SCORE_AGGREGATOR | PROCESS | Averaged scores computed | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:04:18.033650 +0530	SCORE_AGGREGATOR | PROCESS | Averaged scores computed | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:04:18.034954 +0530	JSON_EXPORTER | SUCCESS | Aggregated Scores outputs skipped saving
+2026-04-12 09:04:18.036310 +0530	SCORE_AGGREGATOR | SUCCESS | Aggregated scores generated for 5 agents
+2026-04-12 09:04:18.037679 +0530	SCORE_AGGREGATOR | SUCCESS | Self-bias removed = False
+2026-04-12 09:04:18.039039 +0530	FINAL_SCORE_CALCULATOR | START | Calculating weighted scores
+2026-04-12 09:04:18.040476 +0530	FINAL_SCORE_CALCULATOR | PROCESS | Weighted score computed for gpt-4o-mini
+2026-04-12 09:04:18.041797 +0530	FINAL_SCORE_CALCULATOR | PROCESS | Weighted score computed for gemini-2.5-flash-lite
+2026-04-12 09:04:18.043084 +0530	FINAL_SCORE_CALCULATOR | PROCESS | Weighted score computed for claude-haiku-4-5-20251001
+2026-04-12 09:04:18.044690 +0530	FINAL_SCORE_CALCULATOR | PROCESS | Weighted score computed for nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:04:18.046078 +0530	FINAL_SCORE_CALCULATOR | PROCESS | Weighted score computed for meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:04:18.047513 +0530	JSON_EXPORTER | SUCCESS | Final Scores outputs skipped saving
+2026-04-12 09:04:18.048956 +0530	FINAL_SCORE_CALCULATOR | SUCCESS | Weighted scores calculated for 5 agents
+2026-04-12 09:04:18.083241 +0530	OUTPUT_MANAGER | SUCCESS | Output file updated | outputs/20260412_090300_074489.json | SCORE_AGGREGATION
+2026-04-12 09:04:18.084848 +0530	STAGE_WRAPPER | END | SCORE_AGGREGATION | Step execution time 0.0709 seconds
+2026-04-12 09:04:18.091407 +0530	STAGE_WRAPPER | START | WINNER_SELECTION
+2026-04-12 09:04:18.109661 +0530	MODEL_RANKER | SUCCESS | Added Rank 1 | claude-haiku-4-5-20251001 | 9.36
+2026-04-12 09:04:18.111232 +0530	MODEL_RANKER | SUCCESS | Added Rank 2 | gpt-4o-mini | 9.18
+2026-04-12 09:04:18.112572 +0530	MODEL_RANKER | SUCCESS | Added Rank 2 | gemini-2.5-flash-lite | 9.18
+2026-04-12 09:04:18.114277 +0530	MODEL_RANKER | SUCCESS | Added Rank 4 | nvidia/nemotron-3-super-120b-a12b | 9.04
+2026-04-12 09:04:18.115543 +0530	MODEL_RANKER | SUCCESS | Added Rank 5 | meta/llama-4-maverick-17b-128e-instruct | 8.06
+2026-04-12 09:04:18.116817 +0530	MODEL_RANKER | SUCCESS | Models Ranked | Total models ranked 5
+2026-04-12 09:04:18.118067 +0530	JSON_EXPORTER | SUCCESS | Model Rankings outputs skipped saving
+2026-04-12 09:04:18.119299 +0530	RESULT_FORMATTER | SUCCESS | Formatted Result added for Rank 1 | claude-haiku-4-5-20251001
+2026-04-12 09:04:18.120533 +0530	RESULT_FORMATTER | SUCCESS | Formatted Result added for Rank 2 | gpt-4o-mini
+2026-04-12 09:04:18.121775 +0530	RESULT_FORMATTER | SUCCESS | Formatted Result added for Rank 2 | gemini-2.5-flash-lite
+2026-04-12 09:04:18.123025 +0530	RESULT_FORMATTER | SUCCESS | Formatted Result added for Rank 4 | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:04:18.124256 +0530	RESULT_FORMATTER | SUCCESS | Formatted Result added for Rank 5 | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:04:18.125520 +0530	RESULT_FORMATTER | SUCCESS | Result formatted
+2026-04-12 09:04:18.127217 +0530	JSON_EXPORTER | SUCCESS | Final Results outputs skipped saving
+2026-04-12 09:04:18.129155 +0530	WINNER_SELECTOR | START | Selecting winner
+2026-04-12 09:04:18.130701 +0530	JSON_EXPORTER | SUCCESS | Winner Details outputs skipped saving
+2026-04-12 09:04:18.132503 +0530	WINNER_SELECTOR | SUCCESS | Winner selected | claude-haiku-4-5-20251001 | 9.36
+2026-04-12 09:04:18.134505 +0530	WINNER_SELECTION | SUCCESS | End Timestamp captured
+2026-04-12 09:04:18.136669 +0530	WINNER_SELECTION | SUCCESS | Total pipeline execution time 78.0634 seconds
+2026-04-12 09:04:18.138390 +0530	JSON_EXPORTER | SUCCESS | More Details outputs skipped saving
+2026-04-12 09:04:18.167091 +0530	OUTPUT_MANAGER | SUCCESS | Output file updated | outputs/20260412_090300_074489.json | WINNER_SELECTION
+2026-04-12 09:04:18.168692 +0530	STAGE_WRAPPER | END | WINNER_SELECTION | Step execution time 0.0485 seconds
+2026-04-12 09:04:18.174251 +0530	STAGE_WRAPPER | START | REPORT_GENERATION
+2026-04-12 09:04:38.830320 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | INITIAL_EXECUTION | gpt-4o-mini
+2026-04-12 09:04:38.832122 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | INITIAL_EXECUTION | gemini-2.5-flash-lite
+2026-04-12 09:04:38.833780 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | INITIAL_EXECUTION | claude-haiku-4-5-20251001
+2026-04-12 09:04:38.835395 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | INITIAL_EXECUTION | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:04:38.836945 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | INITIAL_EXECUTION | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:04:38.838520 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | CONSENSUS_SYNTHESIS | gpt-4o-mini
+2026-04-12 09:04:38.840111 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | CONSENSUS_SYNTHESIS | gemini-2.5-flash-lite
+2026-04-12 09:04:38.842051 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | CONSENSUS_SYNTHESIS | claude-haiku-4-5-20251001
+2026-04-12 09:04:38.844361 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | CONSENSUS_SYNTHESIS | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:04:38.846447 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | CONSENSUS_SYNTHESIS | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:04:38.848494 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | SCORING_COMBINED | gpt-4o-mini
+2026-04-12 09:04:38.850117 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | SCORING_COMBINED | gemini-2.5-flash-lite
+2026-04-12 09:04:38.851739 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | SCORING_COMBINED | claude-haiku-4-5-20251001
+2026-04-12 09:04:38.853339 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | SCORING_COMBINED | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:04:38.855470 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | SCORING_COMBINED | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:04:38.857175 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | ALL_STAGES | gpt-4o-mini
+2026-04-12 09:04:38.859650 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | ALL_STAGES | gemini-2.5-flash-lite
+2026-04-12 09:04:38.862245 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | ALL_STAGES | claude-haiku-4-5-20251001
+2026-04-12 09:04:38.863977 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | ALL_STAGES | nvidia/nemotron-3-super-120b-a12b
+2026-04-12 09:04:38.865579 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | ALL_STAGES | meta/llama-4-maverick-17b-128e-instruct
+2026-04-12 09:04:38.867151 +0530	TOKEN_SUMMARY_GENERATOR | SUCCESS | Token summary added | ALL_STAGES | ALL_MODELS
+2026-04-12 09:04:38.868816 +0530	JSON_EXPORTER | SUCCESS | Token Summary outputs skipped saving
+2026-04-12 09:04:38.870402 +0530	TOKEN_REPORT_BUILDER | START | Token report building initiated
+2026-04-12 09:04:38.872826 +0530	TOKEN_REPORT_BUILDER | SUCCESS | Token summary converted to DataFrame
+2026-04-12 09:04:38.878529 +0530	TOKEN_REPORT_BUILDER | SUCCESS | Stage-wise report generated
+2026-04-12 09:04:38.881543 +0530	TOKEN_REPORT_BUILDER | SUCCESS | Model-wise summary report generated
+2026-04-12 09:04:38.883180 +0530	TOKEN_REPORT_BUILDER | SUCCESS | Token report building completed
+2026-04-12 09:04:38.893125 +0530	CSV_EXPORTER | SUCCESS | Dataframe printed | Stage DF
+2026-04-12 09:04:38.899967 +0530	CSV_EXPORTER | SUCCESS | CSV file created | outputs/token_report_stage/20260412_090300_074489.csv
+2026-04-12 09:04:38.905291 +0530	CSV_EXPORTER | SUCCESS | Dataframe printed | Model DF
+2026-04-12 09:04:38.912374 +0530	CSV_EXPORTER | SUCCESS | CSV file created | outputs/token_report_model/20260412_090300_074489.csv
+2026-04-12 09:04:39.064954 +0530	OUTPUT_MANAGER | SUCCESS | Output file updated | outputs/20260412_090300_074489.json | REPORT_GENERATION
+2026-04-12 09:04:39.066893 +0530	STAGE_WRAPPER | END | REPORT_GENERATION | Step execution time 20.7418 seconds

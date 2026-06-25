@@ -1,0 +1,4 @@
+In system design which is correct ?
+WAF → API Gateway → Load Balancer → Services
+or 
+WAF → Load Balancer → API Gateway → Services

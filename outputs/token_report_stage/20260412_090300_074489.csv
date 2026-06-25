@@ -1,0 +1,16 @@
+stage,provider,model,prompt_token,completion_token,total_token
+INITIAL_EXECUTION,openai,gpt-4o-mini,49,412,461
+INITIAL_EXECUTION,google,gemini-2.5-flash-lite,42,1095,1137
+INITIAL_EXECUTION,anthropic,claude-haiku-4-5-20251001,49,397,446
+INITIAL_EXECUTION,nvidia,nvidia/nemotron-3-super-120b-a12b,55,1024,1079
+INITIAL_EXECUTION,meta,meta/llama-4-maverick-17b-128e-instruct,53,706,759
+CONSENSUS_SYNTHESIS,openai,gpt-4o-mini,3686,403,4089
+CONSENSUS_SYNTHESIS,google,gemini-2.5-flash-lite,3819,542,4361
+CONSENSUS_SYNTHESIS,anthropic,claude-haiku-4-5-20251001,4111,820,4931
+CONSENSUS_SYNTHESIS,nvidia,nvidia/nemotron-3-super-120b-a12b,3762,290,4052
+CONSENSUS_SYNTHESIS,meta,meta/llama-4-maverick-17b-128e-instruct,3632,12,3644
+SCORING_COMBINED,openai,gpt-4o-mini,2377,209,2586
+SCORING_COMBINED,google,gemini-2.5-flash-lite,2475,235,2710
+SCORING_COMBINED,anthropic,claude-haiku-4-5-20251001,2646,216,2862
+SCORING_COMBINED,nvidia,nvidia/nemotron-3-super-120b-a12b,2425,272,2697
+SCORING_COMBINED,meta,meta/llama-4-maverick-17b-128e-instruct,2340,213,2553
